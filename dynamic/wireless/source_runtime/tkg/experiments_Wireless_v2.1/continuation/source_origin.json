@@ -1,0 +1,49 @@
+{
+  "purpose": "Isolated static-terminal continuation fork; original modules unchanged.",
+  "original_modules": {
+    "graph.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/graph.py",
+      "sha256": "845fc68f91e8badd8129190911d97c206de27049fa22275d76ad1d7f16cd16ba"
+    },
+    "service.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/service.py",
+      "sha256": "3a00b0323a43635a118be12880921ef7ac61b2f0d0f409842db09339f422e831"
+    },
+    "reference_metrics.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/reference_metrics.py",
+      "sha256": "d973ecb48b9dddb7fc81035cb81434c83379ffbb41f89577fe0550a90d7a4a21"
+    },
+    "schema.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/schema.py",
+      "sha256": "4a20a709217477350d0bed525e90dc85a03494b7e54acf162d622e4353f5476d"
+    },
+    "control.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/control.py",
+      "sha256": "5606d0ade3d52ecbac5267d8afd7fe0de997c8b23e42edd2a1ffba354a361282"
+    },
+    "planner.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/planner.py",
+      "sha256": "aaf0e338365eae94eac6d9bb3d8179ca1cb567e43f7ca7487e836b0a5d4e0698"
+    },
+    "fairness.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/fairness.py",
+      "sha256": "a778d3a23132d78c688915c85bb76d60e1e830aea8e353c78ea16bdacce074e1"
+    },
+    "fairness_graph.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/fairness_graph.py",
+      "sha256": "c5591cc2825db357e55fef25a32fc919d69a793cba8277dfc83a073dfada36f4"
+    },
+    "fairness_schema.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/fairness_schema.py",
+      "sha256": "dda86935e031c59b2e9a1bf05fe0c722d74e9cc27f3205ecaa73bdd2dfdc808e"
+    },
+    "agent.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/agent.py",
+      "sha256": "ad46ceac8cc55a836e23638f26bd60a7d4fe69dd21def150c6a5f9acfd34c339"
+    },
+    "fair_agent.py": {
+      "source": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/dynamic_tkg/fair_agent.py",
+      "sha256": "bcd5bcf49d310d8e7927483f1630199f6d77755d8af36f2e3f3d763f9e012dfe"
+    }
+  }
+}

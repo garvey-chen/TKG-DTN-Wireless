@@ -1,0 +1,188 @@
+{
+  "method": "tkg_dtn",
+  "scenario": "center",
+  "duration_s": 300.0,
+  "users": {
+    "1": {
+      "traffic_mbit": 6508.114409325137,
+      "effective_served_mbit": 6508.114409325137,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "2": {
+      "traffic_mbit": 6872.219608461568,
+      "effective_served_mbit": 6872.219608461568,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "3": {
+      "traffic_mbit": 4755.094956812161,
+      "effective_served_mbit": 4755.094956812161,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "4": {
+      "traffic_mbit": 30381.380236450186,
+      "effective_served_mbit": 30381.380236450186,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "5": {
+      "traffic_mbit": 4547.744160746373,
+      "effective_served_mbit": 4547.744160746373,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "6": {
+      "traffic_mbit": 38598.24376390142,
+      "effective_served_mbit": 38598.24376390142,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "7": {
+      "traffic_mbit": 3191.7167400208696,
+      "effective_served_mbit": 3191.7167400208696,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "8": {
+      "traffic_mbit": 3925.5034693175917,
+      "effective_served_mbit": 3925.5034693175917,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "9": {
+      "traffic_mbit": 41113.16554677856,
+      "effective_served_mbit": 40441.7744968705,
+      "effective_time_s": 292.88484274593065,
+      "observed_duration_s": 300.0
+    },
+    "10": {
+      "traffic_mbit": 4316.105757214642,
+      "effective_served_mbit": 4316.105757214642,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "11": {
+      "traffic_mbit": 26380.235515001656,
+      "effective_served_mbit": 21948.25803001687,
+      "effective_time_s": 210.64477771701058,
+      "observed_duration_s": 300.0
+    },
+    "12": {
+      "traffic_mbit": 5221.72530033464,
+      "effective_served_mbit": 5221.72530033464,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "13": {
+      "traffic_mbit": 3819.4002948248144,
+      "effective_served_mbit": 3819.4002948248144,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "14": {
+      "traffic_mbit": 3145.126243087755,
+      "effective_served_mbit": 3145.126243087755,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "15": {
+      "traffic_mbit": 26355.983057122932,
+      "effective_served_mbit": 23378.06088783434,
+      "effective_time_s": 222.48053455207264,
+      "observed_duration_s": 300.0
+    },
+    "16": {
+      "traffic_mbit": 5476.971864871138,
+      "effective_served_mbit": 5476.971864871138,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "17": {
+      "traffic_mbit": 6433.249385276824,
+      "effective_served_mbit": 6433.249385276824,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "18": {
+      "traffic_mbit": 31493.159854189027,
+      "effective_served_mbit": 31493.159854189027,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "19": {
+      "traffic_mbit": 4803.946412141163,
+      "effective_served_mbit": 4803.946412141163,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "20": {
+      "traffic_mbit": 5221.495807233728,
+      "effective_served_mbit": 5221.495807233728,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "21": {
+      "traffic_mbit": 30381.380236450186,
+      "effective_served_mbit": 30381.380236450186,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "22": {
+      "traffic_mbit": 6002.274591412365,
+      "effective_served_mbit": 6002.274591412365,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "23": {
+      "traffic_mbit": 0.0,
+      "effective_served_mbit": 0.0,
+      "effective_time_s": 0.0,
+      "observed_duration_s": 300.0
+    },
+    "24": {
+      "traffic_mbit": 5688.811161387519,
+      "effective_served_mbit": 5688.811161387519,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "25": {
+      "traffic_mbit": 0.0,
+      "effective_served_mbit": 0.0,
+      "effective_time_s": 0.0,
+      "observed_duration_s": 300.0
+    },
+    "26": {
+      "traffic_mbit": 6925.771073988283,
+      "effective_served_mbit": 6925.771073988283,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "27": {
+      "traffic_mbit": 5951.37800785408,
+      "effective_served_mbit": 5951.37800785408,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "28": {
+      "traffic_mbit": 4327.042281450229,
+      "effective_served_mbit": 4327.042281450229,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "29": {
+      "traffic_mbit": 4320.576489304119,
+      "effective_served_mbit": 4320.576489304119,
+      "effective_time_s": 300.0,
+      "observed_duration_s": 300.0
+    },
+    "30": {
+      "traffic_mbit": 0.0,
+      "effective_served_mbit": 0.0,
+      "effective_time_s": 0.0,
+      "observed_duration_s": 300.0
+    }
+  },
+  "evaluation_only_not_policy_input": false
+}

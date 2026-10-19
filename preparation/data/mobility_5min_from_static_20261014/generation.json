@@ -1,0 +1,2871 @@
+{
+  "scenario_variant": "static_positions_linked_mobility",
+  "duration_s": 300,
+  "interval_s": 10,
+  "frame_count": 31,
+  "base_seed": 20261013,
+  "scene_seed_rule": "base_seed + {center:0,north:1,south:2}[scene]",
+  "time_origin": "relative simulation time, t=0 uses exact original static positions",
+  "interval_semantics": "Frame t records position/channel at t and movement during (t-10,t]; frame zero has zero distance/speed.",
+  "static_selection": "first 30 rows in original source order, matching the static paper experiment",
+  "moving_fraction": 0.6666666666666666,
+  "intermittent_fraction_of_movers": 0.5,
+  "nominal_speed_range_mps": [
+    0.4,
+    0.8
+  ],
+  "movement_model": "Correlated random walk with full-segment building avoidance; 40-80 s moving / 20-40 s pauses for intermittent users.",
+  "profile_assignment": "Building-contained source users are static. Among remaining users, seeded ID ranking selects exactly 10 intermittent and 10 continuous users; others are static.",
+  "bounds_policy": "Preserve existing bounds except sides excluding source coordinates; extend those sides 5 m past the outermost source point.",
+  "channel_model": "Unchanged upstream geometry/LOS/path-loss/SNR/CQI model, recomputed at every frame including t=0. Source signal columns are retained separately, not spliced into the new timeline.",
+  "channel_parameters": {
+    "frequency_hz": 2400000000.0,
+    "tx_power_dbm": 30,
+    "noise_bandwidth_hz": 20000000.0,
+    "noise_figure_db": 8,
+    "noise_floor_dbm": -92.98970004336019
+  },
+  "user_identity": "Persistent (Scenario,RX_ID); source ID, X/Y/Z at t=0, request and label preserved.",
+  "coordinate_and_signal_decimals": 6,
+  "limitations": [
+    "Position/request continuity does not imply static allocation or channel continuity; north has legacy channel discrepancies reported in static_initial_comparison.csv.",
+    "Four building-contained source users are retained as stationary. The inherited signal model is not a calibrated indoor penetration model.",
+    "Buildings constrain outdoor movement; roads, shorelines, land use and user-user collision avoidance are not modeled.",
+    "No special south-user-7 toward-BS modification is applied in this independent variant.",
+    "This package contains scenario inputs and maps only; existing paper service/control results are not results for these new inputs."
+  ],
+  "code_sha256": {
+    "generate_static_linked_mobility.py": "598c4a904cce5e607ea1a5471b0e21741c1cf650d1388d59c1edadcee45104de",
+    "generate_mobility.py": "50d8285a225e9e23ab2a771a515f3bb5c0398a0ab976136a4b1f8043e66addcb",
+    "mobility.py": "1b5f90d7679c2977bfbf3cebb08b42954f6474245b8a856407352c54cbd625c7",
+    "generate_scenarios.py": "224f74a9a8b2936feae92713e7ab08c0527f559fdf437b18aae23eca2deb6162",
+    "vendor/upstream/RayTracing_cqi.py": "e26b4651252b2aaf995f60ed7a26b3cf4df2e799063a789d601aa28bbffcc820"
+  },
+  "software": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2",
+    "pyproj": "3.7.2",
+    "shapely": "2.2.0"
+  },
+  "scenarios": {
+    "center": {
+      "seed": 20261013,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/center.csv",
+      "initial_csv_sha256": "f08ba4ff20b55dcecde480fad30451dc9eaf58f3538ffcca423e7915db1d5974",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/center.csv",
+      "map_file": "data/maps/HKUST_Center.osm",
+      "map_sha256": "b945eccfb00e493949dd8ff96824a0d7327d869b8ee8d43ea6d279fe9299182a",
+      "tx_position_m": [
+        -1.2099597409359395,
+        2.6525237686259433,
+        10.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.335120124,
+        114.26491020000002
+      ],
+      "original_sampling_bounds_xy_m": [
+        -255.65838513351025,
+        70.82455680527079,
+        -115.86386206993383,
+        151.2842999454599
+      ],
+      "sampling_bounds_xy_m": [
+        -255.65838513351025,
+        70.82455680527079,
+        -115.86386206993383,
+        151.2842999454599
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {},
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7764951364742108,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6076758961076282,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 110
+            },
+            {
+              "state": "paused",
+              "start_time_s": 110,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 210
+            },
+            {
+              "state": "paused",
+              "start_time_s": 210,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              110,
+              150
+            ],
+            [
+              210,
+              250
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4988111294701031,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7995798148167255,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6270410425210791,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7818611581122137,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5037291027534574,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5267940498761031,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7210146745549908,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5664715655465966,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              120,
+              150
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6676453342529203,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.724378071858539,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              190,
+              230
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6019007689839359,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5116810761284694,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6031884974154883,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              120,
+              160
+            ],
+            [
+              200,
+              220
+            ],
+            [
+              260,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.40161354496057594,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5966359788615678,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              90
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              240,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.42236809970593514,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              90
+            ],
+            [
+              160,
+              200
+            ],
+            [
+              260,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4666125834323922,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "paused",
+              "start_time_s": 100,
+              "end_time_s": 140
+            },
+            {
+              "state": "moving",
+              "start_time_s": 140,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              100,
+              140
+            ],
+            [
+              190,
+              210
+            ],
+            [
+              270,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6584193172065862,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "frames": 31,
+        "rows": 930,
+        "profile_counts": {
+          "continuous": 10,
+          "static": 10,
+          "intermittent": 10
+        },
+        "source_position_matches": 30,
+        "initial_cqi_differences_vs_static": 0,
+        "users_with_cqi_changes": 20,
+        "cqi_change_events": 81,
+        "blocked_intervals": 0
+      }
+    },
+    "north": {
+      "seed": 20261014,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/north.csv",
+      "initial_csv_sha256": "07b85ad4bd2d6c30ae698ecac4ea3ad8a57a782e79b2bfd9333a6cfff7a51884",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/north.csv",
+      "map_file": "data/maps/HKUST_North.osm",
+      "map_sha256": "97e090aca47b824ca1062eddfabe9341217d5cd163c8a4e6eeb55bfab064a1ab",
+      "tx_position_m": [
+        25.034529342864527,
+        71.37546518540904,
+        18.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.33749453,
+        114.26487297999999
+      ],
+      "original_sampling_bounds_xy_m": [
+        -357.93918197407453,
+        90.11479411050794,
+        -46.388189378648406,
+        244.519490850447
+      ],
+      "sampling_bounds_xy_m": [
+        -357.93918197407453,
+        102.93,
+        -46.388189378648406,
+        244.519490850447
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {
+        "11": [
+          0
+        ],
+        "20": [
+          1
+        ]
+      },
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7683114409565266,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.47063448875919,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6902437278643901,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              90
+            ],
+            [
+              140,
+              160
+            ],
+            [
+              240,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5672119563996605,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              80
+            ],
+            [
+              160,
+              190
+            ],
+            [
+              270,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.48013429097223254,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              140,
+              160
+            ],
+            [
+              240,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            0
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.43009214509284643,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5830793197609445,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5670969047404181,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              90
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              200,
+              220
+            ]
+          ]
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4107644342265972,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5908122728769257,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6892728379956703,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              170,
+              200
+            ],
+            [
+              240,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            1
+          ]
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5470836474399956,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5377431889575051,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4769308391425324,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 260
+            },
+            {
+              "state": "moving",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              160,
+              190
+            ],
+            [
+              240,
+              260
+            ]
+          ]
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5085690258839988,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              80
+            ],
+            [
+              120,
+              150
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5261666264235388,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4339670116197143,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5822308609575505,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              170,
+              200
+            ],
+            [
+              260,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5804804249240738,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 180
+            },
+            {
+              "state": "paused",
+              "start_time_s": 180,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              180,
+              220
+            ]
+          ]
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7499225200324832,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              90
+            ],
+            [
+              140,
+              170
+            ],
+            [
+              230,
+              250
+            ]
+          ]
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "frames": 31,
+        "rows": 930,
+        "profile_counts": {
+          "static": 10,
+          "continuous": 10,
+          "intermittent": 10
+        },
+        "source_position_matches": 30,
+        "initial_cqi_differences_vs_static": 17,
+        "users_with_cqi_changes": 19,
+        "cqi_change_events": 89,
+        "blocked_intervals": 0
+      }
+    },
+    "south": {
+      "seed": 20261015,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/south.csv",
+      "initial_csv_sha256": "6ae13492a799c3fa7e13a7df94454666ab38acdbdca39083fbc3fe6eb387fe2b",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/south.csv",
+      "map_file": "data/maps/HKUST_South.osm",
+      "map_sha256": "ea64b7e3836dd5723218f87f2f6e02d44d7319b0f2065ddb739b3e290d98978d",
+      "tx_position_m": [
+        -0.9594124618909454,
+        1.0380942903752557,
+        10.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.333702222222218,
+        114.2627669111111
+      ],
+      "original_sampling_bounds_xy_m": [
+        -98.1543995831359,
+        294.42513997957303,
+        -207.223886040556,
+        226.4108364600372
+      ],
+      "sampling_bounds_xy_m": [
+        -98.1543995831359,
+        294.42513997957303,
+        -207.223886040556,
+        226.4108364600372
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {
+        "13": [
+          7
+        ],
+        "21": [
+          5
+        ]
+      },
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5345122797172026,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              80
+            ],
+            [
+              140,
+              170
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6454817910589388,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 260
+            },
+            {
+              "state": "moving",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              230,
+              260
+            ]
+          ]
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7785484312823711,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              190,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.48886523969724993,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              170,
+              210
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7709250846315588,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 110
+            },
+            {
+              "state": "moving",
+              "start_time_s": 110,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 210
+            },
+            {
+              "state": "paused",
+              "start_time_s": 210,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              110
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              210,
+              250
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.49582475421870714,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5451727622033625,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              160,
+              200
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4669712473964271,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6493469760502446,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 180
+            },
+            {
+              "state": "paused",
+              "start_time_s": 180,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              180,
+              220
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7141587230194532,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            7
+          ]
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4117541880166008,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 110
+            },
+            {
+              "state": "moving",
+              "start_time_s": 110,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              110
+            ],
+            [
+              170,
+              190
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.769713144342577,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6716096754429901,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5621451465086278,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5729218011999911,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 250
+            },
+            {
+              "state": "paused",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              250,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6177013769538265,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            5
+          ]
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.41641362932847825,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 140
+            },
+            {
+              "state": "moving",
+              "start_time_s": 140,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              70
+            ],
+            [
+              120,
+              140
+            ],
+            [
+              190,
+              210
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7961374214271727,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7427252775237361,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4775359569418877,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "frames": 31,
+        "rows": 930,
+        "profile_counts": {
+          "intermittent": 10,
+          "static": 10,
+          "continuous": 10
+        },
+        "source_position_matches": 30,
+        "initial_cqi_differences_vs_static": 0,
+        "users_with_cqi_changes": 18,
+        "cqi_change_events": 92,
+        "blocked_intervals": 0
+      }
+    }
+  },
+  "output_sha256": {
+    "center.csv": "357ecae074fde496da87465167b8b4bd56235e3eba457da0729accada5cf3203",
+    "dynamic_users_from_static.csv": "ce287fa2c6597f1bc3406f70898c35aecdf02a1adb9c32439de4b958603b8715",
+    "frames/frame_000/center.csv": "f7de89ee91f12ea5898f5d2d0f9a04263f7cbaffb0fe813c118e64faa2c8a393",
+    "frames/frame_000/north.csv": "b191686a11b1cc443671d1c5053871860a245200659bb81734d352085714cab4",
+    "frames/frame_000/south.csv": "d0aa83d92b16a2a1782e3da3b967e9ad33265cc3c2796e24fcd4ebbd123001b3",
+    "frames/frame_001/center.csv": "a2e7fb1c6eb6ebac23098a210c4c79c6613d8230e1c75498a528ab4db1535ad6",
+    "frames/frame_001/north.csv": "76bfaf6709c5a44acc0e984f10e4215fe50b5598be480fea168f0044dfecd03c",
+    "frames/frame_001/south.csv": "90c7fc09f266904e2a1c6ec67613aa6df2710f421179c979d4c5e0cbbe4629b4",
+    "frames/frame_002/center.csv": "476aa856c76a65a3d6ad37766a8ff56eeaba0d47b49a2e4085f17a18c60b24e8",
+    "frames/frame_002/north.csv": "a13e6743af84952052147675673bc5a776f1158425c1326a0e707bf9ea453bf9",
+    "frames/frame_002/south.csv": "86ff9bb97ee76ca4c5332c8db585a3f39755138e91b3e74b9df3c43d7c3dbc50",
+    "frames/frame_003/center.csv": "c46aa85b259ba297ec6c1fc40d3871b9b1b3c46779c47e65ffe8e06f0658b667",
+    "frames/frame_003/north.csv": "07b73a28bbdf5c972496037286f265a6d5586f600b22ff2419f6552ba699cd0c",
+    "frames/frame_003/south.csv": "720710a113193d3d0bd86405deee61702b4c75c1932eb635e2fe8d84fab97676",
+    "frames/frame_004/center.csv": "19ae45bec9421cdcf186cceab14e5248c1502bc4144b92682e19720490a24f3d",
+    "frames/frame_004/north.csv": "94dcf1f503dcf0815b543a20b9837d2966d75572d1bbbcd1c94e1eec39f0e73e",
+    "frames/frame_004/south.csv": "6c80f4d60b1546d27752cad30cb92a29dd753acc49e604176814a85ff1ef76e3",
+    "frames/frame_005/center.csv": "2fbf443a39dae2f2ec6d0ad5e57f244658331c17dab00ce36cdc19e5ad1d00b5",
+    "frames/frame_005/north.csv": "943b7bc5c2d89386e3f254db38d8a97fd8e9c3f4088a653d9ff72bd1903fe196",
+    "frames/frame_005/south.csv": "acb6471bc1ba0dc2d320a39bfdef2a5fb22c6878197a9a1d1f654b0d93f5ab73",
+    "frames/frame_006/center.csv": "90163ae3a2409c4c5a4f1b504317f0117914e26fe6f173949c4e9e096d2a3dca",
+    "frames/frame_006/north.csv": "1d10f5721f8c3b41e25fc093c6bb4b74fbf1c5d309eb15661437dd580ae2d6be",
+    "frames/frame_006/south.csv": "ae08d817b30bd537c3e1191b9610d02389205b1c91d4f3ee0dec48cfec33ac40",
+    "frames/frame_007/center.csv": "59241a3e2f3bab33e23a673424e8f4b907e485d187ba2928294d1b5c3f74981d",
+    "frames/frame_007/north.csv": "7d18e4a494d714803de006a2a0c951b8665ea3e1336ee4606acd67239a6797b8",
+    "frames/frame_007/south.csv": "de7d644221222121bb9d1930fb85bab215818684c5b788a118288f358f8607f4",
+    "frames/frame_008/center.csv": "0849abfb393311a2c481673ddb2945046e3e2596690fe83c85d57adb4f55a7d8",
+    "frames/frame_008/north.csv": "09494f70d9d24565ef385c1dd47b6882dafbbbb58b964e5086092c84ecc819b3",
+    "frames/frame_008/south.csv": "5085a219c14a002c3d3143d6197804e0f81b87ad461c27469a8e260c6ec302eb",
+    "frames/frame_009/center.csv": "9fdcaf53ac53bae380326106a297c4af129b73e78e94d4d6a5664fd1455679c4",
+    "frames/frame_009/north.csv": "adbdf5f475a574c3777da4bb6a3e80db1ade80f9f4dd8de024b5a7fa2e04662d",
+    "frames/frame_009/south.csv": "0f5b544293336fc0048880739b1f6b204349d1c020c44ea0d76fff97c1b4c660",
+    "frames/frame_010/center.csv": "c79983290a389d2a530bf27fa6319ea13548af438676987e412a7230c2dc4cc3",
+    "frames/frame_010/north.csv": "4acfbcaad5bb7e789a2f2062d6cdaf64628a129dfbb43418fd2c23db18aa449b",
+    "frames/frame_010/south.csv": "6e1b393d57c99f955335257f629da5a6d5beeeedbefa6e63f1671c5d1176c005",
+    "frames/frame_011/center.csv": "08dea30214acd5be9bc0b40081c4495ef5e9afea09e10283349911ec434a930a",
+    "frames/frame_011/north.csv": "5b05ce7e670a6eccf6706f1874104ce862be1d7e67e823c5ce6590da3b9a5303",
+    "frames/frame_011/south.csv": "e5f2e01c91d3a4108c00bbde58c6b27e6985e2d4c06bc83b4425eec0630a4eee",
+    "frames/frame_012/center.csv": "a136629e25a01865fd82633337a24e346a5c0b137ac261982a941c9f40ab7bac",
+    "frames/frame_012/north.csv": "5e4665a2ffaa480ff3f5040d44935aa74b5583da59c5abb3a67173f5d0a40028",
+    "frames/frame_012/south.csv": "36c4b2b54d1d5dc2798fd8cf021f4b6a3957e2db197a3220002ba7e152fa30d2",
+    "frames/frame_013/center.csv": "688f5dc14deabc79d5237476978c4e1214940b989c523c804cfb9a7b89349187",
+    "frames/frame_013/north.csv": "b7cd3dbd1ba41310c819a02e04854b127edbba0ac50b0252990d50187394408c",
+    "frames/frame_013/south.csv": "c84a830f28f5fe44ea280ab366ce8345444f9563f89e98cdd8f0da06b59f2dde",
+    "frames/frame_014/center.csv": "c42b5c96d18dcbbd64e8e54aa1779034f8bbaaba4a0890a890bf3b79a1f39a3d",
+    "frames/frame_014/north.csv": "c51beb576fde5f3cbd55cc46bf5ad8dd4e89a38bcd3239e7ccf9982a38e46d9a",
+    "frames/frame_014/south.csv": "66d2c326e936420752c8b6b9b847f24cd0e6bc2eab3ea9d94ae01b0b1079223d",
+    "frames/frame_015/center.csv": "a6a4c41fda235f8d66b338f00a2b2ad9b49a95a462768947c633bd8d06706bfe",
+    "frames/frame_015/north.csv": "eccc432c11a5d750d7c7df0dd6f2befc7f5d5b151ac46705230c9ec09d35fab7",
+    "frames/frame_015/south.csv": "2d17c3afc64ef702552a331789cc35eaf91ae73cff5ec23fe72285c001bf0421",
+    "frames/frame_016/center.csv": "e825dfbd5a7d5b73ba644ba5b98673063638b1c98aaec687a4f447c8141f202d",
+    "frames/frame_016/north.csv": "440de9b6ae3279d38f16b2f80f5e816bbc8b892de97babcfccef0a624773f545",
+    "frames/frame_016/south.csv": "94988d5bc6681059bdcc5ee173cf8d8c328fbffb7ee67fca99e75dea7bf8d1e5",
+    "frames/frame_017/center.csv": "d8b9f9ca333f14ea4a8dd0103cf3aef835693250b3b04a7536d29131274df4b8",
+    "frames/frame_017/north.csv": "3f556b7dcee6a6f2f56f283e7f05f0657856a9aee910037cb77c00b93eba04fc",
+    "frames/frame_017/south.csv": "0d349a40ff5ca6918437c7e182d93463fd45041b752483fac3b18a3eda7d19ad",
+    "frames/frame_018/center.csv": "014dc19d8c9b1e13ef96a08e77e304534ca7471a902044cac5d8b097568a4a7d",
+    "frames/frame_018/north.csv": "d2f821e2a880d9ea0d3aaafaeafc6d0cb67c91046ac02c60d7bb5240da2d9605",
+    "frames/frame_018/south.csv": "4e6d3e3218646e3502ae373eea3f86ce85cd085fd2410cf1a4af2965ebc2e6ec",
+    "frames/frame_019/center.csv": "590f4a9c113b10d93479e824ce8bb2a013a1097e9f033f7ac2e84963d22da1fc",
+    "frames/frame_019/north.csv": "5748abcdbc3a739d39e34abc70850863dadd96ad9ed3384cb657ae840695813b",
+    "frames/frame_019/south.csv": "0ebc52d71516ed1358a22569b7d3b756ad8cd1f8110ccafe81f9351288a2aaf1",
+    "frames/frame_020/center.csv": "ac0da564838cee25b3cb2bbc9f6232febeeae359dda691652c1f5ecb86ecd10d",
+    "frames/frame_020/north.csv": "e1f0db36a3c3922bf388623f9fba1b7374f39e82be5982407ba57eb1fea479d4",
+    "frames/frame_020/south.csv": "02cad1b833ca5a57dcedf696e973cc341f9bbb4e169a715a69d8a2bd826d4825",
+    "frames/frame_021/center.csv": "f8172ff21b55b061d14dbdd719e5d874f8b4eee2e6da8b9dad96a82d44220d08",
+    "frames/frame_021/north.csv": "10fb8a4d597a9f8398851404ab9a4fe613ba612f7aea25da9a2b135e382e193a",
+    "frames/frame_021/south.csv": "1a02140a56b7c56bb2495996db86ac7cf51e8d4c28b50c7fc84017ea2bdab0ac",
+    "frames/frame_022/center.csv": "47cc3343763322da0dd726330da930d43abe1e1ef40ba52a53412718764affc9",
+    "frames/frame_022/north.csv": "694118173eade1dc4115f24a61cdbf21e82a97fefbc9bd1356a90997d458449a",
+    "frames/frame_022/south.csv": "73162983ce6e3d4e3d7510923ac462ee8099aafe8fd16d4b604a9987b243cb93",
+    "frames/frame_023/center.csv": "dc821cf38255b9f7aa6a003412be956df1957158bfedc56a300f68914df1f25b",
+    "frames/frame_023/north.csv": "2483726eae810e095a44509c913ce3bcbc938e0acc294e1eac80821066a337db",
+    "frames/frame_023/south.csv": "e87b72fc84cee80a223e74f856e03a9143273da2fdca56748d28c4f817744c3d",
+    "frames/frame_024/center.csv": "a5e7f7ba9bf591af4fa6426b543821ceaad2f3775099ba33cfb70cf8bfe286d4",
+    "frames/frame_024/north.csv": "bb20b1b00af07d0c8b16b66856c43e3986944fd2c3e4a50b4780a1d5eeabd119",
+    "frames/frame_024/south.csv": "4b77589a47beb643e9a64502ee2e0a1caf8ae9e4f9bfde0eb07eb6abc6ec02dd",
+    "frames/frame_025/center.csv": "98e4c26e7ccd1acb530fe3d56b64e76aaab487cf23ce30692c3cb18f233fe7eb",
+    "frames/frame_025/north.csv": "5c733a13159005666ad05e744ffd6d63817011729b6ccc49a5c26cae9319847a",
+    "frames/frame_025/south.csv": "43041c733024219d4a8f849c9c08fb159667ee169e68bfbea74f9e70d3819a72",
+    "frames/frame_026/center.csv": "bb642a515a5158f90a30c8f44fba9ef851cc62f14d03e699fb59ab554ef99178",
+    "frames/frame_026/north.csv": "3797ed87d314b06d0268a5748e7dcb2dd80e5b5e2515ff0bd5be3e02b05daf49",
+    "frames/frame_026/south.csv": "2eda0cd2d1762fa468f025d420fdea7f3edcf9fb26348e48545fa94e67da0e40",
+    "frames/frame_027/center.csv": "a133ef4fe2f3eed53f7f945021f4a34b7e62735d58aa5a367523c17e64745bde",
+    "frames/frame_027/north.csv": "66d2e878f98895f14ba23473fc4862bee73dec6c727ebe4714fe9822cad55d00",
+    "frames/frame_027/south.csv": "4fb2864defa700f99df18a1b8e41d578eca9b1f4f0139e368431daa522369039",
+    "frames/frame_028/center.csv": "5ff0c4e950a8f916cd15a9f33bb92c30e2445c31c01959747f82ca70ff7fcc88",
+    "frames/frame_028/north.csv": "c5ab199ef0e0fc529b3801eb0c50f5e57df922db0d769be0acaed626001fff8f",
+    "frames/frame_028/south.csv": "7633c30ed4ec8af0ec7b1f459e6d3e44d9a354ab41821ee8298f3ddc456eff13",
+    "frames/frame_029/center.csv": "aef6fc99312971e796fed61e7783a75c721852a5c3a9bfd6f47d2c4038b65241",
+    "frames/frame_029/north.csv": "790e5dd469f7a4e4e525ae92c6aa42c806ac8dcde025fc17c942e3c9e7cd4d8c",
+    "frames/frame_029/south.csv": "5f5cd80684a626585ecee39aec5524616f6ce5410fe7cdc0f92d1f6d04138a4c",
+    "frames/frame_030/center.csv": "b77551f764251280a0c2516dcc074069868a83f67d37f25c35670aa4fa92a13e",
+    "frames/frame_030/north.csv": "e84ae8ca7031e7bb4ca395b6fb25d29c743bf2cf8852cc6ff2611eaea8bf6a93",
+    "frames/frame_030/south.csv": "f50df5342ca6c0527a97a7968bee016bf9309a98f30059ae6dd70c0042d556cb",
+    "initial_static/center.csv": "af08765d4e09fd157f0fb53116671547e512d8a2c8468bcac929ac3bff395288",
+    "initial_static/north.csv": "3afe850a888ffba0a70da73422ec9e49427b2784bcce1af72261ef47ae0d6502",
+    "initial_static/south.csv": "3ba9de6a8c7c9f606c5201cab961ebfd8b1a66dfafddc3da12ed83d93e162f79",
+    "north.csv": "c46369459b73608855c97eddbdec10cc1b436708f2bb3ab05dbac8316492a89b",
+    "south.csv": "343224ad12577182f7e9bb6511b9e0c7fb38ba861b9ff7407bcece0edc9ea09d",
+    "static_initial_comparison.csv": "7df818f2937fdff30d5361ceba5847988f7ff7497d5f310257d8b6f94aaa4dbd",
+    "timeline.csv": "074a0fc3c485c9dabf4874a5931de34c7883d903af7cc4e3c072a1d6601fc809",
+    "user_profiles.csv": "73ca4848e1fe8e69f692b471620bea896e6374bbe7c0c729c2000fbbc9f4a92b",
+    "user_summary.csv": "35f0e0a48482373aa950e6e05eae2f253b55df6a25712aae831b2e7613c74b55",
+    "validation.json": "31b1d93e8407935ba72896bc12cb3717be879851328c63b3525b28f9ecbecaf0"
+  }
+}

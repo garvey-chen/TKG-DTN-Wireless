@@ -1,0 +1,3517 @@
+{
+  "scenario_variant": "static_terminal_anchored_channel_mobility",
+  "duration_s": 300,
+  "interval_s": 10,
+  "frame_count": 31,
+  "base_seed": 20261013,
+  "scene_seed_rule": "base_seed + {center:0,north:1,south:2}[scene]",
+  "time_origin": "t=0 exactly inherits original static positions, requests, labels and channel values.",
+  "interval_semantics": "Frame t records position/channel at t and movement during (t-10,t]; frame zero has zero distance/speed.",
+  "static_selection": "first 30 rows in original source order, matching the static paper experiment",
+  "moving_fraction": 0.6666666666666666,
+  "intermittent_fraction_of_movers": 0.5,
+  "nominal_speed_range_mps": [
+    0.4,
+    0.8
+  ],
+  "movement_model": "Correlated random walk with full-segment building avoidance; 40-80 s moving / 20-40 s pauses for intermittent users.",
+  "profile_assignment": "Building-contained source users are static. Among remaining users, seeded ID ranking selects exactly 10 intermittent and 10 continuous users; others are static.",
+  "bounds_policy": "Preserve existing bounds except sides excluding source coordinates; extend those sides 5 m past the outermost source point.",
+  "channel_model": "Per-user legacy-static channel anchor plus the existing deterministic geometric model increments.",
+  "channel_parameters": {
+    "frequency_hz": 2400000000.0,
+    "tx_power_dbm": 30,
+    "noise_bandwidth_hz": 20000000.0,
+    "noise_figure_db": 8,
+    "noise_floor_dbm": -92.98970004336019
+  },
+  "user_identity": "Persistent (Scenario,RX_ID); source ID, X/Y/Z at t=0, request and label preserved.",
+  "coordinate_and_signal_decimals": 6,
+  "limitations": [
+    "The legacy north CSV is internally SNR/CQI-consistent but cannot be reproduced at its source coordinates by the supplied current map/code settings; 17/30 CQI values differ before anchoring. Historical cause is not established.",
+    "The per-user static offset is a continuity calibration. It preserves model-predicted changes along the existing path, not independently measured future channel values.",
+    "The original static SNR/RX noise-floor rounding is preserved. SNR and RX are independently anchored to avoid changing any static channel field.",
+    "Four original building-contained receivers remain stationary; inherited geometry is not a calibrated indoor propagation model.",
+    "Source movement validation applies because positions, IDs, profiles, schedules and distance/speed fields are unchanged.",
+    "This dataset does not itself execute a dynamic control experiment."
+  ],
+  "code_sha256": {
+    "continuation/generate_anchored_channel.py": "ad9621fdef7334630b6c9df612be93ef5f78b31f90a06d4c8f90e2181690865c"
+  },
+  "software": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2",
+    "pyproj": "3.7.2",
+    "shapely": "2.2.0"
+  },
+  "scenarios": {
+    "center": {
+      "seed": 20261013,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/center.csv",
+      "initial_csv_sha256": "f08ba4ff20b55dcecde480fad30451dc9eaf58f3538ffcca423e7915db1d5974",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/center.csv",
+      "map_file": "data/maps/HKUST_Center.osm",
+      "map_sha256": "b945eccfb00e493949dd8ff96824a0d7327d869b8ee8d43ea6d279fe9299182a",
+      "tx_position_m": [
+        -1.2099597409359395,
+        2.6525237686259433,
+        10.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.335120124,
+        114.26491020000002
+      ],
+      "original_sampling_bounds_xy_m": [
+        -255.65838513351025,
+        70.82455680527079,
+        -115.86386206993383,
+        151.2842999454599
+      ],
+      "sampling_bounds_xy_m": [
+        -255.65838513351025,
+        70.82455680527079,
+        -115.86386206993383,
+        151.2842999454599
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {},
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7764951364742108,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6076758961076282,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 110
+            },
+            {
+              "state": "paused",
+              "start_time_s": 110,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 210
+            },
+            {
+              "state": "paused",
+              "start_time_s": 210,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              110,
+              150
+            ],
+            [
+              210,
+              250
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4988111294701031,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7995798148167255,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6270410425210791,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7818611581122137,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5037291027534574,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5267940498761031,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7210146745549908,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5664715655465966,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              120,
+              150
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6676453342529203,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.724378071858539,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              190,
+              230
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6019007689839359,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5116810761284694,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6031884974154883,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              120,
+              160
+            ],
+            [
+              200,
+              220
+            ],
+            [
+              260,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.40161354496057594,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5966359788615678,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              90
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              240,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.42236809970593514,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              90
+            ],
+            [
+              160,
+              200
+            ],
+            [
+              260,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4666125834323922,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 60
+            },
+            {
+              "state": "moving",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "paused",
+              "start_time_s": 100,
+              "end_time_s": 140
+            },
+            {
+              "state": "moving",
+              "start_time_s": 140,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              60
+            ],
+            [
+              100,
+              140
+            ],
+            [
+              190,
+              210
+            ],
+            [
+              270,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6584193172065862,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "rows": 930,
+        "frames": 31,
+        "profile_counts": {
+          "continuous": 10,
+          "static": 10,
+          "intermittent": 10
+        },
+        "exact_source_t0_channel_matches": 30,
+        "stationary_users_with_unchanged_legacy_channel": 10,
+        "identical_original_trajectory_and_requests": true,
+        "source_snr_cqi_self_consistent": true,
+        "anchored_formula_verified_all_rows": true,
+        "raw_model_frame0_cqi_mismatch_ids": [],
+        "raw_model_frame0_los_mismatch_ids": [],
+        "source_vs_model_snr_max_abs_difference_db": 0.005443,
+        "users_with_cqi_changes": 20,
+        "cqi_change_events": 81,
+        "paused_channels_unchanged": true
+      },
+      "channel_policy": "legacy-static per-user anchored increments"
+    },
+    "north": {
+      "seed": 20261014,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/north.csv",
+      "initial_csv_sha256": "07b85ad4bd2d6c30ae698ecac4ea3ad8a57a782e79b2bfd9333a6cfff7a51884",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/north.csv",
+      "map_file": "data/maps/HKUST_North.osm",
+      "map_sha256": "97e090aca47b824ca1062eddfabe9341217d5cd163c8a4e6eeb55bfab064a1ab",
+      "tx_position_m": [
+        25.034529342864527,
+        71.37546518540904,
+        18.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.33749453,
+        114.26487297999999
+      ],
+      "original_sampling_bounds_xy_m": [
+        -357.93918197407453,
+        90.11479411050794,
+        -46.388189378648406,
+        244.519490850447
+      ],
+      "sampling_bounds_xy_m": [
+        -357.93918197407453,
+        102.93,
+        -46.388189378648406,
+        244.519490850447
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {
+        "11": [
+          0
+        ],
+        "20": [
+          1
+        ]
+      },
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7683114409565266,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.47063448875919,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6902437278643901,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              90
+            ],
+            [
+              140,
+              160
+            ],
+            [
+              240,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5672119563996605,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              80
+            ],
+            [
+              160,
+              190
+            ],
+            [
+              270,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.48013429097223254,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 160
+            },
+            {
+              "state": "moving",
+              "start_time_s": 160,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 280
+            },
+            {
+              "state": "moving",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              70
+            ],
+            [
+              140,
+              160
+            ],
+            [
+              240,
+              280
+            ]
+          ]
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            0
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.43009214509284643,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5830793197609445,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5670969047404181,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              90
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              200,
+              220
+            ]
+          ]
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4107644342265972,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5908122728769257,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6892728379956703,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              170,
+              200
+            ],
+            [
+              240,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            1
+          ]
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5470836474399956,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5377431889575051,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4769308391425324,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 240
+            },
+            {
+              "state": "paused",
+              "start_time_s": 240,
+              "end_time_s": 260
+            },
+            {
+              "state": "moving",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              160,
+              190
+            ],
+            [
+              240,
+              260
+            ]
+          ]
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5085690258839988,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 200
+            },
+            {
+              "state": "paused",
+              "start_time_s": 200,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              80
+            ],
+            [
+              120,
+              150
+            ],
+            [
+              200,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5261666264235388,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4339670116197143,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5822308609575505,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 260
+            },
+            {
+              "state": "paused",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              170,
+              200
+            ],
+            [
+              260,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5804804249240738,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 180
+            },
+            {
+              "state": "paused",
+              "start_time_s": 180,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              180,
+              220
+            ]
+          ]
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7499225200324832,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 90
+            },
+            {
+              "state": "moving",
+              "start_time_s": 90,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              90
+            ],
+            [
+              140,
+              170
+            ],
+            [
+              230,
+              250
+            ]
+          ]
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "rows": 930,
+        "frames": 31,
+        "profile_counts": {
+          "static": 10,
+          "continuous": 10,
+          "intermittent": 10
+        },
+        "exact_source_t0_channel_matches": 30,
+        "stationary_users_with_unchanged_legacy_channel": 10,
+        "identical_original_trajectory_and_requests": true,
+        "source_snr_cqi_self_consistent": true,
+        "anchored_formula_verified_all_rows": true,
+        "raw_model_frame0_cqi_mismatch_ids": [
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "11",
+          "13",
+          "14",
+          "15",
+          "19",
+          "21",
+          "22",
+          "24",
+          "25",
+          "26",
+          "28",
+          "30"
+        ],
+        "raw_model_frame0_los_mismatch_ids": [],
+        "source_vs_model_snr_max_abs_difference_db": 45.314624,
+        "users_with_cqi_changes": 10,
+        "cqi_change_events": 57,
+        "paused_channels_unchanged": true
+      },
+      "channel_policy": "legacy-static per-user anchored increments"
+    },
+    "south": {
+      "seed": 20261015,
+      "initial_csv": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/south.csv",
+      "initial_csv_sha256": "6ae13492a799c3fa7e13a7df94454666ab38acdbdca39083fbc3fe6eb387fe2b",
+      "selected_source_rows_1based": [
+        1,
+        30
+      ],
+      "selected_users": 30,
+      "preserved_static_snapshot": "initial_static/south.csv",
+      "map_file": "data/maps/HKUST_South.osm",
+      "map_sha256": "ea64b7e3836dd5723218f87f2f6e02d44d7319b0f2065ddb739b3e290d98978d",
+      "tx_position_m": [
+        -0.9594124618909454,
+        1.0380942903752557,
+        10.0
+      ],
+      "geographic_origin_lat_lon": [
+        22.333702222222218,
+        114.2627669111111
+      ],
+      "original_sampling_bounds_xy_m": [
+        -98.1543995831359,
+        294.42513997957303,
+        -207.223886040556,
+        226.4108364600372
+      ],
+      "sampling_bounds_xy_m": [
+        -98.1543995831359,
+        294.42513997957303,
+        -207.223886040556,
+        226.4108364600372
+      ],
+      "bounds_order": [
+        "min_x",
+        "max_x",
+        "min_y",
+        "max_y"
+      ],
+      "forced_static_building_contained_users": {
+        "13": [
+          7
+        ],
+        "21": [
+          5
+        ]
+      },
+      "user_profiles": [
+        {
+          "user_id": "1",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5345122797172026,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              80
+            ],
+            [
+              140,
+              170
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "2",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6454817910589388,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 140
+            },
+            {
+              "state": "paused",
+              "start_time_s": 140,
+              "end_time_s": 180
+            },
+            {
+              "state": "moving",
+              "start_time_s": 180,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 260
+            },
+            {
+              "state": "moving",
+              "start_time_s": 260,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              140,
+              180
+            ],
+            [
+              230,
+              260
+            ]
+          ]
+        },
+        {
+          "user_id": "3",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7785484312823711,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 130
+            },
+            {
+              "state": "paused",
+              "start_time_s": 130,
+              "end_time_s": 150
+            },
+            {
+              "state": "moving",
+              "start_time_s": 150,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "moving",
+              "start_time_s": 230,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              130,
+              150
+            ],
+            [
+              190,
+              230
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "4",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "5",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.48886523969724993,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 120
+            },
+            {
+              "state": "moving",
+              "start_time_s": 120,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              120
+            ],
+            [
+              170,
+              210
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "6",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.7709250846315588,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 70
+            },
+            {
+              "state": "paused",
+              "start_time_s": 70,
+              "end_time_s": 110
+            },
+            {
+              "state": "moving",
+              "start_time_s": 110,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 210
+            },
+            {
+              "state": "paused",
+              "start_time_s": 210,
+              "end_time_s": 250
+            },
+            {
+              "state": "moving",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "paused",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              70,
+              110
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              210,
+              250
+            ],
+            [
+              290,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "7",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.49582475421870714,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "8",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5451727622033625,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 40
+            },
+            {
+              "state": "paused",
+              "start_time_s": 40,
+              "end_time_s": 80
+            },
+            {
+              "state": "moving",
+              "start_time_s": 80,
+              "end_time_s": 160
+            },
+            {
+              "state": "paused",
+              "start_time_s": 160,
+              "end_time_s": 200
+            },
+            {
+              "state": "moving",
+              "start_time_s": 200,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              40,
+              80
+            ],
+            [
+              160,
+              200
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "9",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "10",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4669712473964271,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "11",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.6493469760502446,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 180
+            },
+            {
+              "state": "paused",
+              "start_time_s": 180,
+              "end_time_s": 220
+            },
+            {
+              "state": "moving",
+              "start_time_s": 220,
+              "end_time_s": 270
+            },
+            {
+              "state": "paused",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              180,
+              220
+            ],
+            [
+              270,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "12",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7141587230194532,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "13",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            7
+          ]
+        },
+        {
+          "user_id": "14",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.4117541880166008,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 80
+            },
+            {
+              "state": "paused",
+              "start_time_s": 80,
+              "end_time_s": 110
+            },
+            {
+              "state": "moving",
+              "start_time_s": 110,
+              "end_time_s": 170
+            },
+            {
+              "state": "paused",
+              "start_time_s": 170,
+              "end_time_s": 190
+            },
+            {
+              "state": "moving",
+              "start_time_s": 190,
+              "end_time_s": 230
+            },
+            {
+              "state": "paused",
+              "start_time_s": 230,
+              "end_time_s": 270
+            },
+            {
+              "state": "moving",
+              "start_time_s": 270,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              80,
+              110
+            ],
+            [
+              170,
+              190
+            ],
+            [
+              230,
+              270
+            ]
+          ]
+        },
+        {
+          "user_id": "15",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.769713144342577,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "16",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6716096754429901,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "17",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.5621451465086278,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "18",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.5729218011999911,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 60
+            },
+            {
+              "state": "paused",
+              "start_time_s": 60,
+              "end_time_s": 100
+            },
+            {
+              "state": "moving",
+              "start_time_s": 100,
+              "end_time_s": 150
+            },
+            {
+              "state": "paused",
+              "start_time_s": 150,
+              "end_time_s": 170
+            },
+            {
+              "state": "moving",
+              "start_time_s": 170,
+              "end_time_s": 250
+            },
+            {
+              "state": "paused",
+              "start_time_s": 250,
+              "end_time_s": 290
+            },
+            {
+              "state": "moving",
+              "start_time_s": 290,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              60,
+              100
+            ],
+            [
+              150,
+              170
+            ],
+            [
+              250,
+              290
+            ]
+          ]
+        },
+        {
+          "user_id": "19",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "20",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.6177013769538265,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "21",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [],
+          "assignment_reason": "preserve building-contained static source position",
+          "containing_building_indexes": [
+            5
+          ]
+        },
+        {
+          "user_id": "22",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "23",
+          "mobility_profile": "intermittent",
+          "nominal_speed_mps": 0.41641362932847825,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 50
+            },
+            {
+              "state": "paused",
+              "start_time_s": 50,
+              "end_time_s": 70
+            },
+            {
+              "state": "moving",
+              "start_time_s": 70,
+              "end_time_s": 120
+            },
+            {
+              "state": "paused",
+              "start_time_s": 120,
+              "end_time_s": 140
+            },
+            {
+              "state": "moving",
+              "start_time_s": 140,
+              "end_time_s": 190
+            },
+            {
+              "state": "paused",
+              "start_time_s": 190,
+              "end_time_s": 210
+            },
+            {
+              "state": "moving",
+              "start_time_s": 210,
+              "end_time_s": 280
+            },
+            {
+              "state": "paused",
+              "start_time_s": 280,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": [
+            [
+              50,
+              70
+            ],
+            [
+              120,
+              140
+            ],
+            [
+              190,
+              210
+            ],
+            [
+              280,
+              300
+            ]
+          ]
+        },
+        {
+          "user_id": "24",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7961374214271727,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "25",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "26",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.7427252775237361,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "27",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "28",
+          "mobility_profile": "continuous",
+          "nominal_speed_mps": 0.4775359569418877,
+          "schedule": [
+            {
+              "state": "moving",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "29",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        },
+        {
+          "user_id": "30",
+          "mobility_profile": "static",
+          "nominal_speed_mps": 0.0,
+          "schedule": [
+            {
+              "state": "static",
+              "start_time_s": 0,
+              "end_time_s": 300
+            }
+          ],
+          "pause_intervals_s": []
+        }
+      ],
+      "statistics": {
+        "users": 30,
+        "rows": 930,
+        "frames": 31,
+        "profile_counts": {
+          "intermittent": 10,
+          "static": 10,
+          "continuous": 10
+        },
+        "exact_source_t0_channel_matches": 30,
+        "stationary_users_with_unchanged_legacy_channel": 10,
+        "identical_original_trajectory_and_requests": true,
+        "source_snr_cqi_self_consistent": true,
+        "anchored_formula_verified_all_rows": true,
+        "raw_model_frame0_cqi_mismatch_ids": [],
+        "raw_model_frame0_los_mismatch_ids": [],
+        "source_vs_model_snr_max_abs_difference_db": 0.004968,
+        "users_with_cqi_changes": 18,
+        "cqi_change_events": 92,
+        "paused_channels_unchanged": true
+      },
+      "channel_policy": "legacy-static per-user anchored increments"
+    }
+  },
+  "output_sha256": {
+    "center.csv": "c414a2214d4c088f65770846bbe68c6fd86dc4b2b7a38bd40bf3d1a7d7c9592e",
+    "initial_static/center.csv": "af08765d4e09fd157f0fb53116671547e512d8a2c8468bcac929ac3bff395288",
+    "frames/frame_000/center.csv": "42e7b8da1872dca44db25452ebbacdad6d315674509a702090f52a6357031271",
+    "frames/frame_001/center.csv": "901f2d09133b27da369eb318aeb74498212074146b796476ec88ccb032a9a2a6",
+    "frames/frame_002/center.csv": "88a9e652d1772c9bd29178b93a151bee1959435bbc3ac1f9761c93a4f3d71146",
+    "frames/frame_003/center.csv": "96d9abd09b47e4c15c9b110c7c2805497d7e27e6a89e568a0af716a868f4e7fd",
+    "frames/frame_004/center.csv": "bb40cf7be833d4964fef08feda19317cbc1eecc1a2705c6f14d8ebd29b15c4cb",
+    "frames/frame_005/center.csv": "9c128e1a2fa8587c9c4674d6cc67d087dab5ee3ffd2a074948ea9b04f67c66c9",
+    "frames/frame_006/center.csv": "1584199e3c13d1c772b820c466e5e7ac61355915b597b7e2d6b2e78f2e90f5ac",
+    "frames/frame_007/center.csv": "ea443497b0b77b3406ef148732b02162a367e1dcc6cc78cbb1646376a587fc34",
+    "frames/frame_008/center.csv": "e5ebd70dbd4120efa0c8b519e7f410cc866e49ff5b68c9a11834eed191a595e9",
+    "frames/frame_009/center.csv": "f94d3f732d7bd634d99073dda969241f8d69dbe6e7935fbce516cb31a4f97d49",
+    "frames/frame_010/center.csv": "5748f6d27b1263ba07b1984b0ce21adff49771d916f16dd19b4f3da726da8dfd",
+    "frames/frame_011/center.csv": "d61a4773d1849501649257b5baa616a4a741aa47fa928fdfaf7c27a774241cea",
+    "frames/frame_012/center.csv": "527ac15fcf5f0c5592672c13753bf7f196b55605420cfa78ae95e5eafb00723b",
+    "frames/frame_013/center.csv": "40cc147afba1dc073ab3303468d473e157d19b834408ed5e5085422498540f58",
+    "frames/frame_014/center.csv": "7858321a59a7dceadf77af749474aebec24cbf6b3bec567cc889d1a09e3de637",
+    "frames/frame_015/center.csv": "93834b47c004589d0c7a20916919f7143bcdd81d9f93ef555bfaceb2570b5a92",
+    "frames/frame_016/center.csv": "43526cd6878b6208b16d647662501774b0fee6348dc59c2f8473b03093bd2ccf",
+    "frames/frame_017/center.csv": "6d8c77c1a0ebddb2dbc0cfa7481342cadd5ecfb459acdee98ce652d682873cc8",
+    "frames/frame_018/center.csv": "23adfdc1c17ecec7377d750595b8a1e122311a5bab811ddc43dac9611eca6336",
+    "frames/frame_019/center.csv": "c10d962c96b338e6d66d2f4580b5dac198189b7f98793bd51664326f092f2b0d",
+    "frames/frame_020/center.csv": "12ba458bbc660778b2c85a12e7ef5c47b47cfd3507427c5e1c4c6778a22d05b8",
+    "frames/frame_021/center.csv": "c57e0f1ec559738a21887da95bf23295a37a5583205a96f73d4f27b3730dce9d",
+    "frames/frame_022/center.csv": "1bfff35ae8077ed96b5a08e5a273f4ef38a5b5cb6afb8f1a3c29c75b690c304d",
+    "frames/frame_023/center.csv": "69d8082c818f56b3a935efb1d135ddf931c19d044a3170a1e70c1f519264a113",
+    "frames/frame_024/center.csv": "046fbceb92223c7c4ddd8e86c59af9bf6b57ed3ad3d9a7cda0bbfb349335abdb",
+    "frames/frame_025/center.csv": "e7abd15bb673d3e501f93bf7cbd64ff8f102d807d771546bdb609494c1eb6724",
+    "frames/frame_026/center.csv": "528272c3fd7e6462d4eeeacc9dc4a526aa6b69ce03f07c5d8b77c488a18e3e21",
+    "frames/frame_027/center.csv": "3c521c48aae99d071ceeab5c6906128540442c4c3e76b2de7d1d3082c175f3e9",
+    "frames/frame_028/center.csv": "9aec237e5a154a11126802176b9b0e8c35b8f326f5b3a30125b2d028d131dce3",
+    "frames/frame_029/center.csv": "ccec75b33e48946addf7a651122a30fd3b551113d944bc3c5b25c24a82d7f1e1",
+    "frames/frame_030/center.csv": "7f7d75b0316d6189d4a1018ea8da201263cc8baf8a89caafda5300cde2e1618c",
+    "north.csv": "8bdedd5c72a34d99047e0146870dc1d43faa7c86ac430b25f963644333aa0ffb",
+    "initial_static/north.csv": "3afe850a888ffba0a70da73422ec9e49427b2784bcce1af72261ef47ae0d6502",
+    "frames/frame_000/north.csv": "5c596cefc45e176f1eb660087ad4bfea7315a2152125b9aaaa3e129ab68f61ab",
+    "frames/frame_001/north.csv": "48fcd3e4598ccdc9153f818b909e2e3fcdb51230e028bfb983bae80175a752c0",
+    "frames/frame_002/north.csv": "f511088228338e4f14bbb665a75b9ce94e9b380977b5ff61a937cd9aec894552",
+    "frames/frame_003/north.csv": "f1ba3a3b3a9295614564d9ae7b64e67cd064ec12f14aa18415b30d7b17df59d4",
+    "frames/frame_004/north.csv": "62e043ba2ccdbc85f7d9e5a54f7d86ac072b30099800531e2308518475ac6a1e",
+    "frames/frame_005/north.csv": "85089d10a843e52f886c918c2a45b940f863294c37514ad4c837468f6698b396",
+    "frames/frame_006/north.csv": "9dd481ccca168eadbab0f0ea0123f3d56b719f35b498ffface1eef2943acc429",
+    "frames/frame_007/north.csv": "092342de1f0855a6c7d910971eb8b1f8e700b8d05268efedee1340c300a23b2f",
+    "frames/frame_008/north.csv": "3769ec98949c2d63f1a791e3a673be6d13c55600f713a0980622764681b819f8",
+    "frames/frame_009/north.csv": "a1c2cfb794a8ed0068ba921a16045d4d83a85f05b47c1d0ede217c635a1cf8f3",
+    "frames/frame_010/north.csv": "b67860a5f949954214e7b0cfdef660eb76b8b5bda87cea2c1f411c1c0446e418",
+    "frames/frame_011/north.csv": "eb089e7eb3b368f0f4ee9e376450faad518bec6d5824c4193c9551fc27f7e5f0",
+    "frames/frame_012/north.csv": "01ebe95d2886f6b0f81016b5b9b8ebcd0913b26383313eb81cab5adf213ebca0",
+    "frames/frame_013/north.csv": "0dd7f0e7b19bf8c733cda04fb5ccedc63783870b254d2050183d24266467d6b8",
+    "frames/frame_014/north.csv": "c2ca3ef8cc05894decb5354062fe93222f0e61921d2d6a434f3858c74c55848e",
+    "frames/frame_015/north.csv": "e951797f0b04fdfd6dca2d61ba7d44c7df310e4bbebca2dc0e5d459dd5b84070",
+    "frames/frame_016/north.csv": "4e00e648cca02923b0fcda1f684944356a71b2a7269651405f96e89c48291fa4",
+    "frames/frame_017/north.csv": "0da5206dfc350710dcf08456bfc91276998f20693091953ea3b4d91dc7e24f10",
+    "frames/frame_018/north.csv": "a23305c6eaa4471bd3429a9ea6b835bfaffe40a61c15f9373c99c8f88b79abd2",
+    "frames/frame_019/north.csv": "f29ea43303f48fc94a8b5d05329c0cd3dd72a28bb193d89c37fc5e435caceb39",
+    "frames/frame_020/north.csv": "964a814612276b5543f2331b9940939efd667f8e976d1bff83b90f913fbdd2ab",
+    "frames/frame_021/north.csv": "9dda1c203cbd97acf9f29da557a6b7b6cac790e76fff1fa9a7c69477d9488797",
+    "frames/frame_022/north.csv": "fae0e63858674ba9cd3a47b8e729774dd63d2b452320767879199a82ded73271",
+    "frames/frame_023/north.csv": "82ccfbe08315ce4ddc4db289e3312aeb11eafb3284deabceada844ccd2014b8a",
+    "frames/frame_024/north.csv": "171a39576d9b5134bba959c6b2665c54dc2b0e5243da107c0da01ce550a50b77",
+    "frames/frame_025/north.csv": "1762dbf620e26edcce5a73d07c3b6fa70148389c9a5c1f9f07d771aacf638856",
+    "frames/frame_026/north.csv": "31a97753e56681858aad02fe7e46c5565d5d017abfdedc77d4be41bfea1ba8c6",
+    "frames/frame_027/north.csv": "21e368667032d50efcb702a2dcb998e551cc0a06cc63ae64008a2eaa668a097e",
+    "frames/frame_028/north.csv": "a14b8ca04e50e6fc5fb009d15f479d7475e6e4772052d40e723254d23b035db0",
+    "frames/frame_029/north.csv": "da4275365270231269db07f1f9200a2109a7b258bc47e9733e7ca33e22f76e05",
+    "frames/frame_030/north.csv": "8bb0d5637caa6b643997446b76a4e2c2092a13f3df53e9b65d8a2f46800f8dc0",
+    "south.csv": "e889e4a266e1cc5c148f5942e54e1b0dfb4bed7f0fdb26289b178e4674429957",
+    "initial_static/south.csv": "3ba9de6a8c7c9f606c5201cab961ebfd8b1a66dfafddc3da12ed83d93e162f79",
+    "frames/frame_000/south.csv": "cd057f4f51f265fc8d9daee5b3b6d2196635034ef501dc0e7a2f3e5993438878",
+    "frames/frame_001/south.csv": "56074da2a5673fb4e409f3f74d3f427601e7bcf7fcef8f4ad73bb360b6049912",
+    "frames/frame_002/south.csv": "28e15ff5788af919ca11192f4ab836242d660ade3c7c8522f7f44f1cbf9d4a1c",
+    "frames/frame_003/south.csv": "aef619a37a35913042dab42ad445d085c8b00ac9ce9864b3ecfd1e462971768f",
+    "frames/frame_004/south.csv": "02520808461734c83cdd9f5f972e347a733a0b1a8c87a28c1149656c7b15510e",
+    "frames/frame_005/south.csv": "ae3530c36cb05bd2acd838be74185afa137697cc80f869d8c8b38129abebafde",
+    "frames/frame_006/south.csv": "dd3a81aa4fa75d8ecb4f2ede66cb16e0f1d896a1b96863d3c68fec2d07b0ca85",
+    "frames/frame_007/south.csv": "97aa39c1bc67c01720e85c21284115aa851fa966e664c72cf5f7096153ff724b",
+    "frames/frame_008/south.csv": "f2fa61df406dec24a18d7ee392e89513f62d8182b9cf752bd93decbfd88aba2f",
+    "frames/frame_009/south.csv": "d5f2c984021f6e7b1ea7b0cc4e3064136263f005093b1c762a2f585c47beaf15",
+    "frames/frame_010/south.csv": "83038367c5bb95c4aee8a6893256fe2d13e8cf58b7407d0d1e91b7688cf640e7",
+    "frames/frame_011/south.csv": "cb5627ee05d4cc852eec4cc1d9d7812f9e6a801ab6ed105cb975a57943e9e844",
+    "frames/frame_012/south.csv": "471e7f62a91cbe9d6b84e678e4a4b09687c05b99be33ca0edfadc347b537039d",
+    "frames/frame_013/south.csv": "0c4ca613ead3cb68c9e8d8cd9dff3a7238f13ed732d703727b3e475d3b7810f2",
+    "frames/frame_014/south.csv": "9c4b5137afc339d331a375a4444c80769ea15ba7d9ed1a8da6c683551ccd3481",
+    "frames/frame_015/south.csv": "21b8615c86c80f344dc3e1c87124ae1d4b91cb1db85b5ba2d75da7ce51a8654a",
+    "frames/frame_016/south.csv": "05efeb1d6bbedb73e279f5dc70d00e87c743fbf7bc434bd6a457ed0dc08f5757",
+    "frames/frame_017/south.csv": "cc571c29d748fd0bd016b9d25d8257749b54b6b997ff67700d84d2acc4068a15",
+    "frames/frame_018/south.csv": "6940a9a9abf438571ab42518c057014a6b998d351957e12e549328addf9f2f75",
+    "frames/frame_019/south.csv": "00c92dc4a22b83fa264564f3acfa8f104fe6014592893ebec020a39577b1f5e9",
+    "frames/frame_020/south.csv": "c7575b235ce22784bae0d814b2a07236757b15d9c50e3ef8b86b22e1e5c9ad18",
+    "frames/frame_021/south.csv": "637c913c905c3dfed76b9d065af5789dcb4bf02d47f62bb5916dd9060feabfc7",
+    "frames/frame_022/south.csv": "5d8592a9919db3a95c16cbbe475c34abe2eb5d9ba7f9ea85a128196612349c0c",
+    "frames/frame_023/south.csv": "f8400417758104570c31b3bf291bef7faf1ea434018aeaeed510743fe5b85a5f",
+    "frames/frame_024/south.csv": "2286a6f14b886ce82615f31687fe9c5a60d58760a6724b7c69a7868863da75b3",
+    "frames/frame_025/south.csv": "cba52e7338300ee5f47e9cc4cc88a945fa4521268b7322d922ad3fb38e88320a",
+    "frames/frame_026/south.csv": "1078fc8112592785dcfc9670f86928014adc7aca54ab53bd1ff5b4d4a3597a46",
+    "frames/frame_027/south.csv": "5d93656a505bfe3e7a5def2fb9a6fd19715de6208f2e0626895216e1ff5862e8",
+    "frames/frame_028/south.csv": "3f27eaee7c88768b41fb783206287b3a64d8ebf24420615834c1b9ea32067591",
+    "frames/frame_029/south.csv": "1f822a121dd3b7774673e587a0c760d223eedb16ccc2a74c5035e3d2ad338ba1",
+    "frames/frame_030/south.csv": "da47a3185f1ebbe27584e7cce138c85c81f9498a7a118d8d1d097774ae522d32",
+    "dynamic_users_from_static.csv": "28d964f42c50af088fc1c752c676bc58d33f0fe57f2acbc77509dd722ffb4432",
+    "user_summary.csv": "131ce1199adb50f44e1a676488330c85d0bd03278ff1433075ce2dcd5e0a3d20",
+    "static_initial_comparison.csv": "87cb58d63c982e091815a552c2f641f8c90a4b39229e3a5c6cc77942d5f5f96d",
+    "timeline.csv": "074a0fc3c485c9dabf4874a5931de34c7883d903af7cc4e3c072a1d6601fc809",
+    "user_profiles.csv": "73ca4848e1fe8e69f692b471620bea896e6374bbe7c0c729c2000fbbc9f4a92b",
+    "raw_model_initial_comparison.csv": "7df818f2937fdff30d5361ceba5847988f7ff7497d5f310257d8b6f94aaa4dbd",
+    "source_generation.json": "7873450380331077e30880bb2743f39d3e2d396424070de826527c22a7d522fb",
+    "source_validation.json": "31b1d93e8407935ba72896bc12cb3717be879851328c63b3525b28f9ecbecaf0",
+    "validation.json": "bf37bd582dc9f52e4ec8db5f15ded12a7aeb382800a0e2bf2d8a35b684fcb137"
+  },
+  "created_at": "2026-10-15T00:00:29.051390+08:00",
+  "channel_anchor": {
+    "snr_formula": "SNR_anchor(u,t) = SNR_static(u) + SNR_raw(u,t) - SNR_raw(u,0)",
+    "rx_formula": "RX_anchor(u,t) = RX_static(u) + RX_raw(u,t) - RX_raw(u,0)",
+    "cqi_formula": "round(1 + ((clamp(SNR_anchor,-10,30) + 10) / 40) * 14), Python round, matching upstream function",
+    "scope": "All 90 users, all 31 frames. Fixed per-user offset; no artificial first-step channel switch.",
+    "signal_precision": "Decimal arithmetic on the existing 6-decimal raw timeline and original 2-decimal static values; exact original channel text at t0 and for stationary users.",
+    "los_semantics": "LOS at t0 and for stationary users is the original static LOS; at later nonstationary-profile frames it is current geometry LOS. raw_model_los always records current geometry, and exported_los_origin identifies provenance. Anchored SNR is not claimed to be a fresh uncalibrated path-loss prediction from exported LOS.",
+    "dynamic_state_allocation": "No allocation/admission/classification chosen or changed by this dataset generator."
+  },
+  "exporter": {
+    "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/continuation/generate_anchored_channel.py",
+    "sha256": "ad9621fdef7334630b6c9df612be93ef5f78b31f90a06d4c8f90e2181690865c",
+    "bytes": 19717
+  },
+  "source_input_directory": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014",
+  "source_input_files": {
+    "center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/center.csv",
+      "sha256": "357ecae074fde496da87465167b8b4bd56235e3eba457da0729accada5cf3203",
+      "bytes": 164573
+    },
+    "dynamic_users_from_static.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/dynamic_users_from_static.csv",
+      "sha256": "ce287fa2c6597f1bc3406f70898c35aecdf02a1adb9c32439de4b958603b8715",
+      "bytes": 489193
+    },
+    "frames/frame_000/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_000/center.csv",
+      "sha256": "f7de89ee91f12ea5898f5d2d0f9a04263f7cbaffb0fe813c118e64faa2c8a393",
+      "bytes": 3610
+    },
+    "frames/frame_000/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_000/north.csv",
+      "sha256": "b191686a11b1cc443671d1c5053871860a245200659bb81734d352085714cab4",
+      "bytes": 3595
+    },
+    "frames/frame_000/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_000/south.csv",
+      "sha256": "d0aa83d92b16a2a1782e3da3b967e9ad33265cc3c2796e24fcd4ebbd123001b3",
+      "bytes": 3563
+    },
+    "frames/frame_001/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_001/center.csv",
+      "sha256": "a2e7fb1c6eb6ebac23098a210c4c79c6613d8230e1c75498a528ab4db1535ad6",
+      "bytes": 3611
+    },
+    "frames/frame_001/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_001/north.csv",
+      "sha256": "76bfaf6709c5a44acc0e984f10e4215fe50b5598be480fea168f0044dfecd03c",
+      "bytes": 3594
+    },
+    "frames/frame_001/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_001/south.csv",
+      "sha256": "90c7fc09f266904e2a1c6ec67613aa6df2710f421179c979d4c5e0cbbe4629b4",
+      "bytes": 3563
+    },
+    "frames/frame_002/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_002/center.csv",
+      "sha256": "476aa856c76a65a3d6ad37766a8ff56eeaba0d47b49a2e4085f17a18c60b24e8",
+      "bytes": 3614
+    },
+    "frames/frame_002/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_002/north.csv",
+      "sha256": "a13e6743af84952052147675673bc5a776f1158425c1326a0e707bf9ea453bf9",
+      "bytes": 3594
+    },
+    "frames/frame_002/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_002/south.csv",
+      "sha256": "86ff9bb97ee76ca4c5332c8db585a3f39755138e91b3e74b9df3c43d7c3dbc50",
+      "bytes": 3563
+    },
+    "frames/frame_003/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_003/center.csv",
+      "sha256": "c46aa85b259ba297ec6c1fc40d3871b9b1b3c46779c47e65ffe8e06f0658b667",
+      "bytes": 3613
+    },
+    "frames/frame_003/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_003/north.csv",
+      "sha256": "07b73a28bbdf5c972496037286f265a6d5586f600b22ff2419f6552ba699cd0c",
+      "bytes": 3595
+    },
+    "frames/frame_003/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_003/south.csv",
+      "sha256": "720710a113193d3d0bd86405deee61702b4c75c1932eb635e2fe8d84fab97676",
+      "bytes": 3562
+    },
+    "frames/frame_004/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_004/center.csv",
+      "sha256": "19ae45bec9421cdcf186cceab14e5248c1502bc4144b92682e19720490a24f3d",
+      "bytes": 3614
+    },
+    "frames/frame_004/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_004/north.csv",
+      "sha256": "94dcf1f503dcf0815b543a20b9837d2966d75572d1bbbcd1c94e1eec39f0e73e",
+      "bytes": 3596
+    },
+    "frames/frame_004/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_004/south.csv",
+      "sha256": "6c80f4d60b1546d27752cad30cb92a29dd753acc49e604176814a85ff1ef76e3",
+      "bytes": 3562
+    },
+    "frames/frame_005/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_005/center.csv",
+      "sha256": "2fbf443a39dae2f2ec6d0ad5e57f244658331c17dab00ce36cdc19e5ad1d00b5",
+      "bytes": 3614
+    },
+    "frames/frame_005/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_005/north.csv",
+      "sha256": "943b7bc5c2d89386e3f254db38d8a97fd8e9c3f4088a653d9ff72bd1903fe196",
+      "bytes": 3594
+    },
+    "frames/frame_005/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_005/south.csv",
+      "sha256": "acb6471bc1ba0dc2d320a39bfdef2a5fb22c6878197a9a1d1f654b0d93f5ab73",
+      "bytes": 3563
+    },
+    "frames/frame_006/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_006/center.csv",
+      "sha256": "90163ae3a2409c4c5a4f1b504317f0117914e26fe6f173949c4e9e096d2a3dca",
+      "bytes": 3615
+    },
+    "frames/frame_006/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_006/north.csv",
+      "sha256": "1d10f5721f8c3b41e25fc093c6bb4b74fbf1c5d309eb15661437dd580ae2d6be",
+      "bytes": 3594
+    },
+    "frames/frame_006/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_006/south.csv",
+      "sha256": "ae08d817b30bd537c3e1191b9610d02389205b1c91d4f3ee0dec48cfec33ac40",
+      "bytes": 3562
+    },
+    "frames/frame_007/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_007/center.csv",
+      "sha256": "59241a3e2f3bab33e23a673424e8f4b907e485d187ba2928294d1b5c3f74981d",
+      "bytes": 3615
+    },
+    "frames/frame_007/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_007/north.csv",
+      "sha256": "7d18e4a494d714803de006a2a0c951b8665ea3e1336ee4606acd67239a6797b8",
+      "bytes": 3593
+    },
+    "frames/frame_007/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_007/south.csv",
+      "sha256": "de7d644221222121bb9d1930fb85bab215818684c5b788a118288f358f8607f4",
+      "bytes": 3561
+    },
+    "frames/frame_008/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_008/center.csv",
+      "sha256": "0849abfb393311a2c481673ddb2945046e3e2596690fe83c85d57adb4f55a7d8",
+      "bytes": 3615
+    },
+    "frames/frame_008/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_008/north.csv",
+      "sha256": "09494f70d9d24565ef385c1dd47b6882dafbbbb58b964e5086092c84ecc819b3",
+      "bytes": 3594
+    },
+    "frames/frame_008/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_008/south.csv",
+      "sha256": "5085a219c14a002c3d3143d6197804e0f81b87ad461c27469a8e260c6ec302eb",
+      "bytes": 3561
+    },
+    "frames/frame_009/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_009/center.csv",
+      "sha256": "9fdcaf53ac53bae380326106a297c4af129b73e78e94d4d6a5664fd1455679c4",
+      "bytes": 3617
+    },
+    "frames/frame_009/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_009/north.csv",
+      "sha256": "adbdf5f475a574c3777da4bb6a3e80db1ade80f9f4dd8de024b5a7fa2e04662d",
+      "bytes": 3593
+    },
+    "frames/frame_009/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_009/south.csv",
+      "sha256": "0f5b544293336fc0048880739b1f6b204349d1c020c44ea0d76fff97c1b4c660",
+      "bytes": 3560
+    },
+    "frames/frame_010/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_010/center.csv",
+      "sha256": "c79983290a389d2a530bf27fa6319ea13548af438676987e412a7230c2dc4cc3",
+      "bytes": 3617
+    },
+    "frames/frame_010/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_010/north.csv",
+      "sha256": "4acfbcaad5bb7e789a2f2062d6cdaf64628a129dfbb43418fd2c23db18aa449b",
+      "bytes": 3592
+    },
+    "frames/frame_010/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_010/south.csv",
+      "sha256": "6e1b393d57c99f955335257f629da5a6d5beeeedbefa6e63f1671c5d1176c005",
+      "bytes": 3559
+    },
+    "frames/frame_011/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_011/center.csv",
+      "sha256": "08dea30214acd5be9bc0b40081c4495ef5e9afea09e10283349911ec434a930a",
+      "bytes": 3617
+    },
+    "frames/frame_011/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_011/north.csv",
+      "sha256": "5b05ce7e670a6eccf6706f1874104ce862be1d7e67e823c5ce6590da3b9a5303",
+      "bytes": 3594
+    },
+    "frames/frame_011/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_011/south.csv",
+      "sha256": "e5f2e01c91d3a4108c00bbde58c6b27e6985e2d4c06bc83b4425eec0630a4eee",
+      "bytes": 3561
+    },
+    "frames/frame_012/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_012/center.csv",
+      "sha256": "a136629e25a01865fd82633337a24e346a5c0b137ac261982a941c9f40ab7bac",
+      "bytes": 3614
+    },
+    "frames/frame_012/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_012/north.csv",
+      "sha256": "5e4665a2ffaa480ff3f5040d44935aa74b5583da59c5abb3a67173f5d0a40028",
+      "bytes": 3591
+    },
+    "frames/frame_012/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_012/south.csv",
+      "sha256": "36c4b2b54d1d5dc2798fd8cf021f4b6a3957e2db197a3220002ba7e152fa30d2",
+      "bytes": 3562
+    },
+    "frames/frame_013/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_013/center.csv",
+      "sha256": "688f5dc14deabc79d5237476978c4e1214940b989c523c804cfb9a7b89349187",
+      "bytes": 3614
+    },
+    "frames/frame_013/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_013/north.csv",
+      "sha256": "b7cd3dbd1ba41310c819a02e04854b127edbba0ac50b0252990d50187394408c",
+      "bytes": 3591
+    },
+    "frames/frame_013/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_013/south.csv",
+      "sha256": "c84a830f28f5fe44ea280ab366ce8345444f9563f89e98cdd8f0da06b59f2dde",
+      "bytes": 3559
+    },
+    "frames/frame_014/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_014/center.csv",
+      "sha256": "c42b5c96d18dcbbd64e8e54aa1779034f8bbaaba4a0890a890bf3b79a1f39a3d",
+      "bytes": 3614
+    },
+    "frames/frame_014/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_014/north.csv",
+      "sha256": "c51beb576fde5f3cbd55cc46bf5ad8dd4e89a38bcd3239e7ccf9982a38e46d9a",
+      "bytes": 3592
+    },
+    "frames/frame_014/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_014/south.csv",
+      "sha256": "66d2c326e936420752c8b6b9b847f24cd0e6bc2eab3ea9d94ae01b0b1079223d",
+      "bytes": 3560
+    },
+    "frames/frame_015/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_015/center.csv",
+      "sha256": "a6a4c41fda235f8d66b338f00a2b2ad9b49a95a462768947c633bd8d06706bfe",
+      "bytes": 3615
+    },
+    "frames/frame_015/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_015/north.csv",
+      "sha256": "eccc432c11a5d750d7c7df0dd6f2befc7f5d5b151ac46705230c9ec09d35fab7",
+      "bytes": 3594
+    },
+    "frames/frame_015/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_015/south.csv",
+      "sha256": "2d17c3afc64ef702552a331789cc35eaf91ae73cff5ec23fe72285c001bf0421",
+      "bytes": 3559
+    },
+    "frames/frame_016/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_016/center.csv",
+      "sha256": "e825dfbd5a7d5b73ba644ba5b98673063638b1c98aaec687a4f447c8141f202d",
+      "bytes": 3615
+    },
+    "frames/frame_016/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_016/north.csv",
+      "sha256": "440de9b6ae3279d38f16b2f80f5e816bbc8b892de97babcfccef0a624773f545",
+      "bytes": 3595
+    },
+    "frames/frame_016/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_016/south.csv",
+      "sha256": "94988d5bc6681059bdcc5ee173cf8d8c328fbffb7ee67fca99e75dea7bf8d1e5",
+      "bytes": 3560
+    },
+    "frames/frame_017/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_017/center.csv",
+      "sha256": "d8b9f9ca333f14ea4a8dd0103cf3aef835693250b3b04a7536d29131274df4b8",
+      "bytes": 3616
+    },
+    "frames/frame_017/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_017/north.csv",
+      "sha256": "3f556b7dcee6a6f2f56f283e7f05f0657856a9aee910037cb77c00b93eba04fc",
+      "bytes": 3596
+    },
+    "frames/frame_017/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_017/south.csv",
+      "sha256": "0d349a40ff5ca6918437c7e182d93463fd45041b752483fac3b18a3eda7d19ad",
+      "bytes": 3562
+    },
+    "frames/frame_018/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_018/center.csv",
+      "sha256": "014dc19d8c9b1e13ef96a08e77e304534ca7471a902044cac5d8b097568a4a7d",
+      "bytes": 3618
+    },
+    "frames/frame_018/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_018/north.csv",
+      "sha256": "d2f821e2a880d9ea0d3aaafaeafc6d0cb67c91046ac02c60d7bb5240da2d9605",
+      "bytes": 3597
+    },
+    "frames/frame_018/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_018/south.csv",
+      "sha256": "4e6d3e3218646e3502ae373eea3f86ce85cd085fd2410cf1a4af2965ebc2e6ec",
+      "bytes": 3562
+    },
+    "frames/frame_019/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_019/center.csv",
+      "sha256": "590f4a9c113b10d93479e824ce8bb2a013a1097e9f033f7ac2e84963d22da1fc",
+      "bytes": 3617
+    },
+    "frames/frame_019/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_019/north.csv",
+      "sha256": "5748abcdbc3a739d39e34abc70850863dadd96ad9ed3384cb657ae840695813b",
+      "bytes": 3597
+    },
+    "frames/frame_019/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_019/south.csv",
+      "sha256": "0ebc52d71516ed1358a22569b7d3b756ad8cd1f8110ccafe81f9351288a2aaf1",
+      "bytes": 3563
+    },
+    "frames/frame_020/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_020/center.csv",
+      "sha256": "ac0da564838cee25b3cb2bbc9f6232febeeae359dda691652c1f5ecb86ecd10d",
+      "bytes": 3616
+    },
+    "frames/frame_020/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_020/north.csv",
+      "sha256": "e1f0db36a3c3922bf388623f9fba1b7374f39e82be5982407ba57eb1fea479d4",
+      "bytes": 3597
+    },
+    "frames/frame_020/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_020/south.csv",
+      "sha256": "02cad1b833ca5a57dcedf696e973cc341f9bbb4e169a715a69d8a2bd826d4825",
+      "bytes": 3563
+    },
+    "frames/frame_021/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_021/center.csv",
+      "sha256": "f8172ff21b55b061d14dbdd719e5d874f8b4eee2e6da8b9dad96a82d44220d08",
+      "bytes": 3615
+    },
+    "frames/frame_021/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_021/north.csv",
+      "sha256": "10fb8a4d597a9f8398851404ab9a4fe613ba612f7aea25da9a2b135e382e193a",
+      "bytes": 3598
+    },
+    "frames/frame_021/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_021/south.csv",
+      "sha256": "1a02140a56b7c56bb2495996db86ac7cf51e8d4c28b50c7fc84017ea2bdab0ac",
+      "bytes": 3562
+    },
+    "frames/frame_022/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_022/center.csv",
+      "sha256": "47cc3343763322da0dd726330da930d43abe1e1ef40ba52a53412718764affc9",
+      "bytes": 3615
+    },
+    "frames/frame_022/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_022/north.csv",
+      "sha256": "694118173eade1dc4115f24a61cdbf21e82a97fefbc9bd1356a90997d458449a",
+      "bytes": 3599
+    },
+    "frames/frame_022/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_022/south.csv",
+      "sha256": "73162983ce6e3d4e3d7510923ac462ee8099aafe8fd16d4b604a9987b243cb93",
+      "bytes": 3561
+    },
+    "frames/frame_023/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_023/center.csv",
+      "sha256": "dc821cf38255b9f7aa6a003412be956df1957158bfedc56a300f68914df1f25b",
+      "bytes": 3616
+    },
+    "frames/frame_023/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_023/north.csv",
+      "sha256": "2483726eae810e095a44509c913ce3bcbc938e0acc294e1eac80821066a337db",
+      "bytes": 3599
+    },
+    "frames/frame_023/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_023/south.csv",
+      "sha256": "e87b72fc84cee80a223e74f856e03a9143273da2fdca56748d28c4f817744c3d",
+      "bytes": 3562
+    },
+    "frames/frame_024/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_024/center.csv",
+      "sha256": "a5e7f7ba9bf591af4fa6426b543821ceaad2f3775099ba33cfb70cf8bfe286d4",
+      "bytes": 3618
+    },
+    "frames/frame_024/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_024/north.csv",
+      "sha256": "bb20b1b00af07d0c8b16b66856c43e3986944fd2c3e4a50b4780a1d5eeabd119",
+      "bytes": 3600
+    },
+    "frames/frame_024/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_024/south.csv",
+      "sha256": "4b77589a47beb643e9a64502ee2e0a1caf8ae9e4f9bfde0eb07eb6abc6ec02dd",
+      "bytes": 3562
+    },
+    "frames/frame_025/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_025/center.csv",
+      "sha256": "98e4c26e7ccd1acb530fe3d56b64e76aaab487cf23ce30692c3cb18f233fe7eb",
+      "bytes": 3618
+    },
+    "frames/frame_025/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_025/north.csv",
+      "sha256": "5c733a13159005666ad05e744ffd6d63817011729b6ccc49a5c26cae9319847a",
+      "bytes": 3600
+    },
+    "frames/frame_025/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_025/south.csv",
+      "sha256": "43041c733024219d4a8f849c9c08fb159667ee169e68bfbea74f9e70d3819a72",
+      "bytes": 3563
+    },
+    "frames/frame_026/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_026/center.csv",
+      "sha256": "bb642a515a5158f90a30c8f44fba9ef851cc62f14d03e699fb59ab554ef99178",
+      "bytes": 3618
+    },
+    "frames/frame_026/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_026/north.csv",
+      "sha256": "3797ed87d314b06d0268a5748e7dcb2dd80e5b5e2515ff0bd5be3e02b05daf49",
+      "bytes": 3601
+    },
+    "frames/frame_026/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_026/south.csv",
+      "sha256": "2eda0cd2d1762fa468f025d420fdea7f3edcf9fb26348e48545fa94e67da0e40",
+      "bytes": 3563
+    },
+    "frames/frame_027/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_027/center.csv",
+      "sha256": "a133ef4fe2f3eed53f7f945021f4a34b7e62735d58aa5a367523c17e64745bde",
+      "bytes": 3617
+    },
+    "frames/frame_027/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_027/north.csv",
+      "sha256": "66d2e878f98895f14ba23473fc4862bee73dec6c727ebe4714fe9822cad55d00",
+      "bytes": 3600
+    },
+    "frames/frame_027/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_027/south.csv",
+      "sha256": "4fb2864defa700f99df18a1b8e41d578eca9b1f4f0139e368431daa522369039",
+      "bytes": 3563
+    },
+    "frames/frame_028/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_028/center.csv",
+      "sha256": "5ff0c4e950a8f916cd15a9f33bb92c30e2445c31c01959747f82ca70ff7fcc88",
+      "bytes": 3618
+    },
+    "frames/frame_028/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_028/north.csv",
+      "sha256": "c5ab199ef0e0fc529b3801eb0c50f5e57df922db0d769be0acaed626001fff8f",
+      "bytes": 3600
+    },
+    "frames/frame_028/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_028/south.csv",
+      "sha256": "7633c30ed4ec8af0ec7b1f459e6d3e44d9a354ab41821ee8298f3ddc456eff13",
+      "bytes": 3564
+    },
+    "frames/frame_029/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_029/center.csv",
+      "sha256": "aef6fc99312971e796fed61e7783a75c721852a5c3a9bfd6f47d2c4038b65241",
+      "bytes": 3618
+    },
+    "frames/frame_029/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_029/north.csv",
+      "sha256": "790e5dd469f7a4e4e525ae92c6aa42c806ac8dcde025fc17c942e3c9e7cd4d8c",
+      "bytes": 3601
+    },
+    "frames/frame_029/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_029/south.csv",
+      "sha256": "5f5cd80684a626585ecee39aec5524616f6ce5410fe7cdc0f92d1f6d04138a4c",
+      "bytes": 3562
+    },
+    "frames/frame_030/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_030/center.csv",
+      "sha256": "b77551f764251280a0c2516dcc074069868a83f67d37f25c35670aa4fa92a13e",
+      "bytes": 3618
+    },
+    "frames/frame_030/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_030/north.csv",
+      "sha256": "e84ae8ca7031e7bb4ca395b6fb25d29c743bf2cf8852cc6ff2611eaea8bf6a93",
+      "bytes": 3599
+    },
+    "frames/frame_030/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/frames/frame_030/south.csv",
+      "sha256": "f50df5342ca6c0527a97a7968bee016bf9309a98f30059ae6dd70c0042d556cb",
+      "bytes": 3562
+    },
+    "generation.json": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/generation.json",
+      "sha256": "7873450380331077e30880bb2743f39d3e2d396424070de826527c22a7d522fb",
+      "bytes": 80196
+    },
+    "initial_static/center.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/initial_static/center.csv",
+      "sha256": "af08765d4e09fd157f0fb53116671547e512d8a2c8468bcac929ac3bff395288",
+      "bytes": 3010
+    },
+    "initial_static/north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/initial_static/north.csv",
+      "sha256": "3afe850a888ffba0a70da73422ec9e49427b2784bcce1af72261ef47ae0d6502",
+      "bytes": 2995
+    },
+    "initial_static/south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/initial_static/south.csv",
+      "sha256": "3ba9de6a8c7c9f606c5201cab961ebfd8b1a66dfafddc3da12ed83d93e162f79",
+      "bytes": 2963
+    },
+    "north.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/north.csv",
+      "sha256": "c46369459b73608855c97eddbdec10cc1b436708f2bb3ab05dbac8316492a89b",
+      "bytes": 163007
+    },
+    "south.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/south.csv",
+      "sha256": "343224ad12577182f7e9bb6511b9e0c7fb38ba861b9ff7407bcece0edc9ea09d",
+      "bytes": 161965
+    },
+    "static_initial_comparison.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/static_initial_comparison.csv",
+      "sha256": "7df818f2937fdff30d5361ceba5847988f7ff7497d5f310257d8b6f94aaa4dbd",
+      "bytes": 9491
+    },
+    "timeline.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/timeline.csv",
+      "sha256": "074a0fc3c485c9dabf4874a5931de34c7883d903af7cc4e3c072a1d6601fc809",
+      "bytes": 3560
+    },
+    "user_profiles.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/user_profiles.csv",
+      "sha256": "73ca4848e1fe8e69f692b471620bea896e6374bbe7c0c729c2000fbbc9f4a92b",
+      "bytes": 2694
+    },
+    "user_summary.csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/user_summary.csv",
+      "sha256": "35f0e0a48482373aa950e6e05eae2f253b55df6a25712aae831b2e7613c74b55",
+      "bytes": 4652
+    },
+    "validation.json": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014/validation.json",
+      "sha256": "31b1d93e8407935ba72896bc12cb3717be879851328c63b3525b28f9ecbecaf0",
+      "bytes": 2608
+    }
+  },
+  "static_sources": {
+    "center": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/center.csv",
+      "sha256": "f08ba4ff20b55dcecde480fad30451dc9eaf58f3538ffcca423e7915db1d5974",
+      "bytes": 19162
+    },
+    "north": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/north.csv",
+      "sha256": "07b85ad4bd2d6c30ae698ecac4ea3ad8a57a782e79b2bfd9333a6cfff7a51884",
+      "bytes": 2964
+    },
+    "south": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/south.csv",
+      "sha256": "6ae13492a799c3fa7e13a7df94454666ab38acdbdca39083fbc3fe6eb387fe2b",
+      "bytes": 2932
+    }
+  },
+  "north_source_diagnostic_evidence": {
+    "static_north_csv": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/data/scenarios/north.csv",
+      "sha256": "07b85ad4bd2d6c30ae698ecac4ea3ad8a57a782e79b2bfd9333a6cfff7a51884",
+      "bytes": 2964
+    },
+    "original_upstream_north_csv": {
+      "path": "[ORIGINAL_WORKSPACE]/无线场景补充实验/WirelessAgent_R1-main/WirelessAgent_R1-main/Knowledge_Base/ray_tracing_results_north.csv",
+      "sha256": "07b85ad4bd2d6c30ae698ecac4ea3ad8a57a782e79b2bfd9333a6cfff7a51884",
+      "bytes": 2964
+    },
+    "current_north_map": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/maps/HKUST_North.osm",
+      "sha256": "97e090aca47b824ca1062eddfabe9341217d5cd163c8a4e6eeb55bfab064a1ab",
+      "bytes": 382505
+    },
+    "original_upstream_north_map": {
+      "path": "[ORIGINAL_WORKSPACE]/无线场景补充实验/WirelessAgent_R1-main/WirelessAgent_R1-main/Knowledge_Base/HKUST_North.osm",
+      "sha256": "97e090aca47b824ca1062eddfabe9341217d5cd163c8a4e6eeb55bfab064a1ab",
+      "bytes": 382505
+    },
+    "current_channel_code": {
+      "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/vendor/upstream/RayTracing_cqi.py",
+      "sha256": "e26b4651252b2aaf995f60ed7a26b3cf4df2e799063a789d601aa28bbffcc820",
+      "bytes": 23082
+    },
+    "original_upstream_channel_code": {
+      "path": "[ORIGINAL_WORKSPACE]/无线场景补充实验/WirelessAgent_R1-main/WirelessAgent_R1-main/RayTracing_cqi.py",
+      "sha256": "e26b4651252b2aaf995f60ed7a26b3cf4df2e799063a789d601aa28bbffcc820",
+      "bytes": 23082
+    },
+    "north_csv_byte_identical_to_upstream": true,
+    "north_map_byte_identical_to_upstream": true,
+    "channel_code_byte_identical_to_upstream": true
+  },
+  "source_code_sha256": {
+    "generate_static_linked_mobility.py": "598c4a904cce5e607ea1a5471b0e21741c1cf650d1388d59c1edadcee45104de",
+    "generate_mobility.py": "50d8285a225e9e23ab2a771a515f3bb5c0398a0ab976136a4b1f8043e66addcb",
+    "mobility.py": "1b5f90d7679c2977bfbf3cebb08b42954f6474245b8a856407352c54cbd625c7",
+    "generate_scenarios.py": "224f74a9a8b2936feae92713e7ab08c0527f559fdf437b18aae23eca2deb6162",
+    "vendor/upstream/RayTracing_cqi.py": "e26b4651252b2aaf995f60ed7a26b3cf4df2e799063a789d601aa28bbffcc820"
+  }
+}

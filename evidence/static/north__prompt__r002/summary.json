@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "method": "prompt",
+  "scenario": "north",
+  "repeat": 2,
+  "users_processed": 30,
+  "users_requested": 30,
+  "mean_utilization_over_all_processed_arrivals_pct": 60.55555555555557,
+  "intent_accuracy_on_classified_arrivals_pct": 93.33333333333333,
+  "intent_classified_arrivals": 30,
+  "mean_decision_seconds": 1.6095358301664722,
+  "steps_with_audit_issues": 30,
+  "final": {
+    "arrivals": 30,
+    "user_id": "30",
+    "intent_correct_this_arrival": true,
+    "step_seconds": 1.8721018549986184,
+    "admitted_users": 14,
+    "resource_feasible_users": 14,
+    "correct_slice_users": 13,
+    "valid_correct_users": 13,
+    "bandwidth_used_mhz": 110.0,
+    "bandwidth_utilization_pct": 91.66666666666666,
+    "bandwidth_idle_pct": 8.333333333333332,
+    "raw_calculated_throughput_mbps": 1616.759846997235,
+    "reported_throughput_mbps": 1650.0,
+    "resource_feasible_throughput_mbps": 1616.759846997235,
+    "violation_count": 14,
+    "valid_correct_admission_pct": 43.333333333333336,
+    "llm_calls_cumulative": 30
+  },
+  "llm_statistics": {
+    "llm_calls": 30,
+    "api_attempts": 30,
+    "llm_failures": 0,
+    "prompt_tokens": 29351,
+    "completion_tokens": 6328
+  },
+  "error": null
+}

@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "validation_type": "independent_readback_of_serialized_csv",
+  "interval_s": 1,
+  "duration_s": 300,
+  "frames_per_scene": 301,
+  "users_per_scene": 30,
+  "total_users": 90,
+  "total_rows_per_combined_csv": 27090,
+  "api_calls": 0,
+  "source_raw_directory": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_from_static_20261014",
+  "source_anchored_directory": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/mobility_5min_static_terminal_20261014",
+  "input_sha256": {
+    "dynamic_users_1s.csv": "0148785072a5e753ccc055f45f01211ebb61e58b14972878142539a561b1b21b",
+    "dynamic_users_raw_model_1s.csv": "b4fb48a474bf682ff76d6992ee08312a1547564ff954999c9566b55e7ac7241d",
+    "timeline.csv": "041c3b373bed501fa14fa885923c0ad71f47eb004c0adc25aed6ae5749a61c45",
+    "generation.json": "159fca1b849a6828989bd241e578be971d08793f36e3f9aa141b355e3d7b9e40"
+  },
+  "validator_sha256": "9852ab63e74e1e5e3c09245e31fcec8f2f4ccaffb81bb278a4da89109af9c3b1",
+  "scenarios": {
+    "center": {
+      "rows": 9030,
+      "original_10s_samples_verified": 930,
+      "profile_counts": {
+        "continuous": 10,
+        "static": 10,
+        "intermittent": 10
+      },
+      "movement_state_counts_by_profile": {
+        "continuous": {
+          "moving": 3000
+        },
+        "static": {
+          "static": 3000
+        },
+        "intermittent": {
+          "moving": 1950,
+          "paused": 1050
+        }
+      },
+      "raw_model_channels_recomputed": 9030,
+      "moving_segments_checked_against_buildings": 4950,
+      "stationary_intervals_with_unchanged_channels": 4050,
+      "forced_static_source_user_ids": [],
+      "max_piecewise_linear_position_error_m": 5.000000271593308e-07,
+      "max_cumulative_distance_readback_error_m": 4.999754210643914e-07,
+      "max_distance_error_at_original_10s_samples_m": 0.0,
+      "all_initial_and_original_10s_positions_and_signals_preserved": true,
+      "all_301_frame_snapshots_match_combined_csv": true,
+      "source_raw_sha256": "357ecae074fde496da87465167b8b4bd56235e3eba457da0729accada5cf3203",
+      "source_anchored_sha256": "c414a2214d4c088f65770846bbe68c6fd86dc4b2b7a38bd40bf3d1a7d7c9592e",
+      "map_sha256": "b945eccfb00e493949dd8ff96824a0d7327d869b8ee8d43ea6d279fe9299182a"
+    },
+    "north": {
+      "rows": 9030,
+      "original_10s_samples_verified": 930,
+      "profile_counts": {
+        "static": 10,
+        "continuous": 10,
+        "intermittent": 10
+      },
+      "movement_state_counts_by_profile": {
+        "static": {
+          "static": 3000
+        },
+        "continuous": {
+          "moving": 3000
+        },
+        "intermittent": {
+          "moving": 2150,
+          "paused": 850
+        }
+      },
+      "raw_model_channels_recomputed": 9030,
+      "moving_segments_checked_against_buildings": 5150,
+      "stationary_intervals_with_unchanged_channels": 3850,
+      "forced_static_source_user_ids": [
+        "11",
+        "20"
+      ],
+      "max_piecewise_linear_position_error_m": 5.000000271593308e-07,
+      "max_cumulative_distance_readback_error_m": 4.998493920993496e-07,
+      "max_distance_error_at_original_10s_samples_m": 0.0,
+      "all_initial_and_original_10s_positions_and_signals_preserved": true,
+      "all_301_frame_snapshots_match_combined_csv": true,
+      "source_raw_sha256": "c46369459b73608855c97eddbdec10cc1b436708f2bb3ab05dbac8316492a89b",
+      "source_anchored_sha256": "8bdedd5c72a34d99047e0146870dc1d43faa7c86ac430b25f963644333aa0ffb",
+      "map_sha256": "97e090aca47b824ca1062eddfabe9341217d5cd163c8a4e6eeb55bfab064a1ab"
+    },
+    "south": {
+      "rows": 9030,
+      "original_10s_samples_verified": 930,
+      "profile_counts": {
+        "intermittent": 10,
+        "static": 10,
+        "continuous": 10
+      },
+      "movement_state_counts_by_profile": {
+        "intermittent": {
+          "moving": 1990,
+          "paused": 1010
+        },
+        "static": {
+          "static": 3000
+        },
+        "continuous": {
+          "moving": 3000
+        }
+      },
+      "raw_model_channels_recomputed": 9030,
+      "moving_segments_checked_against_buildings": 4990,
+      "stationary_intervals_with_unchanged_channels": 4010,
+      "forced_static_source_user_ids": [
+        "13",
+        "21"
+      ],
+      "max_piecewise_linear_position_error_m": 5.000000555810402e-07,
+      "max_cumulative_distance_readback_error_m": 4.999459477517121e-07,
+      "max_distance_error_at_original_10s_samples_m": 0.0,
+      "all_initial_and_original_10s_positions_and_signals_preserved": true,
+      "all_301_frame_snapshots_match_combined_csv": true,
+      "source_raw_sha256": "343224ad12577182f7e9bb6511b9e0c7fb38ba861b9ff7407bcece0edc9ea09d",
+      "source_anchored_sha256": "e889e4a266e1cc5c148f5942e54e1b0dfb4bed7f0fdb26289b178e4674429957",
+      "map_sha256": "ea64b7e3836dd5723218f87f2f6e02d44d7319b0f2065ddb739b3e290d98978d"
+    }
+  }
+}

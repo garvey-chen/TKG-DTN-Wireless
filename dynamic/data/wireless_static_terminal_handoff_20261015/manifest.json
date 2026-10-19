@@ -1,0 +1,1153 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-14T17:11:11.300781+00:00",
+  "purpose": "Exact WirelessAgent KB static r001 terminal continuation; no admission or t0 optimization.",
+  "exporter": {
+    "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/prepare_wireless_static_handoff.py",
+    "sha256": "244b153b9290bf931ba7ab50c276029504f7303930eede668a4bf9b91de6725d",
+    "bytes": 3593
+  },
+  "immutable_source_files": true,
+  "api_calls": 0,
+  "dynamic_experiment_executed": false,
+  "dynamic_channel_policy_selected": false,
+  "semantics": {
+    "population": "All 30 observed users remain in the export, including legacy rejected users.",
+    "allocations": "Raw static final allocation preserved, including incorrect slices; no allocation optimization or reclassification.",
+    "labels": "ground_truth is the original Request_Label, not the assigned slice; no contract/channel policy is selected by this exporter.",
+    "rejected_users": "No allocation: assigned_slice/correct_slice/source_latency_ms are blank; bandwidth and realized source rate are zero.",
+    "frame0": "Comparison is input checking only. It does not modify the source trajectory or specify how to reconcile differing channels.",
+    "terminal_equivalence": "Compare all 5 TKG-DTN trials and all 5 wireless_kb trials per scene using exact numeric values, complete physical state, and full selected population."
+  },
+  "scenes": [
+    {
+      "scene": "center",
+      "source_method": "wireless_kb",
+      "source_repeat": 1,
+      "terminal_line_1based": 30,
+      "sources": {
+        "steps": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r001/steps.jsonl",
+          "sha256": "84565c1f86f8f13fbdc10839ddf6a7ca31aedc6d8a8685b9c71a9bdfbf8289ce",
+          "bytes": 179948
+        },
+        "selected_users": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r001/selected_users.json",
+          "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+          "bytes": 5713
+        },
+        "summary": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r001/summary.json",
+          "sha256": "16845515a0a0277bb55953729a594628fee37307cb691bee876d31ee2f6beefb",
+          "bytes": 1196
+        }
+      },
+      "observed_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "admitted_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "24",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "rejected_user_ids": [
+        "23",
+        "25",
+        "30"
+      ],
+      "wrong_slice_user_ids": [],
+      "original_final_metrics": {
+        "arrivals": 30,
+        "user_id": "30",
+        "intent_correct_this_arrival": true,
+        "step_seconds": 3.134626301995013,
+        "admitted_users": 27,
+        "resource_feasible_users": 27,
+        "correct_slice_users": 27,
+        "valid_correct_users": 27,
+        "bandwidth_used_mhz": 120.0,
+        "bandwidth_utilization_pct": 100.0,
+        "bandwidth_idle_pct": 0.0,
+        "raw_calculated_throughput_mbps": 1145.4076644391462,
+        "reported_throughput_mbps": 1145.4076644391462,
+        "resource_feasible_throughput_mbps": 1145.4076644391462,
+        "violation_count": 0,
+        "valid_correct_admission_pct": 90.0,
+        "llm_calls_cumulative": 62
+      },
+      "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+      "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3",
+      "terminal_equivalence": {
+        "reference": "center__tkg_dtn__r001",
+        "checked_trials": 10,
+        "allocation_fields": [
+          "user_id",
+          "slice",
+          "bandwidth",
+          "cqi",
+          "rate",
+          "latency"
+        ],
+        "physical_state_scope": "State with slice-user lists sorted by numeric user ID; only the upstream wall-clock timestamp is omitted. Raw tkg_dtn source state is exported unchanged.",
+        "all_same": true,
+        "trials": [
+          {
+            "method": "tkg_dtn",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r001/steps.jsonl",
+              "sha256": "4b1a470aa1f01113837dc638baab9c49b5561ed2968df44593f2ec70e908aa67",
+              "bytes": 178637
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r001/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r002/steps.jsonl",
+              "sha256": "1376bca32c921debcf79632c70593b928ec31b200b8d6de6810b2be50a1910bc",
+              "bytes": 178624
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r002/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r003/steps.jsonl",
+              "sha256": "7513ddd3f92d2bb8f40830e4328b1f245623edf61d66ff574013f7a5243dab57",
+              "bytes": 178619
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r003/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r004/steps.jsonl",
+              "sha256": "a7b9349f8e37255531563eeee5ee67a83c81efc973691cf0ab728e7d7d0cbed5",
+              "bytes": 178668
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r004/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r005/steps.jsonl",
+              "sha256": "6147f8ebb1a96d902d19c0c22a6dc72f3bd33a1de2e16533876c641ea3f7b4fa",
+              "bytes": 178763
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__tkg_dtn__r005/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r001/steps.jsonl",
+              "sha256": "84565c1f86f8f13fbdc10839ddf6a7ca31aedc6d8a8685b9c71a9bdfbf8289ce",
+              "bytes": 179948
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r001/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r002/steps.jsonl",
+              "sha256": "bd6aa9caca4f402044a8e6673fc9c5d1bc561d4e30ee9b89e873bf1d2d1cde0e",
+              "bytes": 179949
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r002/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r003/steps.jsonl",
+              "sha256": "42324e68798ea994196b68124c8cdc77b891446dc8e3a269df26ec176f4835fc",
+              "bytes": 179948
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r003/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r004/steps.jsonl",
+              "sha256": "c3086ac007a16d55229de7fea47132a437bf4482eb39cf4ee026f15a4c43e129",
+              "bytes": 179946
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r004/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r005/steps.jsonl",
+              "sha256": "22e4336c26a6df6a6cb6152bcceb928b6851697774e98e1827dbcb58a6034d10",
+              "bytes": 179944
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/center__wireless_kb__r005/selected_users.json",
+              "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+              "bytes": 5713
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "4a52354f76f96972b3106692aa36596ea2c2d6c7f9ac680284c0dbb94171ada2",
+            "canonical_physical_state_sha256": "aafdca6fe8496047ca1811e83dc060ab74ad51fc7d5db8bbc0193773f94064d3"
+          }
+        ]
+      },
+      "frame0_comparison": {
+        "compared_users": 30,
+        "all_same_position_request_label": true,
+        "cqi_mismatch_ids": [],
+        "snr_mismatch_over_0_01_db_ids": [],
+        "channel_policy_selected": false,
+        "interpretation": "Input reconciliation only. Static state and dynamic frame-zero channel values are recorded separately; neither is replaced or adopted for a dynamic trial."
+      },
+      "exact_physical_equivalence_to_tkg_r001": true
+    },
+    {
+      "scene": "north",
+      "source_method": "wireless_kb",
+      "source_repeat": 1,
+      "terminal_line_1based": 30,
+      "sources": {
+        "steps": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r001/steps.jsonl",
+          "sha256": "548dd152d23d0b21a766179fbfda61aa53040fba36889eeb2f1bb509c2de4c6d",
+          "bytes": 185246
+        },
+        "selected_users": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r001/selected_users.json",
+          "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+          "bytes": 5684
+        },
+        "summary": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r001/summary.json",
+          "sha256": "dda55f2047f5532a45015dc5c995207fd71cb50b7766e3c83108c5e6a7d43991",
+          "bytes": 1222
+        }
+      },
+      "observed_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "admitted_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "rejected_user_ids": [],
+      "wrong_slice_user_ids": [
+        "1",
+        "30"
+      ],
+      "original_final_metrics": {
+        "arrivals": 30,
+        "user_id": "30",
+        "intent_correct_this_arrival": false,
+        "step_seconds": 2.2380691840007785,
+        "admitted_users": 30,
+        "resource_feasible_users": 30,
+        "correct_slice_users": 28,
+        "valid_correct_users": 28,
+        "bandwidth_used_mhz": 120.0,
+        "bandwidth_utilization_pct": 100.0,
+        "bandwidth_idle_pct": 0.0,
+        "raw_calculated_throughput_mbps": 1800.8084750956148,
+        "reported_throughput_mbps": 1800.8084750956148,
+        "resource_feasible_throughput_mbps": 1800.8084750956148,
+        "violation_count": 0,
+        "valid_correct_admission_pct": 93.33333333333333,
+        "llm_calls_cumulative": 60
+      },
+      "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+      "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b",
+      "terminal_equivalence": {
+        "reference": "north__tkg_dtn__r001",
+        "checked_trials": 10,
+        "allocation_fields": [
+          "user_id",
+          "slice",
+          "bandwidth",
+          "cqi",
+          "rate",
+          "latency"
+        ],
+        "physical_state_scope": "State with slice-user lists sorted by numeric user ID; only the upstream wall-clock timestamp is omitted. Raw tkg_dtn source state is exported unchanged.",
+        "all_same": true,
+        "trials": [
+          {
+            "method": "tkg_dtn",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r001/steps.jsonl",
+              "sha256": "12fe1880220e6b9d6bfd51526c8d05d1ad8716803b20c1a902231180e54534d1",
+              "bytes": 182142
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r001/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r002/steps.jsonl",
+              "sha256": "086f4cf0a9de800bd37f49602833842ac17a50a7ef34ed2a82eebb27394f47b2",
+              "bytes": 182147
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r002/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r003/steps.jsonl",
+              "sha256": "5d6340ed1a594f748fb7885550f7125c02f9ce7271addc0756a2446bc0fc3029",
+              "bytes": 182139
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r003/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r004/steps.jsonl",
+              "sha256": "a9b5a3e83de147adf1a25a0a8458601be3cfdf4fba7c9d3a3a8153f2ff26e962",
+              "bytes": 182140
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r004/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r005/steps.jsonl",
+              "sha256": "4212c477fd4bf7d7dabcd5ff415664321bcdd659c1d8d268099e506637efe3e1",
+              "bytes": 182148
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__tkg_dtn__r005/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r001/steps.jsonl",
+              "sha256": "548dd152d23d0b21a766179fbfda61aa53040fba36889eeb2f1bb509c2de4c6d",
+              "bytes": 185246
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r001/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r002/steps.jsonl",
+              "sha256": "145786bec3722541c9f3650a609914ba5e284cff4f3e16391582b38b3763d99e",
+              "bytes": 185251
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r002/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r003/steps.jsonl",
+              "sha256": "4636c77347f272f412d00ffa40cd78a7cd2d0e12800245ff2101dbef4135dbaa",
+              "bytes": 185252
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r003/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r004/steps.jsonl",
+              "sha256": "0cb1f499c2850e349a839e3f479a4cc2680433cee3f265eb694978e2dc5dfe2a",
+              "bytes": 185247
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r004/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r005/steps.jsonl",
+              "sha256": "e5e192333d7ce59c8b07b0272d8af1f2d1d43dd35e939639883ef7303200cf8c",
+              "bytes": 185251
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/north__wireless_kb__r005/selected_users.json",
+              "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+              "bytes": 5684
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "7b79c7b3df6904b80010aeac3838c5e924a0c47f0fe77161f663b9307c6d415e",
+            "canonical_physical_state_sha256": "2bdd9ef196484e3b740793505cae52d5e8dc688171e81a83b65b4b9d5802685b"
+          }
+        ]
+      },
+      "frame0_comparison": {
+        "compared_users": 30,
+        "all_same_position_request_label": true,
+        "cqi_mismatch_ids": [
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "11",
+          "13",
+          "14",
+          "15",
+          "19",
+          "21",
+          "22",
+          "24",
+          "25",
+          "26",
+          "28",
+          "30"
+        ],
+        "snr_mismatch_over_0_01_db_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ],
+        "channel_policy_selected": false,
+        "interpretation": "Input reconciliation only. Static state and dynamic frame-zero channel values are recorded separately; neither is replaced or adopted for a dynamic trial."
+      },
+      "exact_physical_equivalence_to_tkg_r001": true
+    },
+    {
+      "scene": "south",
+      "source_method": "wireless_kb",
+      "source_repeat": 1,
+      "terminal_line_1based": 30,
+      "sources": {
+        "steps": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r001/steps.jsonl",
+          "sha256": "9ad29194833e88f02cd0018aea4e010ed145f5b5191de19c633cb754847ac39f",
+          "bytes": 184660
+        },
+        "selected_users": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r001/selected_users.json",
+          "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+          "bytes": 5659
+        },
+        "summary": {
+          "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r001/summary.json",
+          "sha256": "4722ad8ed46dd1be0afbc4aad4831d754d07bde8eeb8565b6bfb11545eab13e5",
+          "bytes": 1208
+        }
+      },
+      "observed_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "admitted_user_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "rejected_user_ids": [
+        "30"
+      ],
+      "wrong_slice_user_ids": [
+        "7",
+        "12"
+      ],
+      "original_final_metrics": {
+        "arrivals": 30,
+        "user_id": "30",
+        "intent_correct_this_arrival": true,
+        "step_seconds": 2.688960337996832,
+        "admitted_users": 29,
+        "resource_feasible_users": 29,
+        "correct_slice_users": 27,
+        "valid_correct_users": 27,
+        "bandwidth_used_mhz": 120.0,
+        "bandwidth_utilization_pct": 100.0,
+        "bandwidth_idle_pct": 0.0,
+        "raw_calculated_throughput_mbps": 1346.4438899442118,
+        "reported_throughput_mbps": 1346.4438899442118,
+        "resource_feasible_throughput_mbps": 1346.4438899442118,
+        "violation_count": 0,
+        "valid_correct_admission_pct": 90.0,
+        "llm_calls_cumulative": 62
+      },
+      "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+      "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a",
+      "terminal_equivalence": {
+        "reference": "south__tkg_dtn__r001",
+        "checked_trials": 10,
+        "allocation_fields": [
+          "user_id",
+          "slice",
+          "bandwidth",
+          "cqi",
+          "rate",
+          "latency"
+        ],
+        "physical_state_scope": "State with slice-user lists sorted by numeric user ID; only the upstream wall-clock timestamp is omitted. Raw tkg_dtn source state is exported unchanged.",
+        "all_same": true,
+        "trials": [
+          {
+            "method": "tkg_dtn",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r001/steps.jsonl",
+              "sha256": "0ed13ea7b24a53a847f275b861507494ae292216a992fdb447de7afdf35b3bb1",
+              "bytes": 181886
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r001/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r002/steps.jsonl",
+              "sha256": "e7ac3860f0be9881e1e0de09b32548876ed9eb33e1fbeaee845476c2cda9a9d5",
+              "bytes": 181882
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r002/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r003/steps.jsonl",
+              "sha256": "b665d3abbe01c12f898c9baa1e55dec25326d762e08dcd4edd8aac8493d752b9",
+              "bytes": 181894
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r003/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r004/steps.jsonl",
+              "sha256": "35b8d6d43c33e98f8b9e044376d67cac0a634696f27588d524b8c8d04765fc46",
+              "bytes": 181840
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r004/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "tkg_dtn",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r005/steps.jsonl",
+              "sha256": "b6e0ba95760d43d20709dd703e57eaac32c80ebafdac1f8b52ac95eca3df420d",
+              "bytes": 181884
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__tkg_dtn__r005/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 1,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r001/steps.jsonl",
+              "sha256": "9ad29194833e88f02cd0018aea4e010ed145f5b5191de19c633cb754847ac39f",
+              "bytes": 184660
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r001/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 2,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r002/steps.jsonl",
+              "sha256": "689a90a14bc4bde0737907de529d0e9b27c1aca7fdf42507dedb1a03656ac7a1",
+              "bytes": 184658
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r002/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 3,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r003/steps.jsonl",
+              "sha256": "c50d572fa24ecf066502e37b03546a5500ac975ea9591f54b749d5a31d48187a",
+              "bytes": 184659
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r003/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 4,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r004/steps.jsonl",
+              "sha256": "daad13ab8215fdeda00eb3698061fbfca5c5d17d3bb0c071638f699ae13e0692",
+              "bytes": 184655
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r004/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          },
+          {
+            "method": "wireless_kb",
+            "repeat": 5,
+            "steps_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r005/steps.jsonl",
+              "sha256": "dc5541987d9b12f2db704bce3b34b18a638bfdde34e10feb9d47307a3af51579",
+              "bytes": 184657
+            },
+            "terminal_line_1based": 30,
+            "selected_users_source": {
+              "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2/results/four_methods_5repeats_20261012_212809/south__wireless_kb__r005/selected_users.json",
+              "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+              "bytes": 5659
+            },
+            "same_selected_users": true,
+            "same_allocation_fields": true,
+            "same_complete_physical_state": true,
+            "canonical_allocation_sha256": "12de041fb8849386fd929900300de9fcb4df27c36993627c0418046edd06b043",
+            "canonical_physical_state_sha256": "e8e3d5d7cb915a961611617e10bdf87a70b5915698277df2dfdd6fdaf70fe44a"
+          }
+        ]
+      },
+      "frame0_comparison": {
+        "compared_users": 30,
+        "all_same_position_request_label": true,
+        "cqi_mismatch_ids": [],
+        "snr_mismatch_over_0_01_db_ids": [],
+        "channel_policy_selected": false,
+        "interpretation": "Input reconciliation only. Static state and dynamic frame-zero channel values are recorded separately; neither is replaced or adopted for a dynamic trial."
+      },
+      "exact_physical_equivalence_to_tkg_r001": true
+    }
+  ],
+  "output_files": {
+    "center/dynamic_frame0_input_comparison.csv": {
+      "sha256": "36dd822d665c9b84d07a5888958c3482e24c1a97db86d235cf58ac01c4641f19",
+      "bytes": 5718
+    },
+    "center/raw_static_state.json": {
+      "sha256": "9643be1a548f7b547bfc7ae5ca697cb9aedfd5196ba0616aa212c883ccb0b72f",
+      "bytes": 4131
+    },
+    "center/selected_users.json": {
+      "sha256": "02cfdf8fa1a4263803f3ba3f6b58e669620056fd0b0d67a2b84c44b0d054ef79",
+      "bytes": 5713
+    },
+    "center/static_terminal_users.csv": {
+      "sha256": "cd11bb4e0b5b4ac4f57dd6ee005d7fb2195f6926f503431cd3f9c800206a0190",
+      "bytes": 4652
+    },
+    "center/terminal_step.json": {
+      "sha256": "2f1af3e98289ffc56d590802f018172d9a69a13332d72e305c9cadc902fbcc47",
+      "bytes": 13572
+    },
+    "north/dynamic_frame0_input_comparison.csv": {
+      "sha256": "8f18702c7a16d6fffccc31714654d3e74ecc7f6b70b55f18cec4319c8c668eaa",
+      "bytes": 5374
+    },
+    "north/raw_static_state.json": {
+      "sha256": "73b4d6986e2118d72e1e3081c43d2674de2e306b406b4c5e6922cba5cb8d5425",
+      "bytes": 4569
+    },
+    "north/selected_users.json": {
+      "sha256": "3ee42d6e1b49557d23b3b44aeb8141a3121777f2e252b6157167efa3f240e42a",
+      "bytes": 5684
+    },
+    "north/static_terminal_users.csv": {
+      "sha256": "c74ab1cfabad768014c3f860939eda20ad7bc468d63572c3c4dcd1e8d7971068",
+      "bytes": 4676
+    },
+    "north/terminal_step.json": {
+      "sha256": "fcb6bd739c8b8edff6ec364e658dcd453a3ccba681e097f9a31fdc975d07da7b",
+      "bytes": 14960
+    },
+    "south/dynamic_frame0_input_comparison.csv": {
+      "sha256": "7e87638acd82c6d60608f3193ec14a8cdec46e1ab142ca14d631f9206a94b6f9",
+      "bytes": 5658
+    },
+    "south/raw_static_state.json": {
+      "sha256": "48d687cef50d1575fe7bc4c7b4cb11251f676aa9cfff5d18ded328395e7239ff",
+      "bytes": 4417
+    },
+    "south/selected_users.json": {
+      "sha256": "7a7209422d8cabc6e55fc6b47b85dcf1f44eba4f2b219886d468c42a4b41a8c1",
+      "bytes": 5659
+    },
+    "south/static_terminal_users.csv": {
+      "sha256": "159dff0ec40e32946c18bc6f9ef94a9565c95809d1550704ce3aa4752c293684",
+      "bytes": 4623
+    },
+    "south/terminal_step.json": {
+      "sha256": "4c9fb3cf3e952319c789c1bd704794e5dc8e33ed4ee72996f16854593b6998dd",
+      "bytes": 14457
+    }
+  },
+  "reference_handoff_manifest": {
+    "path": "[ORIGINAL_WORKSPACE]/DTN-KG-transfer-package-20260909/DTN-KG-new-transfer-20260909/DTN-KG-new/experiments_Wireless_v2.1/data/static_terminal_handoff_20261014/manifest.json",
+    "sha256": "732293638ee1abc3b3e02bbe1052539b8f7c8c766cffb71030e9e675ea349565",
+    "bytes": 65918
+  }
+}

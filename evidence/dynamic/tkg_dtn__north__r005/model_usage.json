@@ -1,0 +1,8 @@
+{
+  "llm_calls": 147,
+  "api_attempts": 147,
+  "llm_failures": 0,
+  "prompt_tokens": 505744,
+  "completion_tokens": 19570,
+  "total_tokens": 525314
+}

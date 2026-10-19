@@ -1,0 +1,15 @@
+User ID,Allocation Status,Slice,Ground Truth,Intent Correct,CQI,Bandwidth (MHz),Rate (Mbps),Latency (ms),Adjustments Made,eMBB Total Rate Before (Mbps),eMBB Total Rate After (Mbps),URLLC Total Rate Before (Mbps),URLLC Total Rate After (Mbps),Avg Resource Util Before (%),Avg Resource Util After (%),Request
+1,Success,URLLC,URLLC,Yes,13,5,66.06,1,No,0,0,0,66.06,0.0,4.17,I want to use remote surgery equipment
+2,Success,URLLC,URLLC,Yes,15,5,75.68,5,No,0,0,66.06,141.74,4.17,8.33,I need real-time traffic updates for navigation
+3,Success,URLLC,URLLC,Yes,10,5,52.07,5,No,0,0,141.74,193.81,8.33,12.5,I need to synchronize distributed financial ledgers instantly
+
+SUMMARY STATISTICS
+Average Resource Utilization (%),12.50
+Final Resource Utilization (%),12.50
+Final eMBB Total Rate (Mbps),0.00
+Final URLLC Total Rate (Mbps),193.81
+
+INTENT UNDERSTANDING EVALUATION
+Total Evaluated Requests,3
+Correctly Identified Intents,3
+Intent Understanding Rate (%),100.00

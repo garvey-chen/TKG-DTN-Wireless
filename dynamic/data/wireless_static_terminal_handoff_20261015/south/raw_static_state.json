@@ -1,0 +1,221 @@
+{
+  "embb_slice": {
+    "users": [
+      {
+        "user_id": "1",
+        "cqi": 15,
+        "bandwidth": 8,
+        "rate": 121.08167376864304,
+        "latency": 40
+      },
+      {
+        "user_id": "10",
+        "cqi": 15,
+        "bandwidth": 7,
+        "rate": 105.94646454756267,
+        "latency": 40
+      },
+      {
+        "user_id": "11",
+        "cqi": 10,
+        "bandwidth": 10,
+        "rate": 104.1392685158225,
+        "latency": 40
+      },
+      {
+        "user_id": "13",
+        "cqi": 9,
+        "bandwidth": 11,
+        "rate": 104.66466362277532,
+        "latency": 40
+      },
+      {
+        "user_id": "15",
+        "cqi": 7,
+        "bandwidth": 13,
+        "rate": 101.27126745483363,
+        "latency": 40
+      },
+      {
+        "user_id": "21",
+        "cqi": 12,
+        "bandwidth": 9,
+        "rate": 110.39151380364922,
+        "latency": 40
+      },
+      {
+        "user_id": "23",
+        "cqi": 6,
+        "bandwidth": 15,
+        "rate": 104.59841905630431,
+        "latency": 50
+      },
+      {
+        "user_id": "29",
+        "cqi": 11,
+        "bandwidth": 9,
+        "rate": 101.98760579895851,
+        "latency": 40
+      },
+      {
+        "user_id": "8",
+        "cqi": 14,
+        "bandwidth": 8,
+        "rate": 113.35634314236265,
+        "latency": 80
+      }
+    ],
+    "total_capacity": 90,
+    "resource_usage": 90,
+    "utilization_rate": "100.00%"
+  },
+  "urllc_slice": {
+    "users": [
+      {
+        "user_id": "12",
+        "cqi": 12,
+        "bandwidth": 1,
+        "rate": 12.265723755961025,
+        "latency": 5
+      },
+      {
+        "user_id": "14",
+        "cqi": 15,
+        "bandwidth": 5,
+        "rate": 75.67604610540191,
+        "latency": 1
+      },
+      {
+        "user_id": "16",
+        "cqi": 14,
+        "bandwidth": 1,
+        "rate": 14.16954289279533,
+        "latency": 5
+      },
+      {
+        "user_id": "17",
+        "cqi": 11,
+        "bandwidth": 1,
+        "rate": 11.331956199884278,
+        "latency": 5
+      },
+      {
+        "user_id": "18",
+        "cqi": 8,
+        "bandwidth": 1,
+        "rate": 8.638920341433797,
+        "latency": 5
+      },
+      {
+        "user_id": "19",
+        "cqi": 9,
+        "bandwidth": 1,
+        "rate": 9.514969420252301,
+        "latency": 1
+      },
+      {
+        "user_id": "2",
+        "cqi": 15,
+        "bandwidth": 5,
+        "rate": 75.67604610540191,
+        "latency": 3
+      },
+      {
+        "user_id": "20",
+        "cqi": 11,
+        "bandwidth": 1,
+        "rate": 11.331956199884278,
+        "latency": 5
+      },
+      {
+        "user_id": "22",
+        "cqi": 9,
+        "bandwidth": 1,
+        "rate": 9.514969420252301,
+        "latency": 5
+      },
+      {
+        "user_id": "24",
+        "cqi": 8,
+        "bandwidth": 1,
+        "rate": 8.638920341433797,
+        "latency": 3
+      },
+      {
+        "user_id": "25",
+        "cqi": 9,
+        "bandwidth": 1,
+        "rate": 9.514969420252301,
+        "latency": 3
+      },
+      {
+        "user_id": "26",
+        "cqi": 13,
+        "bandwidth": 1,
+        "rate": 13.21238401914255,
+        "latency": 5
+      },
+      {
+        "user_id": "27",
+        "cqi": 13,
+        "bandwidth": 1,
+        "rate": 13.21238401914255,
+        "latency": 3
+      },
+      {
+        "user_id": "28",
+        "cqi": 10,
+        "bandwidth": 1,
+        "rate": 10.41392685158225,
+        "latency": 5
+      },
+      {
+        "user_id": "3",
+        "cqi": 11,
+        "bandwidth": 1,
+        "rate": 11.331956199884278,
+        "latency": 5
+      },
+      {
+        "user_id": "4",
+        "cqi": 8,
+        "bandwidth": 1,
+        "rate": 8.638920341433797,
+        "latency": 5
+      },
+      {
+        "user_id": "5",
+        "cqi": 7,
+        "bandwidth": 1,
+        "rate": 7.790097496525664,
+        "latency": 5
+      },
+      {
+        "user_id": "6",
+        "cqi": 9,
+        "bandwidth": 1,
+        "rate": 9.514969420252301,
+        "latency": 5
+      },
+      {
+        "user_id": "7",
+        "cqi": 15,
+        "bandwidth": 3,
+        "rate": 45.40562766324114,
+        "latency": 5
+      },
+      {
+        "user_id": "9",
+        "cqi": 13,
+        "bandwidth": 1,
+        "rate": 13.21238401914255,
+        "latency": 5
+      }
+    ],
+    "total_capacity": 30,
+    "resource_usage": 30,
+    "utilization_rate": "100.00%"
+  },
+  "total_users": 29,
+  "timestamp": "2026-10-12 20:57:52"
+}

@@ -1,0 +1,631 @@
+{
+  "arrivals": 30,
+  "user_id": "30",
+  "intent_correct_this_arrival": false,
+  "step_seconds": 19.670436403001077,
+  "admitted_users": 30,
+  "resource_feasible_users": 30,
+  "correct_slice_users": 28,
+  "valid_correct_users": 28,
+  "bandwidth_used_mhz": 120.0,
+  "bandwidth_utilization_pct": 100.0,
+  "bandwidth_idle_pct": 0.0,
+  "raw_calculated_throughput_mbps": 1800.8084750956148,
+  "reported_throughput_mbps": 1800.8084750956148,
+  "resource_feasible_throughput_mbps": 1800.8084750956148,
+  "violation_count": 0,
+  "valid_correct_admission_pct": 93.33333333333333,
+  "llm_calls_cumulative": 122,
+  "violations": [],
+  "allocations": [
+    {
+      "user_id": "13",
+      "cqi": 15,
+      "bandwidth": 12,
+      "rate": 181.62251065296456,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 181.62251065296456,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "14",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "15",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "16",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "19",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "2",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "21",
+      "cqi": 14,
+      "bandwidth": 8,
+      "rate": 113.35634314236265,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 113.35634314236265,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "22",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "24",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "27",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 50,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "5",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "9",
+      "cqi": 15,
+      "bandwidth": 7,
+      "rate": 105.94646454756267,
+      "latency": 40,
+      "slice": "eMBB",
+      "calculated_rate_mbps": 105.94646454756267,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "1",
+      "cqi": 13,
+      "bandwidth": 1,
+      "rate": 13.21238401914255,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 13.21238401914255,
+      "correct_slice": false,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "10",
+      "cqi": 13,
+      "bandwidth": 1,
+      "rate": 13.21238401914255,
+      "latency": 3,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 13.21238401914255,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "11",
+      "cqi": 15,
+      "bandwidth": 5,
+      "rate": 75.67604610540191,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 75.67604610540191,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "12",
+      "cqi": 15,
+      "bandwidth": 5,
+      "rate": 75.67604610540191,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 75.67604610540191,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "17",
+      "cqi": 15,
+      "bandwidth": 5,
+      "rate": 75.67604610540191,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 75.67604610540191,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "18",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "20",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 1,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "23",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "25",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "26",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "28",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "29",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "3",
+      "cqi": 13,
+      "bandwidth": 1,
+      "rate": 13.21238401914255,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 13.21238401914255,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "30",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": false,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "4",
+      "cqi": 13,
+      "bandwidth": 1,
+      "rate": 13.21238401914255,
+      "latency": 1,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 13.21238401914255,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "6",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "7",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    },
+    {
+      "user_id": "8",
+      "cqi": 15,
+      "bandwidth": 1,
+      "rate": 15.13520922108038,
+      "latency": 5,
+      "slice": "URLLC",
+      "calculated_rate_mbps": 15.13520922108038,
+      "correct_slice": true,
+      "resource_feasible": true,
+      "violations": []
+    }
+  ],
+  "state": {
+    "embb_slice": {
+      "users": [
+        {
+          "user_id": "13",
+          "cqi": 15,
+          "bandwidth": 12,
+          "rate": 181.62251065296456,
+          "latency": 40
+        },
+        {
+          "user_id": "14",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "15",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "16",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 40
+        },
+        {
+          "user_id": "19",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "2",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "21",
+          "cqi": 14,
+          "bandwidth": 8,
+          "rate": 113.35634314236265,
+          "latency": 40
+        },
+        {
+          "user_id": "22",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "24",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 40
+        },
+        {
+          "user_id": "27",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 50
+        },
+        {
+          "user_id": "5",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 40
+        },
+        {
+          "user_id": "9",
+          "cqi": 15,
+          "bandwidth": 7,
+          "rate": 105.94646454756267,
+          "latency": 40
+        }
+      ],
+      "total_capacity": 90,
+      "resource_usage": 90,
+      "utilization_rate": "100.00%"
+    },
+    "urllc_slice": {
+      "users": [
+        {
+          "user_id": "1",
+          "cqi": 13,
+          "bandwidth": 1,
+          "rate": 13.21238401914255,
+          "latency": 5
+        },
+        {
+          "user_id": "10",
+          "cqi": 13,
+          "bandwidth": 1,
+          "rate": 13.21238401914255,
+          "latency": 3
+        },
+        {
+          "user_id": "11",
+          "cqi": 15,
+          "bandwidth": 5,
+          "rate": 75.67604610540191,
+          "latency": 5
+        },
+        {
+          "user_id": "12",
+          "cqi": 15,
+          "bandwidth": 5,
+          "rate": 75.67604610540191,
+          "latency": 5
+        },
+        {
+          "user_id": "17",
+          "cqi": 15,
+          "bandwidth": 5,
+          "rate": 75.67604610540191,
+          "latency": 5
+        },
+        {
+          "user_id": "18",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "20",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 1
+        },
+        {
+          "user_id": "23",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "25",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "26",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "28",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "29",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "3",
+          "cqi": 13,
+          "bandwidth": 1,
+          "rate": 13.21238401914255,
+          "latency": 5
+        },
+        {
+          "user_id": "30",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "4",
+          "cqi": 13,
+          "bandwidth": 1,
+          "rate": 13.21238401914255,
+          "latency": 1
+        },
+        {
+          "user_id": "6",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "7",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        },
+        {
+          "user_id": "8",
+          "cqi": 15,
+          "bandwidth": 1,
+          "rate": 15.13520922108038,
+          "latency": 5
+        }
+      ],
+      "total_capacity": 30,
+      "resource_usage": 30,
+      "utilization_rate": "100.00%"
+    },
+    "total_users": 30,
+    "timestamp": "2026-10-12 20:55:07"
+  },
+  "result": {
+    "user_id": "30",
+    "request": "I want to monitor my home security cameras remotely",
+    "cqi": 15,
+    "ground_truth": null,
+    "allocation_failed": false,
+    "slice_type": "URLLC",
+    "intent_correct": null,
+    "bandwidth": 1,
+    "rate": 15.13520922108038,
+    "latency": 5,
+    "adjustments_made": true,
+    "embb_total_rate_before": 1354.4434992709541,
+    "embb_total_rate_after": 1354.4434992709541,
+    "urllc_total_rate_before": 446.36497582466035,
+    "urllc_total_rate_after": 446.3649758246604,
+    "avg_resource_util_before": 100.0,
+    "avg_resource_util_after": 100.0,
+    "embb_util_after": "100.00%",
+    "urllc_util_after": "100.00%"
+  }
+}

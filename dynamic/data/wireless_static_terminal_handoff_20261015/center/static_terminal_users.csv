@@ -1,0 +1,31 @@
+scene,user_id,legacy_admitted,assigned_slice,bandwidth_mhz,original_cqi,original_snr_db,original_rx_power_dbm,original_los,original_x,original_y,original_z,ground_truth,request,correct_slice,source_rate_mbps,source_latency_ms,legacy_resource_feasible,legacy_status
+center,1,1,URLLC,1,13,24.07,-68.92,0,61.58,-68.02,1.50,URLLC,I want to use remote surgery equipment,1,13.21238401914255,1,1,admitted
+center,2,1,URLLC,5,15,36.60,-56.39,0,-43.33,-28.89,1.50,URLLC,I need real-time traffic updates for navigation,1,75.67604610540191,5,1,admitted
+center,3,1,URLLC,1,10,15.70,-77.29,0,22.09,139.95,1.50,URLLC,I need to synchronize distributed financial ledgers instantly,1,10.41392685158225,5,1,admitted
+center,4,1,eMBB,13,7,6.04,-86.95,0,-218.79,2.19,1.50,eMBB,I want to download a large software update,1,101.27126745483363,80,1,admitted
+center,5,1,URLLC,1,13,25.63,-67.36,0,-31.51,85.18,1.50,URLLC,I need to control a robotic arm in real time,1,13.21238401914255,3,1,admitted
+center,6,1,eMBB,10,10,14.57,-78.42,0,-15.92,148.68,1.50,eMBB,I need to participate in a video conference meeting,1,104.1392685158225,50,1,admitted
+center,7,1,URLLC,1,7,6.51,-86.48,0,-212.33,30.48,1.50,URLLC,I need to control remote diagnostic equipment in rural clinics,1,7.790097496525664,3,1,admitted
+center,8,1,URLLC,1,8,11.14,-81.85,0,-167.87,45.11,1.50,URLLC,I need real-time traffic updates for navigation,1,8.638920341433797,5,1,admitted
+center,9,1,eMBB,10,15,35.95,-57.04,0,8.57,-50.72,1.50,eMBB,I want to stream a live sports event in HD,1,151.35209221080382,50,1,admitted
+center,10,1,URLLC,1,8,9.77,-83.21,0,-171.39,70.29,1.50,URLLC,I need to deploy early warning systems for natural disasters,1,8.638920341433797,5,1,admitted
+center,11,1,eMBB,12,8,11.26,-81.72,0,-172.16,3.46,1.50,eMBB,I need to sync my calendar and contacts,1,103.66704409720556,40,1,admitted
+center,12,1,URLLC,1,8,9.31,-83.68,0,-177.73,64.65,1.50,URLLC,I need to control critical infrastructure with zero downtime,1,8.638920341433797,3,1,admitted
+center,13,1,URLLC,1,6,3.33,-89.66,0,-241.99,55.78,1.50,URLLC,I need real-time traffic updates for navigation,1,6.973227937086954,5,1,admitted
+center,14,1,URLLC,1,11,17.15,-75.84,0,-101.97,-79.92,1.50,URLLC,I need to monitor IoT sensors in real-time,1,11.331956199884278,5,1,admitted
+center,15,1,eMBB,15,6,5.18,-87.81,0,-195.80,118.29,1.50,eMBB,I want to participate in a virtual reality gaming session,1,104.59841905630431,40,1,admitted
+center,16,1,URLLC,1,9,13.30,-79.69,0,-107.48,116.32,1.50,URLLC,I need reliable communication for firefighters inside buildings,1,9.514969420252301,5,1,admitted
+center,17,1,URLLC,1,14,26.93,-66.06,0,-10.00,84.93,1.50,URLLC,I want to play competitive mobile games with ultra-low latency,1,14.16954289279533,5,1,admitted
+center,18,1,eMBB,17,5,2.41,-90.58,0,-250.36,-61.16,1.50,eMBB,I want to watch 4K video,1,105.28627817123609,50,1,admitted
+center,19,1,URLLC,1,10,16.86,-76.13,0,-100.91,89.23,1.50,URLLC,I need instant alerts for life-threatening patient conditions,1,10.41392685158225,5,1,admitted
+center,20,1,URLLC,1,11,17.16,-75.83,0,-95.08,-87.58,1.50,URLLC,I need to control critical infrastructure with zero downtime,1,11.331956199884278,3,1,admitted
+center,21,1,eMBB,13,7,7.09,-85.90,0,-195.25,-70.24,1.50,eMBB,I want to use augmented reality navigation,1,101.27126745483363,40,1,admitted
+center,22,1,URLLC,1,13,23.72,-69.26,0,-15.76,97.60,1.50,URLLC,I need emergency response coordination during a disaste,1,13.21238401914255,1,1,admitted
+center,23,0,,0,13,25.18,-67.81,0,-19.56,90.55,1.50,eMBB,I need to send text messages and use messaging apps,,0,,,rejected
+center,24,1,URLLC,1,12,22.73,-70.25,0,59.81,-77.29,1.50,URLLC,I want to remotely access my work computer,1,12.265723755961025,5,1,admitted
+center,25,0,,0,8,9.62,-83.37,0,-140.74,123.24,1.50,eMBB,I need to use cloud-based AI services for image processing,,0,,,rejected
+center,26,1,URLLC,5,15,30.85,-62.14,0,41.27,56.93,1.50,URLLC,I need real-time fraud detection for financial transactions,1,75.67604610540191,5,1,admitted
+center,27,1,URLLC,3,15,28.69,-64.30,0,-38.35,-63.94,1.50,URLLC,I need vehicle-to-vehicle collision avoidance systems,1,45.40562766324114,5,1,admitted
+center,28,1,URLLC,1,7,6.22,-86.77,0,-209.49,-53.59,1.50,URLLC,I need to monitor and control critical manufacturing processes in real-time,1,7.790097496525664,3,1,admitted
+center,29,1,URLLC,1,9,12.31,-80.68,0,-102.42,130.34,1.50,URLLC,I need instant facial recognition for public security threats,1,9.514969420252301,5,1,admitted
+center,30,0,,0,8,8.73,-84.26,0,-190.73,34.32,1.50,eMBB,I want to listen to low-quality audio streaming,,0,,,rejected

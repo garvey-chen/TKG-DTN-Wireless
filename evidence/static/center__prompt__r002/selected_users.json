@@ -1,0 +1,272 @@
+[
+  {
+    "user_id": "1",
+    "x": 61.58,
+    "y": -68.02,
+    "z": 1.5,
+    "cqi": 13,
+    "request": "I want to use remote surgery equipment",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "2",
+    "x": -43.33,
+    "y": -28.89,
+    "z": 1.5,
+    "cqi": 15,
+    "request": "I need real-time traffic updates for navigation",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "3",
+    "x": 22.09,
+    "y": 139.95,
+    "z": 1.5,
+    "cqi": 10,
+    "request": "I need to synchronize distributed financial ledgers instantly",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "4",
+    "x": -218.79,
+    "y": 2.19,
+    "z": 1.5,
+    "cqi": 7,
+    "request": "I want to download a large software update",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "5",
+    "x": -31.51,
+    "y": 85.18,
+    "z": 1.5,
+    "cqi": 13,
+    "request": "I need to control a robotic arm in real time",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "6",
+    "x": -15.92,
+    "y": 148.68,
+    "z": 1.5,
+    "cqi": 10,
+    "request": "I need to participate in a video conference meeting",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "7",
+    "x": -212.33,
+    "y": 30.48,
+    "z": 1.5,
+    "cqi": 7,
+    "request": "I need to control remote diagnostic equipment in rural clinics",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "8",
+    "x": -167.87,
+    "y": 45.11,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I need real-time traffic updates for navigation",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "9",
+    "x": 8.57,
+    "y": -50.72,
+    "z": 1.5,
+    "cqi": 15,
+    "request": "I want to stream a live sports event in HD",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "10",
+    "x": -171.39,
+    "y": 70.29,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I need to deploy early warning systems for natural disasters",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "11",
+    "x": -172.16,
+    "y": 3.46,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I need to sync my calendar and contacts",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "12",
+    "x": -177.73,
+    "y": 64.65,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I need to control critical infrastructure with zero downtime",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "13",
+    "x": -241.99,
+    "y": 55.78,
+    "z": 1.5,
+    "cqi": 6,
+    "request": "I need real-time traffic updates for navigation",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "14",
+    "x": -101.97,
+    "y": -79.92,
+    "z": 1.5,
+    "cqi": 11,
+    "request": "I need to monitor IoT sensors in real-time",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "15",
+    "x": -195.8,
+    "y": 118.29,
+    "z": 1.5,
+    "cqi": 6,
+    "request": "I want to participate in a virtual reality gaming session",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "16",
+    "x": -107.48,
+    "y": 116.32,
+    "z": 1.5,
+    "cqi": 9,
+    "request": "I need reliable communication for firefighters inside buildings",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "17",
+    "x": -10.0,
+    "y": 84.93,
+    "z": 1.5,
+    "cqi": 14,
+    "request": "I want to play competitive mobile games with ultra-low latency",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "18",
+    "x": -250.36,
+    "y": -61.16,
+    "z": 1.5,
+    "cqi": 5,
+    "request": "I want to watch 4K video",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "19",
+    "x": -100.91,
+    "y": 89.23,
+    "z": 1.5,
+    "cqi": 10,
+    "request": "I need instant alerts for life-threatening patient conditions",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "20",
+    "x": -95.08,
+    "y": -87.58,
+    "z": 1.5,
+    "cqi": 11,
+    "request": "I need to control critical infrastructure with zero downtime",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "21",
+    "x": -195.25,
+    "y": -70.24,
+    "z": 1.5,
+    "cqi": 7,
+    "request": "I want to use augmented reality navigation",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "22",
+    "x": -15.76,
+    "y": 97.6,
+    "z": 1.5,
+    "cqi": 13,
+    "request": "I need emergency response coordination during a disaste",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "23",
+    "x": -19.56,
+    "y": 90.55,
+    "z": 1.5,
+    "cqi": 13,
+    "request": "I need to send text messages and use messaging apps",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "24",
+    "x": 59.81,
+    "y": -77.29,
+    "z": 1.5,
+    "cqi": 12,
+    "request": "I want to remotely access my work computer",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "25",
+    "x": -140.74,
+    "y": 123.24,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I need to use cloud-based AI services for image processing",
+    "ground_truth": "eMBB"
+  },
+  {
+    "user_id": "26",
+    "x": 41.27,
+    "y": 56.93,
+    "z": 1.5,
+    "cqi": 15,
+    "request": "I need real-time fraud detection for financial transactions",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "27",
+    "x": -38.35,
+    "y": -63.94,
+    "z": 1.5,
+    "cqi": 15,
+    "request": "I need vehicle-to-vehicle collision avoidance systems",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "28",
+    "x": -209.49,
+    "y": -53.59,
+    "z": 1.5,
+    "cqi": 7,
+    "request": "I need to monitor and control critical manufacturing processes in real-time",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "29",
+    "x": -102.42,
+    "y": 130.34,
+    "z": 1.5,
+    "cqi": 9,
+    "request": "I need instant facial recognition for public security threats",
+    "ground_truth": "URLLC"
+  },
+  {
+    "user_id": "30",
+    "x": -190.73,
+    "y": 34.32,
+    "z": 1.5,
+    "cqi": 8,
+    "request": "I want to listen to low-quality audio streaming",
+    "ground_truth": "eMBB"
+  }
+]

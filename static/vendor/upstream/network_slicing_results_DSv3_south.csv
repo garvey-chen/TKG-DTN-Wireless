@@ -1,0 +1,13 @@
+User ID,Allocation Status,Slice,Ground Truth,Intent Correct,CQI,Bandwidth (MHz),Rate (Mbps),Latency (ms),Adjustments Made,eMBB Total Rate Before (Mbps),eMBB Total Rate After (Mbps),URLLC Total Rate Before (Mbps),URLLC Total Rate After (Mbps),Avg Resource Util Before (%),Avg Resource Util After (%),Request
+1,Success,eMBB,eMBB,Yes,15,15,227.03,40,No,0,227.03,0,0,0.0,12.5,I want to update my social media status
+
+SUMMARY STATISTICS
+Average Resource Utilization (%),12.50
+Final Resource Utilization (%),12.50
+Final eMBB Total Rate (Mbps),227.03
+Final URLLC Total Rate (Mbps),0.00
+
+INTENT UNDERSTANDING EVALUATION
+Total Evaluated Requests,1
+Correctly Identified Intents,1
+Intent Understanding Rate (%),100.00

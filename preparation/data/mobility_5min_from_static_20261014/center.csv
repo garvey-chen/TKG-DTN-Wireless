@@ -1,0 +1,931 @@
+Scenario,Frame_Index,Time_s,RX_ID,X,Y,Z,SNR_dB,RX_Power_dBm,CQI,LOS,User_Request,Request_Label,Mobility_Profile,Movement_State,Step_Distance_m,Speed_mps,Cumulative_Distance_m
+center,0,0,1,61.580000,-68.020000,1.500000,24.068037,-68.921663,13,0,I want to use remote surgery equipment,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,initial,0.000000,0.000000,0.000000
+center,0,0,5,-31.510000,85.180000,1.500000,25.631542,-67.358158,13,0,I need to control a robotic arm in real time,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,initial,0.000000,0.000000,0.000000
+center,0,0,7,-212.330000,30.480000,1.500000,6.504706,-86.484994,7,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,9,8.570000,-50.720000,1.500000,35.947806,-57.041894,15,0,I want to stream a live sports event in HD,eMBB,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,10,-171.390000,70.290000,1.500000,9.774304,-83.215396,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,11,-172.160000,3.460000,1.500000,11.264964,-81.724736,8,0,I need to sync my calendar and contacts,eMBB,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,12,-177.730000,64.650000,1.500000,9.310452,-83.679248,8,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,13,-241.990000,55.780000,1.500000,3.325427,-89.664273,6,0,I need real-time traffic updates for navigation,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,14,-101.970000,-79.920000,1.500000,17.146788,-75.842912,11,0,I need to monitor IoT sensors in real-time,URLLC,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,15,-195.800000,118.290000,1.500000,5.180518,-87.809182,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,16,-107.480000,116.320000,1.500000,13.301635,-79.688065,9,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,18,-250.360000,-61.160000,1.500000,2.410741,-90.578959,5,0,I want to watch 4K video,eMBB,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,20,-95.080000,-87.580000,1.500000,17.157823,-75.831877,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,initial,0.000000,0.000000,0.000000
+center,0,0,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,23,-19.560000,90.550000,1.500000,25.176616,-67.813084,13,0,I need to send text messages and use messaging apps,eMBB,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,24,59.810000,-77.290000,1.500000,22.734858,-70.254842,12,0,I want to remotely access my work computer,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,25,-140.740000,123.240000,1.500000,9.622278,-83.367422,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,initial,0.000000,0.000000,0.000000
+center,0,0,26,41.270000,56.930000,1.500000,30.852901,-62.136799,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,27,-38.350000,-63.940000,1.500000,28.689606,-64.300094,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,28,-209.490000,-53.590000,1.500000,6.222089,-86.767611,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,initial,0.000000,0.000000,0.000000
+center,0,0,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,initial,0.000000,0.000000,0.000000
+center,0,0,30,-190.730000,34.320000,1.500000,8.732508,-84.257192,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,initial,0.000000,0.000000,0.000000
+center,1,10,1,69.244295,-69.266213,1.500000,22.711579,-70.278121,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,7.764951
+center,1,10,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,1,10,5,-37.562385,84.636280,1.500000,25.203148,-67.786552,13,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,6.076759
+center,1,10,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,1,10,7,-216.317610,27.483298,1.500000,6.142246,-86.847454,7,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,4.988112
+center,1,10,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,9,1.370188,-54.197858,1.500000,34.936912,-58.052788,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,7.995798
+center,1,10,10,-165.181616,69.410217,1.500000,10.506861,-82.482839,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,6.270411
+center,1,10,11,-179.950253,2.794678,1.500000,10.299819,-82.689881,8,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,7.818612
+center,1,10,12,-172.838439,65.852885,1.500000,9.801945,-83.187755,8,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,5.037291
+center,1,10,13,-237.166495,53.662219,1.500000,3.784505,-89.205195,6,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,5.267940
+center,1,10,14,-102.022668,-87.129954,1.500000,16.376366,-76.613334,10,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,7.210146
+center,1,10,15,-201.049893,120.417823,1.500000,4.650407,-88.339293,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,5.664716
+center,1,10,16,-104.480132,110.355453,1.500000,14.209903,-78.779797,9,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,6.676453
+center,1,10,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,18,-249.832669,-53.935439,1.500000,2.598002,-90.391698,5,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,7.243781
+center,1,10,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,20,-93.115309,-81.890673,1.500000,18.061248,-74.928452,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,6.019008
+center,1,10,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,1,10,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,23,-19.558824,85.433189,1.500000,26.409713,-66.579987,14,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,5.116811
+center,1,10,24,57.279117,-82.765241,1.500000,22.110526,-70.879174,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,6.031885
+center,1,10,25,-142.634077,119.698557,1.500000,9.721297,-83.268403,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,4.016136
+center,1,10,26,47.235626,57.023575,1.500000,29.675133,-63.314567,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,5.966360
+center,1,10,27,-34.391991,-62.465670,1.500000,29.598168,-63.391532,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,4.223681
+center,1,10,28,-205.353576,-51.430665,1.500000,6.684625,-86.305075,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,4.666126
+center,1,10,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,1,10,30,-184.243694,33.188878,1.500000,9.488089,-83.501611,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,6.584193
+center,2,20,1,69.168789,-77.030797,1.500000,21.536833,-71.452867,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,15.529902
+center,2,20,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,2,20,5,-43.591077,83.873477,1.500000,24.744477,-68.245223,13,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,12.153517
+center,2,20,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,2,20,7,-220.817217,25.330442,1.500000,5.721891,-87.267809,7,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,9.976223
+center,2,20,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,9,-6.226445,-56.692642,1.500000,33.969969,-59.019731,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,15.991596
+center,2,20,10,-158.911485,69.351042,1.500000,11.230222,-81.759478,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,12.540821
+center,2,20,11,-187.768825,2.819552,1.500000,9.372157,-83.617544,8,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,15.637224
+center,2,20,12,-167.930708,66.987996,1.500000,10.304313,-82.685387,8,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,10.074582
+center,2,20,13,-232.158232,52.028665,1.500000,4.260409,-88.729291,6,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,10.535881
+center,2,20,14,-102.341513,-94.333047,1.500000,15.570490,-77.419210,10,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,14.420293
+center,2,20,15,-206.537247,121.824218,1.500000,4.147063,-88.842637,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664715,0.566472,11.329431
+center,2,20,16,-101.354402,104.455890,1.500000,15.160137,-77.829563,10,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,13.352907
+center,2,20,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,18,-248.667633,-46.785960,1.500000,2.823179,-90.166521,5,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,14.487561
+center,2,20,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,20,-90.046972,-76.712472,1.500000,19.080152,-73.909548,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,12.038016
+center,2,20,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,2,20,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,23,-18.427218,80.443077,1.500000,27.747008,-65.242692,14,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,10.233622
+center,2,20,24,54.097838,-87.889995,1.500000,21.580542,-71.409158,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,12.063770
+center,2,20,25,-144.670680,116.237113,1.500000,9.791645,-83.198055,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,8.032271
+center,2,20,26,53.197991,57.241877,1.500000,28.459147,-64.530553,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,11.932720
+center,2,20,27,-30.428737,-61.005499,1.500000,30.508381,-62.481319,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,8.447362
+center,2,20,28,-201.602404,-48.655518,1.500000,7.133691,-85.856010,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,9.332252
+center,2,20,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,2,20,30,-180.535709,27.748065,1.500000,10.018865,-82.970835,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,13.168386
+center,3,30,1,69.011397,-84.794153,1.500000,20.383032,-72.606668,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,23.294853
+center,3,30,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,3,30,5,-49.667579,83.929329,1.500000,24.047719,-68.941981,13,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,18.230276
+center,3,30,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,3,30,7,-225.761382,24.669768,1.500000,5.250405,-87.739295,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,14.964334
+center,3,30,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,9,-9.163951,-49.255986,1.500000,36.640778,-56.348922,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,23.987394
+center,3,30,10,-152.641075,69.351451,1.500000,11.970975,-81.018725,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,18.811231
+center,3,30,11,-195.578201,3.199456,1.500000,8.483380,-84.506320,7,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,23.455835
+center,3,30,12,-162.920023,67.505044,1.500000,10.853553,-82.136147,8,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,15.111873
+center,3,30,13,-227.826306,49.031063,1.500000,4.710775,-88.278925,6,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,15.803822
+center,3,30,14,-101.447534,-101.487557,1.500000,14.898115,-78.091585,10,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,21.630439
+center,3,30,15,-211.904160,123.636744,1.500000,3.645517,-89.344183,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,16.994147
+center,3,30,16,-97.826838,98.787440,1.500000,16.169090,-76.820610,10,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,20.029360
+center,3,30,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,18,-247.012943,-39.733701,1.500000,3.075375,-89.914326,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,21.731342
+center,3,30,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,20,-87.556181,-71.233018,1.500000,20.097760,-72.891940,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,18.057024
+center,3,30,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,3,30,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,23,-18.218246,75.330535,1.500000,29.146521,-63.843179,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,15.350433
+center,3,30,24,50.739756,-92.900676,1.500000,21.045490,-71.944210,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,18.095655
+center,3,30,25,-146.394725,112.609853,1.500000,9.893466,-83.096234,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,12.048407
+center,3,30,26,59.047791,58.415455,1.500000,27.102412,-65.887288,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966359,0.596636,17.899079
+center,3,30,27,-26.566001,-59.297064,1.500000,31.478200,-61.511500,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,12.671043
+center,3,30,28,-197.577196,-46.295342,1.500000,7.608404,-85.381296,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,13.998378
+center,3,30,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,3,30,30,-177.870330,21.727487,1.500000,10.427851,-82.561849,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584194,0.658419,19.752580
+center,4,40,1,68.930115,-92.558679,1.500000,19.238118,-73.751582,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,31.059805
+center,4,40,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,4,40,5,-55.742974,84.058071,1.500000,23.296487,-69.693213,13,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,24.307035
+center,4,40,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,4,40,7,-230.715228,24.086102,1.500000,4.786804,-88.202897,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,19.952446
+center,4,40,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,9,-11.854661,-41.726520,1.500000,39.598995,-53.390705,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,31.983192
+center,4,40,10,-146.393890,69.890644,1.500000,12.699157,-80.290543,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,25.081642
+center,4,40,11,-203.396246,3.293577,1.500000,7.628609,-85.361091,7,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,31.274446
+center,4,40,12,-157.918089,66.909260,1.500000,11.466276,-81.523424,9,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,20.149164
+center,4,40,13,-222.989833,46.943068,1.500000,5.199440,-87.790260,6,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,21.071762
+center,4,40,14,-101.365087,-108.697232,1.500000,14.129915,-78.859785,9,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,28.840586
+center,4,40,15,-216.674561,126.691622,1.500000,3.146201,-89.843499,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,22.658863
+center,4,40,16,-94.090601,93.254307,1.500000,17.233332,-75.756368,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,26.705814
+center,4,40,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,18,-246.141187,-32.542567,1.500000,3.248565,-89.741135,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,28.975123
+center,4,40,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,20,-85.844277,-65.462590,1.500000,21.069739,-71.919961,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,24.076031
+center,4,40,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,4,40,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,23,-17.991179,70.218765,1.500000,30.638430,-62.351270,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,20.467243
+center,4,40,24,48.167310,-98.356513,1.500000,20.329112,-72.660589,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,24.127540
+center,4,40,25,-147.026674,108.643749,1.500000,10.115397,-82.874303,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,16.064542
+center,4,40,26,64.995789,58.883180,1.500000,25.890395,-67.099305,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,23.865439
+center,4,40,27,-28.397676,-55.491220,1.500000,32.374641,-60.615059,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,16.894724
+center,4,40,28,-193.357044,-44.304601,1.500000,8.103954,-84.885746,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,18.664504
+center,4,40,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,4,40,30,-175.542483,15.568532,1.500000,10.781481,-82.208219,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,26.336773
+center,5,50,1,69.000857,-100.323308,1.500000,18.103303,-74.886397,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,38.824756
+center,5,50,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,5,50,5,-55.742974,84.058071,1.500000,23.296487,-69.693213,13,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,24.307035
+center,5,50,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,5,50,7,-235.459222,22.544746,1.500000,4.359365,-88.630335,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,24.940557
+center,5,50,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,9,-13.540128,-33.910383,1.500000,43.099504,-49.890196,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,39.978991
+center,5,50,10,-140.411254,68.012851,1.500000,13.557048,-79.432652,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,31.352051
+center,5,50,11,-211.079931,4.739839,1.500000,6.819093,-86.170607,7,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,39.093058
+center,5,50,12,-152.990203,65.865115,1.500000,12.109110,-80.880590,9,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,25.186455
+center,5,50,13,-218.312308,44.519856,1.500000,5.689761,-87.299939,6,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,26.339702
+center,5,50,14,-102.900423,-115.742014,1.500000,13.237181,-79.752519,9,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,36.050732
+center,5,50,15,-216.674561,126.691622,1.500000,3.146201,-89.843499,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,22.658863
+center,5,50,16,-94.090601,93.254307,1.500000,17.233332,-75.756368,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,26.705814
+center,5,50,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,18,-246.141187,-32.542567,1.500000,3.248565,-89.741135,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,28.975123
+center,5,50,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,20,-85.844277,-65.462590,1.500000,21.069739,-71.919961,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,24.076031
+center,5,50,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,5,50,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,23,-18.258055,65.108919,1.500000,32.190838,-60.798862,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116810,0.511681,25.584054
+center,5,50,24,48.167310,-98.356513,1.500000,20.329112,-72.660589,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,24.127540
+center,5,50,25,-148.312584,104.839044,1.500000,10.254763,-82.734937,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,20.080678
+center,5,50,26,70.312241,56.175267,1.500000,25.287397,-67.702303,13,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,29.831799
+center,5,50,27,-30.049870,-51.604096,1.500000,33.305244,-59.684456,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,21.118405
+center,5,50,28,-193.357044,-44.304601,1.500000,8.103954,-84.885746,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,18.664504
+center,5,50,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,5,50,30,-173.249032,9.396686,1.500000,11.111017,-81.878683,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,32.920966
+center,6,60,1,68.802759,-108.085732,1.500000,17.023938,-75.965762,10,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,46.589707
+center,6,60,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,6,60,5,-55.742974,84.058071,1.500000,23.296487,-69.693213,13,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,24.307035
+center,6,60,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,6,60,7,-240.153569,20.858222,1.500000,3.944205,-89.045495,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,29.928669
+center,6,60,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,9,-13.742617,-25.917149,1.500000,47.451920,-45.537780,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,47.974789
+center,6,60,10,-134.542753,65.804063,1.500000,14.455153,-78.534547,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,37.622462
+center,6,60,11,-218.866266,5.449536,1.500000,6.028577,-86.961123,7,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,46.911669
+center,6,60,12,-148.389961,63.812780,1.500000,12.782714,-80.206986,9,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,30.223747
+center,6,60,13,-213.473065,42.438289,1.500000,6.200047,-86.789654,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,31.607643
+center,6,60,14,-110.105721,-115.477625,1.500000,12.609158,-80.380542,9,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,43.260879
+center,6,60,15,-216.674561,126.691622,1.500000,3.146201,-89.843499,6,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,22.658863
+center,6,60,16,-94.090601,93.254307,1.500000,17.233332,-75.756368,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,26.705814
+center,6,60,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,18,-246.141187,-32.542567,1.500000,3.248565,-89.741135,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,28.975123
+center,6,60,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,20,-85.844277,-65.462590,1.500000,21.069739,-71.919961,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,24.076031
+center,6,60,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,6,60,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,23,-18.198319,59.992457,1.500000,33.881955,-59.107745,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,30.700865
+center,6,60,24,48.167310,-98.356513,1.500000,20.329112,-72.660589,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,24.127540
+center,6,60,25,-149.636582,101.047425,1.500000,10.380170,-82.609530,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,24.096813
+center,6,60,26,69.696009,50.240816,1.500000,26.256817,-66.732883,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,35.798159
+center,6,60,27,-30.049870,-51.604096,1.500000,33.305244,-59.684456,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,21.118405
+center,6,60,28,-193.357044,-44.304601,1.500000,8.103954,-84.885746,7,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,18.664504
+center,6,60,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,6,60,30,-170.790044,3.288906,1.500000,11.439337,-81.550363,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,39.505159
+center,7,70,1,69.739023,-115.794031,1.500000,15.889426,-77.100274,10,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,54.354658
+center,7,70,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,7,70,5,-61.717409,85.168532,1.500000,22.362098,-70.627602,12,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,30.383794
+center,7,70,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,7,70,7,-245.071891,20.026740,1.500000,3.510186,-89.479514,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,34.916780
+center,7,70,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,9,-15.405756,-18.096231,1.500000,51.741819,-41.247881,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,55.970587
+center,7,70,10,-129.359766,62.274943,1.500000,15.382911,-77.606790,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,43.892872
+center,7,70,11,-226.674523,5.851792,1.500000,5.263957,-87.725743,6,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,54.730281
+center,7,70,12,-144.247489,60.946732,1.500000,13.461817,-79.527883,9,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,35.261038
+center,7,70,13,-208.367512,41.140397,1.500000,6.734330,-86.255370,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,36.875583
+center,7,70,14,-117.255355,-114.545451,1.500000,12.041695,-80.948005,9,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,50.471026
+center,7,70,15,-220.514172,130.856522,1.500000,2.679183,-90.310517,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,28.323579
+center,7,70,16,-90.600904,87.562467,1.500000,18.337587,-74.652113,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,33.382267
+center,7,70,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,18,-246.141187,-32.542567,1.500000,3.248565,-89.741135,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,28.975123
+center,7,70,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,20,-85.844277,-65.462590,1.500000,21.069739,-71.919961,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,24.076031
+center,7,70,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,7,70,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,23,-17.813635,54.890127,1.500000,35.733349,-57.256351,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,35.817675
+center,7,70,24,48.167310,-98.356513,1.500000,20.329112,-72.660589,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,24.127540
+center,7,70,25,-150.436286,97.111715,1.500000,10.559610,-82.430090,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401613,28.112948
+center,7,70,26,68.721919,44.354510,1.500000,27.280732,-65.708968,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,41.764519
+center,7,70,27,-30.049870,-51.604096,1.500000,33.305244,-59.684456,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,21.118405
+center,7,70,28,-188.988750,-42.664255,1.500000,8.617537,-84.372163,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,23.330629
+center,7,70,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,7,70,30,-167.306784,-2.298446,1.500000,11.879395,-81.110306,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,46.089353
+center,8,80,1,62.035196,-114.821652,1.500000,16.630914,-76.358786,10,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,62.119610
+center,8,80,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,8,80,5,-67.589102,83.603212,1.500000,21.869656,-71.120044,12,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,36.460553
+center,8,80,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,8,80,7,-250.020824,19.402785,1.500000,3.080305,-89.909395,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,39.904892
+center,8,80,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,9,-17.748601,-10.451372,1.500000,55.087953,-37.901747,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,63.966386
+center,8,80,10,-123.748162,59.477097,1.500000,16.364180,-76.625520,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,50.163282
+center,8,80,11,-234.492649,5.764666,1.500000,4.525015,-88.464685,6,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,62.548892
+center,8,80,12,-140.443335,57.644806,1.500000,14.139440,-78.850260,9,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,40.298329
+center,8,80,13,-203.131529,40.561017,1.500000,7.281684,-85.708016,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,42.143524
+center,8,80,14,-124.003290,-112.005452,1.500000,11.642002,-81.347698,9,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,57.681173
+center,8,80,15,-224.463626,134.917411,1.500000,2.217617,-90.772083,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,33.988295
+center,8,80,16,-87.839963,81.483632,1.500000,19.445305,-73.544395,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,40.058720
+center,8,80,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,18,-243.585700,-25.764526,1.500000,3.549624,-89.440076,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243780,0.724378,36.218904
+center,8,80,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,20,-85.568882,-59.449886,1.500000,21.855952,-71.133748,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,30.095039
+center,8,80,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,8,80,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,23,-17.567832,49.779224,1.500000,37.726271,-55.263429,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116810,0.511681,40.934486
+center,8,80,24,48.167310,-98.356513,1.500000,20.329112,-72.660589,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,24.127540
+center,8,80,25,-151.220593,93.172907,1.500000,10.732507,-82.257193,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,32.129084
+center,8,80,26,68.721919,44.354510,1.500000,27.280732,-65.708968,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,41.764519
+center,8,80,27,-30.049870,-51.604096,1.500000,33.305244,-59.684456,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,21.118405
+center,8,80,28,-184.585956,-41.118895,1.500000,9.144669,-83.845031,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,27.996755
+center,8,80,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,8,80,30,-162.237570,-6.500191,1.500000,12.525324,-80.464376,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,52.673545
+center,9,90,1,54.362113,-113.630740,1.500000,17.379075,-75.610625,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764952,0.776495,69.884562
+center,9,90,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,9,90,5,-73.231329,81.346605,1.500000,21.463360,-71.526340,12,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,42.537312
+center,9,90,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,9,90,7,-255.008841,19.433416,1.500000,2.651510,-90.338190,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,44.893003
+center,9,90,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,9,-18.535184,-2.494358,1.500000,57.913771,-35.075929,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,71.962184
+center,9,90,10,-117.557247,58.481802,1.500000,17.350771,-75.638929,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,56.433692
+center,9,90,11,-234.492649,5.764666,1.500000,4.525015,-88.464685,6,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,62.548892
+center,9,90,12,-135.854971,55.566052,1.500000,14.879284,-78.110416,10,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,45.335621
+center,9,90,13,-198.055510,39.152037,1.500000,7.842624,-85.147076,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,47.411464
+center,9,90,14,-130.926392,-109.991285,1.500000,11.157867,-81.831833,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,64.891319
+center,9,90,15,-228.861965,138.487231,1.500000,1.754065,-91.235635,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664715,0.566472,39.653010
+center,9,90,16,-82.262304,77.814197,1.500000,20.695786,-72.293914,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,46.735174
+center,9,90,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,18,-239.577199,-19.730930,1.500000,3.964152,-89.025548,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,43.462684
+center,9,90,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,20,-86.049494,-53.450097,1.500000,22.491387,-70.498313,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,36.114047
+center,9,90,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,9,90,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,23,-17.420791,44.664526,1.500000,39.879738,-53.109963,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,46.051297
+center,9,90,24,44.607868,-103.226216,1.500000,19.772587,-73.217113,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,30.159425
+center,9,90,25,-151.810390,89.200315,1.500000,10.919760,-82.069940,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,36.145220
+center,9,90,26,68.721919,44.354510,1.500000,27.280732,-65.708968,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,41.764519
+center,9,90,27,-30.049870,-51.604096,1.500000,33.305244,-59.684456,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,21.118405
+center,9,90,28,-180.028494,-40.117760,1.500000,9.687654,-83.302046,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,32.662881
+center,9,90,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,9,90,30,-158.382077,-11.837491,1.500000,12.993368,-79.996333,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,59.257738
+center,10,100,1,46.764683,-112.026519,1.500000,18.159616,-74.830084,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,77.649513
+center,10,100,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,10,100,5,-78.657412,78.610801,1.500000,21.101666,-71.888034,12,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,48.614071
+center,10,100,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,10,100,7,-254.709222,24.412521,1.500000,2.644823,-90.344877,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,49.881114
+center,10,100,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,9,-19.341968,5.460633,1.500000,57.644909,-35.344791,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,79.957981
+center,10,100,10,-111.548711,56.688609,1.500000,18.413134,-74.576566,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,62.704102
+center,10,100,11,-234.492649,5.764666,1.500000,4.525015,-88.464685,6,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,62.548892
+center,10,100,12,-130.994970,54.241406,1.500000,15.641372,-77.348328,10,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,50.372911
+center,10,100,13,-192.788002,39.219510,1.500000,8.409063,-84.580637,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,52.679404
+center,10,100,14,-137.953034,-108.374955,1.500000,10.617157,-82.372543,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,72.101466
+center,10,100,15,-232.331157,142.965368,1.500000,1.326117,-91.663583,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,45.317726
+center,10,100,16,-75.589536,77.592383,1.500000,21.685118,-71.304582,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,53.411628
+center,10,100,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,18,-237.466010,-12.801627,1.500000,4.205986,-88.783714,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,50.706465
+center,10,100,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,20,-86.860728,-47.486008,1.500000,23.020302,-69.969399,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,42.133055
+center,10,100,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,10,100,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,23,-16.726553,39.595030,1.500000,42.317207,-50.672493,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,51.168108
+center,10,100,24,40.251207,-107.397923,1.500000,19.358247,-73.631453,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,36.191310
+center,10,100,25,-153.092826,85.394438,1.500000,11.012193,-81.977507,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,40.161355
+center,10,100,26,68.243269,38.407381,1.500000,28.170587,-64.819113,14,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,47.730879
+center,10,100,27,-32.779518,-48.380976,1.500000,33.809050,-59.180650,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,25.342086
+center,10,100,28,-175.508406,-38.959512,1.500000,10.244556,-82.745144,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,37.329008
+center,10,100,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,10,100,30,-154.527180,-17.175222,1.500000,13.443068,-79.546632,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,65.841932
+center,11,110,1,39.005423,-111.729286,1.500000,18.698960,-74.290740,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,85.414464
+center,11,110,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,11,110,5,-84.715948,78.140542,1.500000,20.302881,-72.686819,12,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,54.690830
+center,11,110,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,11,110,7,-254.620690,29.399847,1.500000,2.611862,-90.377838,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,54.869226
+center,11,110,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,9,-21.383566,13.191394,1.500000,53.658800,-39.330900,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,87.953780
+center,11,110,10,-105.565691,54.812036,1.500000,19.530955,-73.458745,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,68.974513
+center,11,110,11,-234.492649,5.764666,1.500000,4.525015,-88.464685,6,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,62.548892
+center,11,110,12,-126.091419,53.088372,1.500000,16.426890,-76.562810,10,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,55.410202
+center,11,110,13,-187.520150,39.249961,1.500000,8.990847,-83.998853,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,57.947344
+center,11,110,14,-144.217178,-104.804702,1.500000,10.282876,-82.706824,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,79.311612
+center,11,110,15,-236.890352,146.327324,1.500000,0.878063,-92.111637,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,50.982442
+center,11,110,16,-68.925724,78.003034,1.500000,22.577320,-70.412380,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,60.088081
+center,11,110,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,18,-234.222842,-6.324419,1.500000,4.535959,-88.453741,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,57.950246
+center,11,110,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,20,-87.849439,-41.548761,1.500000,23.455415,-69.534285,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,48.152062
+center,11,110,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,11,110,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,23,-15.995361,34.530732,1.500000,45.027936,-47.961765,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,56.284919
+center,11,110,24,35.827036,-111.497965,1.500000,18.920519,-74.069181,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,42.223194
+center,11,110,25,-154.510884,81.636985,1.500000,11.075709,-81.913991,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,44.177490
+center,11,110,26,68.352130,32.442014,1.500000,28.852494,-64.137206,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,53.697239
+center,11,110,27,-36.642146,-50.089655,1.500000,32.590943,-60.398757,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,29.565767
+center,11,110,28,-175.508406,-38.959512,1.500000,10.244556,-82.745144,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,37.329008
+center,11,110,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,11,110,30,-155.131502,-23.731623,1.500000,13.223969,-79.765731,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,72.426125
+center,12,120,1,31.524310,-109.649042,1.500000,19.473626,-73.516074,11,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,93.179415
+center,12,120,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,12,120,5,-84.715948,78.140542,1.500000,20.302881,-72.686819,12,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,54.690830
+center,12,120,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,12,120,7,-254.184037,34.368810,1.500000,2.600278,-90.389422,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,59.857338
+center,12,120,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,9,-25.941824,19.760646,1.500000,48.192524,-44.797176,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,95.949578
+center,12,120,10,-99.758075,52.447794,1.500000,20.720070,-72.269630,12,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,75.244924
+center,12,120,11,-234.492649,5.764666,1.500000,4.525015,-88.464685,6,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,62.548892
+center,12,120,12,-121.082281,52.556546,1.500000,17.217746,-75.771954,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,60.447493
+center,12,120,13,-182.264493,38.890422,1.500000,9.595565,-83.394135,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,63.215285
+center,12,120,14,-150.153986,-100.713182,1.500000,9.992042,-82.997658,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,86.521760
+center,12,120,15,-241.948706,148.877238,1.500000,0.438724,-92.550976,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,56.647158
+center,12,120,16,-62.383693,79.336021,1.500000,23.271965,-69.717735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,66.764534
+center,12,120,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,18,-233.250537,0.853811,1.500000,4.642067,-88.347633,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,65.194027
+center,12,120,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,20,-89.787810,-35.850413,1.500000,23.606399,-69.383301,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,54.171070
+center,12,120,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,12,120,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,23,-15.448759,29.443200,1.500000,48.014656,-44.975044,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,61.401730
+center,12,120,24,31.258330,-115.436310,1.500000,18.481626,-74.508074,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,48.255079
+center,12,120,25,-156.079816,77.939987,1.500000,11.107383,-81.882317,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,48.193625
+center,12,120,26,67.978618,26.487357,1.500000,29.570662,-63.419038,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,59.663599
+center,12,120,27,-40.360594,-52.092808,1.500000,31.361636,-61.628064,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,33.789447
+center,12,120,28,-175.508406,-38.959512,1.500000,10.244556,-82.745144,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,37.329008
+center,12,120,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,12,120,30,-156.420549,-30.188399,1.500000,12.882767,-80.106933,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,79.010318
+center,13,130,1,24.738730,-105.874075,1.500000,20.492239,-72.497461,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,100.944366
+center,13,130,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,13,130,5,-84.715948,78.140542,1.500000,20.302881,-72.686819,12,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,54.690830
+center,13,130,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,13,130,7,-255.033926,39.283985,1.500000,2.473111,-90.516589,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,64.845449
+center,13,130,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,9,-29.812452,26.757147,1.500000,43.742314,-49.247386,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,103.945376
+center,13,130,10,-93.728801,50.725616,1.500000,21.957057,-71.032643,12,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,81.515334
+center,13,130,11,-242.249167,4.781246,1.500000,3.816752,-89.172948,6,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,70.367504
+center,13,130,12,-116.062250,52.973186,1.500000,17.972163,-75.017537,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,65.484784
+center,13,130,13,-177.030905,39.491049,1.500000,10.191192,-82.798508,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,68.483225
+center,13,130,14,-156.911425,-98.198579,1.500000,9.494360,-83.495340,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,93.731906
+center,13,130,15,-241.948706,148.877238,1.500000,0.438724,-92.550976,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,56.647158
+center,13,130,16,-56.191360,81.832026,1.500000,23.648247,-69.341453,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,73.440987
+center,13,130,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,18,-232.898450,8.089030,1.500000,4.669680,-88.320020,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,72.437808
+center,13,130,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,20,-91.455729,-30.067118,1.500000,23.738444,-69.251256,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,60.190078
+center,13,130,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,13,130,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,23,-20.245529,27.661978,1.500000,47.302053,-45.687647,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,66.518541
+center,13,130,24,31.258330,-115.436310,1.500000,18.481626,-74.508074,11,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,48.255079
+center,13,130,25,-158.029418,74.428805,1.500000,11.074085,-81.915615,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,52.209761
+center,13,130,26,67.223868,20.568928,1.500000,30.296502,-62.693198,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,65.629959
+center,13,130,27,-44.075862,-54.101854,1.500000,30.180859,-62.808841,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,38.013128
+center,13,130,28,-175.508406,-38.959512,1.500000,10.244556,-82.745144,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,37.329008
+center,13,130,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,13,130,30,-157.772235,-36.632353,1.500000,12.508113,-80.481587,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,85.594511
+center,14,140,1,17.444984,-103.210291,1.500000,21.298604,-71.691096,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764952,0.776495,108.709318
+center,14,140,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,14,140,5,-84.715948,78.140542,1.500000,20.302881,-72.686819,12,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,54.690830
+center,14,140,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,14,140,7,-255.619285,44.237631,1.500000,2.360743,-90.628957,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,69.833561
+center,14,140,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,9,-34.461129,33.262729,1.500000,39.803358,-53.186342,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,111.941174
+center,14,140,10,-94.253699,56.974018,1.500000,21.249207,-71.740493,12,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,87.785744
+center,14,140,11,-250.064797,4.565357,1.500000,3.124871,-89.864829,6,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,78.186115
+center,14,140,12,-111.025602,53.053700,1.500000,18.773239,-74.216461,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,70.522076
+center,14,140,13,-171.842466,40.402802,1.500000,10.787904,-82.201796,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,73.751165
+center,14,140,14,-163.195497,-94.663518,1.500000,9.093867,-83.895833,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,100.942053
+center,14,140,15,-241.948706,148.877238,1.500000,0.438724,-92.550976,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,56.647158
+center,14,140,16,-50.447880,85.236063,1.500000,23.703965,-69.285735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,80.117440
+center,14,140,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,18,-232.898450,8.089030,1.500000,4.669680,-88.320020,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,72.437808
+center,14,140,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,20,-92.695871,-24.177254,1.500000,23.886004,-69.103696,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019007,0.601901,66.209085
+center,14,140,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,14,140,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,23,-25.130536,26.139330,1.500000,45.991524,-46.998176,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,71.635352
+center,14,140,24,31.258330,-115.436310,1.500000,18.481626,-74.508074,11,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,48.255079
+center,14,140,25,-158.902708,70.508766,1.500000,11.173845,-81.815855,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,56.225896
+center,14,140,26,65.222937,14.948099,1.500000,31.280108,-61.709592,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966359,0.596636,71.596318
+center,14,140,27,-48.168282,-55.146642,1.500000,29.195782,-63.793918,15,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,42.236810
+center,14,140,28,-175.508406,-38.959512,1.500000,10.244556,-82.745144,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,37.329008
+center,14,140,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,14,140,30,-158.470730,-43.179391,1.500000,12.190149,-80.799551,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,92.178704
+center,15,150,1,10.288642,-100.196783,1.500000,22.117541,-70.872159,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,116.474269
+center,15,150,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,15,150,5,-84.715948,78.140542,1.500000,20.302881,-72.686819,12,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,54.690830
+center,15,150,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,15,150,7,-254.559788,49.111923,1.500000,2.378517,-90.611184,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,74.821672
+center,15,150,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,9,-38.331319,40.259472,1.500000,36.509149,-56.480551,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,119.936972
+center,15,150,10,-94.432538,63.241878,1.500000,20.570405,-72.419295,12,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,94.056155
+center,15,150,11,-254.914131,10.698435,1.500000,2.696012,-90.293688,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,86.004727
+center,15,150,12,-105.992973,53.270382,1.500000,19.585913,-73.403787,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037292,0.503729,75.559367
+center,15,150,13,-166.701260,41.551366,1.500000,11.385736,-81.603964,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,79.019106
+center,15,150,14,-168.958803,-90.331022,1.500000,8.772221,-84.217479,8,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,108.152200
+center,15,150,15,-241.948706,148.877238,1.500000,0.438724,-92.550976,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,56.647158
+center,15,150,16,-50.447880,85.236063,1.500000,23.703965,-69.285735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,80.117440
+center,15,150,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,18,-232.898450,8.089030,1.500000,4.669680,-88.320020,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,72.437808
+center,15,150,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,20,-93.704013,-18.243275,1.500000,24.002437,-68.987263,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,72.228093
+center,15,150,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,15,150,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,23,-29.877713,24.229864,1.500000,44.599624,-48.390076,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,76.752162
+center,15,150,24,31.258330,-115.436310,1.500000,18.481626,-74.508074,11,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,48.255079
+center,15,150,25,-160.428719,66.793846,1.500000,11.176326,-81.813374,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401613,60.242031
+center,15,150,26,65.222937,14.948099,1.500000,31.280108,-61.709592,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,71.596318
+center,15,150,27,-52.391860,-55.176103,1.500000,28.416768,-64.572932,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,46.460490
+center,15,150,28,-171.121007,-37.370972,1.500000,10.812365,-82.177335,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,41.995133
+center,15,150,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,15,150,30,-158.010932,-49.747510,1.500000,11.989905,-80.999795,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,98.762898
+center,16,160,1,2.773749,-98.242083,1.500000,22.648496,-70.341204,12,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,124.239220
+center,16,160,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,16,160,5,-90.792615,78.173893,1.500000,19.437885,-73.551815,11,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,60.767589
+center,16,160,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,16,160,7,-254.033999,54.072246,1.500000,2.342714,-90.646986,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,79.809784
+center,16,160,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,9,-42.981795,46.763767,1.500000,33.547299,-59.442401,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,127.932770
+center,16,160,10,-100.701312,63.385145,1.500000,19.549819,-73.439881,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,100.326566
+center,16,160,11,-254.847923,18.516766,1.500000,2.670231,-90.319469,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,93.823338
+center,16,160,12,-100.995435,53.901982,1.500000,20.378151,-72.611549,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,80.596659
+center,16,160,13,-161.441499,41.844815,1.500000,12.038398,-80.951302,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,84.287046
+center,16,160,14,-175.124336,-86.593052,1.500000,8.360260,-84.629440,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,115.362346
+center,16,160,15,-247.294602,150.750843,1.500000,0.015837,-92.973863,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664715,0.566472,62.311873
+center,16,160,16,-50.447880,85.236063,1.500000,23.703965,-69.285735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,80.117440
+center,16,160,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,18,-232.030294,15.280599,1.500000,4.724653,-88.265047,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,79.681588
+center,16,160,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,20,-93.704013,-18.243275,1.500000,24.002437,-68.987263,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,72.228093
+center,16,160,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,16,160,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,23,-34.660159,22.410534,1.500000,42.958438,-50.031262,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,81.868973
+center,16,160,24,31.258330,-115.436310,1.500000,18.481626,-74.508074,11,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,48.255079
+center,16,160,25,-162.501566,63.353984,1.500000,11.090312,-81.899388,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,64.258167
+center,16,160,26,65.222937,14.948099,1.500000,31.280108,-61.709592,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,71.596318
+center,16,160,27,-56.542246,-54.392665,1.500000,27.801241,-65.188459,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,50.684171
+center,16,160,28,-166.927923,-35.323833,1.500000,11.384178,-81.605522,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,46.661259
+center,16,160,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,16,160,30,-157.185994,-56.279820,1.500000,11.805573,-81.184127,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,105.347091
+center,17,170,1,-3.916090,-94.299936,1.500000,23.516008,-69.473692,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,132.004172
+center,17,170,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,17,170,5,-96.859082,78.527421,1.500000,18.549126,-74.440574,11,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,66.844348
+center,17,170,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,17,170,7,-254.369973,59.049030,1.500000,2.228195,-90.761505,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,84.797896
+center,17,170,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,9,-46.108902,54.122706,1.500000,31.047101,-61.942599,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,135.928568
+center,17,170,10,-106.835924,62.087232,1.500000,18.707155,-74.282545,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,106.596976
+center,17,170,11,-253.904707,26.278276,1.500000,2.698997,-90.290703,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,101.641950
+center,17,170,12,-95.958181,53.882775,1.500000,21.254970,-71.734730,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,85.633949
+center,17,170,13,-158.906451,46.462685,1.500000,12.207921,-80.781779,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,89.554986
+center,17,170,14,-180.884866,-82.256866,1.500000,8.002716,-84.986984,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,122.572493
+center,17,170,15,-252.897924,149.919104,1.500000,-0.313596,-93.303297,4,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,67.976589
+center,17,170,16,-50.447880,85.236063,1.500000,23.703965,-69.285735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,80.117440
+center,17,170,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,18,-230.995373,22.450069,1.500000,4.774319,-88.215381,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,86.925369
+center,17,170,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,20,-93.704013,-18.243275,1.500000,24.002437,-68.987263,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,72.228093
+center,17,170,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,17,170,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,23,-39.239449,20.127585,1.500000,41.410629,-51.579071,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,86.985784
+center,17,170,24,25.302119,-114.483847,1.500000,18.904219,-74.085482,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,54.286964
+center,17,170,25,-165.023004,60.228013,1.500000,10.927431,-82.062269,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,68.274302
+center,17,170,26,65.222937,14.948099,1.500000,31.280108,-61.709592,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,71.596318
+center,17,170,27,-56.542246,-54.392665,1.500000,27.801241,-65.188459,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,50.684171
+center,17,170,28,-162.808960,-33.131375,1.500000,11.965205,-81.024495,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,51.327385
+center,17,170,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,17,170,30,-157.876902,-62.827663,1.500000,11.411363,-81.578337,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,111.931284
+center,18,180,1,-10.511837,-90.202304,1.500000,24.347131,-68.642570,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,139.769123
+center,18,180,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,18,180,5,-102.927070,78.201038,1.500000,17.747175,-75.242525,11,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,72.921108
+center,18,180,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,18,180,7,-254.184079,64.033676,1.500000,2.149001,-90.840699,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,89.786007
+center,18,180,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,9,-47.440592,62.006829,1.500000,28.976959,-64.012741,15,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,143.924366
+center,18,180,10,-112.635481,59.703290,1.500000,18.008504,-74.981196,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,112.867386
+center,18,180,11,-255.490544,33.934372,1.500000,2.494784,-90.494916,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,109.460561
+center,18,180,12,-94.388082,49.096431,1.500000,21.988415,-71.001285,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,90.671240
+center,18,180,13,-156.899121,51.333191,1.500000,12.280353,-80.709348,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,94.822927
+center,18,180,14,-186.762715,-78.081089,1.500000,7.610586,-85.379114,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,129.782640
+center,18,180,15,-255.475337,144.874707,1.500000,-0.293645,-93.283345,4,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664715,0.566472,73.641304
+center,18,180,16,-50.447880,85.236063,1.500000,23.703965,-69.285735,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,80.117440
+center,18,180,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,18,-229.273056,29.486118,1.500000,4.868585,-88.121115,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,94.169150
+center,18,180,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,20,-96.013361,-12.684915,1.500000,23.729040,-69.260661,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,78.247101
+center,18,180,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,18,180,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,23,-44.034620,18.342064,1.500000,39.612586,-53.377114,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,92.102594
+center,18,180,24,19.353889,-113.482752,1.500000,19.295836,-73.693864,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,60.318849
+center,18,180,25,-168.024924,57.560088,1.500000,10.681482,-82.308218,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,72.290438
+center,18,180,26,65.222937,14.948099,1.500000,31.280108,-61.709592,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,71.596318
+center,18,180,27,-56.542246,-54.392665,1.500000,27.801241,-65.188459,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,50.684171
+center,18,180,28,-159.151098,-30.234346,1.500000,12.519796,-80.469904,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,55.993511
+center,18,180,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,18,180,30,-157.726921,-69.410148,1.500000,11.093617,-81.896083,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,118.515477
+center,19,190,1,-17.975543,-88.060444,1.500000,24.595538,-68.394162,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,147.534074
+center,19,190,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,19,190,5,-109.003824,78.208757,1.500000,16.921425,-76.068275,10,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,78.997866
+center,19,190,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,19,190,7,-253.152411,68.913934,1.500000,2.132685,-90.857016,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,94.774118
+center,19,190,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,9,-45.880752,69.849003,1.500000,27.474720,-65.514980,14,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,151.920165
+center,19,190,10,-118.511355,57.514192,1.500000,17.275846,-75.713854,11,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,119.137796
+center,19,190,11,-254.985162,41.736633,1.500000,2.446602,-90.543098,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,117.279173
+center,19,190,12,-98.636139,46.389346,1.500000,21.439747,-71.549953,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,95.708531
+center,19,190,13,-155.825199,56.490505,1.500000,12.201097,-80.788603,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,100.090868
+center,19,190,14,-192.752070,-74.066883,1.500000,7.188391,-85.801309,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,136.992787
+center,19,190,15,-254.942661,139.235092,1.500000,-0.055508,-93.045208,4,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664715,0.566472,79.306020
+center,19,190,16,-45.212824,89.379639,1.500000,23.458045,-69.531655,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,86.793894
+center,19,190,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,18,-227.171532,36.418358,1.500000,4.978952,-88.010748,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243780,0.724378,101.412931
+center,19,190,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,20,-98.237204,-7.091796,1.500000,23.399651,-69.590049,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,84.266109
+center,19,190,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,19,190,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,23,-48.857688,16.633332,1.500000,37.823103,-55.166597,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,97.219405
+center,19,190,24,13.511899,-111.981155,1.500000,19.733685,-73.256015,11,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,66.350734
+center,19,190,25,-171.515963,55.574643,1.500000,10.348493,-82.641207,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,76.306574
+center,19,190,26,61.820334,10.047105,1.500000,32.616547,-60.373153,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,77.562678
+center,19,190,27,-56.542246,-54.392665,1.500000,27.801241,-65.188459,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,50.684171
+center,19,190,28,-155.006186,-28.091349,1.500000,13.130932,-79.858768,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,60.659637
+center,19,190,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,19,190,30,-156.524347,-75.883587,1.500000,10.876955,-82.112745,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,125.099670
+center,20,200,1,-25.163683,-85.123590,1.500000,24.892433,-68.097267,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,155.299026
+center,20,200,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,20,200,5,-115.069639,78.573295,1.500000,16.081390,-76.908310,10,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,85.074625
+center,20,200,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,20,200,7,-251.863582,73.732666,1.500000,2.130439,-90.859261,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988112,0.498811,99.762230
+center,20,200,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,9,-44.119065,77.648314,1.500000,26.004346,-66.985354,14,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,159.915963
+center,20,200,10,-124.168251,54.809090,1.500000,16.607298,-76.382402,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,125.408207
+center,20,200,11,-254.192232,49.514933,1.500000,2.402819,-90.586881,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,125.097785
+center,20,200,12,-103.026324,43.919412,1.500000,20.828418,-72.161282,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,100.745822
+center,20,200,13,-154.514778,61.592857,1.500000,12.131863,-80.857837,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,105.358808
+center,20,200,14,-199.007500,-70.481383,1.500000,6.715578,-86.274122,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,144.202934
+center,20,200,15,-252.902110,133.950666,1.500000,0.268967,-92.720733,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,84.970736
+center,20,200,16,-40.193897,93.782525,1.500000,23.048243,-69.941457,13,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,93.470348
+center,20,200,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,18,-227.171532,36.418358,1.500000,4.978952,-88.010748,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,101.412931
+center,20,200,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,20,-100.540227,-1.530813,1.500000,22.983078,-70.006622,13,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019007,0.601901,90.285116
+center,20,200,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,20,200,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,23,-53.381762,14.242828,1.500000,36.269411,-56.720289,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,102.336216
+center,20,200,24,7.562215,-110.988737,1.500000,20.033956,-72.955744,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,72.382619
+center,20,200,25,-174.853662,53.341011,1.500000,10.040712,-82.948988,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,80.322710
+center,20,200,26,59.213131,4.680547,1.500000,33.650579,-59.339121,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,83.529038
+center,20,200,27,-56.542246,-54.392665,1.500000,27.801241,-65.188459,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,50.684171
+center,20,200,28,-155.006186,-28.091349,1.500000,13.130932,-79.858768,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,60.659637
+center,20,200,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,20,200,30,-154.581171,-82.174506,1.500000,10.725020,-82.264680,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,131.683863
+center,21,210,1,-31.761906,-81.029946,1.500000,25.346794,-67.642906,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,163.063977
+center,21,210,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,21,210,5,-121.045893,79.673926,1.500000,15.213260,-77.776440,10,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,91.151384
+center,21,210,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,21,210,7,-249.200112,77.950151,1.500000,2.244605,-90.745095,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,104.750341
+center,21,210,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,9,-41.805680,85.302139,1.500000,24.634771,-68.354929,13,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,167.911761
+center,21,210,10,-129.928508,52.331694,1.500000,15.904677,-77.085023,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,131.678617
+center,21,210,11,-254.192232,49.514933,1.500000,2.402819,-90.586881,5,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,125.097785
+center,21,210,12,-107.645866,41.910898,1.500000,20.135380,-72.854320,12,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,105.783112
+center,21,210,13,-154.625079,66.859643,1.500000,11.861336,-81.128364,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,110.626749
+center,21,210,14,-205.078966,-66.592487,1.500000,6.265580,-86.724120,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,151.413081
+center,21,210,15,-252.902110,133.950666,1.500000,0.268967,-92.720733,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,84.970736
+center,21,210,16,-35.365861,98.393935,1.500000,22.504117,-70.485583,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,100.146801
+center,21,210,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,18,-227.171532,36.418358,1.500000,4.978952,-88.010748,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,101.412931
+center,21,210,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,20,-105.446196,1.956295,1.500000,21.962099,-71.027601,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,96.304124
+center,21,210,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,21,210,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,23,-56.958210,10.583488,1.500000,35.161743,-57.827957,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116810,0.511681,107.453026
+center,21,210,24,7.562215,-110.988737,1.500000,20.033956,-72.955744,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,72.382619
+center,21,210,25,-177.626847,50.436051,1.500000,9.816347,-83.173353,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,84.338846
+center,21,210,26,56.709401,-0.735059,1.500000,34.526635,-58.463066,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,89.495398
+center,21,210,27,-60.694995,-53.621848,1.500000,27.158698,-65.831002,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,54.907852
+center,21,210,28,-155.006186,-28.091349,1.500000,13.130932,-79.858768,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,60.659637
+center,21,210,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,21,210,30,-152.499368,-88.420921,1.500000,10.562450,-82.427250,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584194,0.658419,138.268057
+center,22,220,1,-38.302721,-76.845186,1.500000,25.677732,-67.311968,13,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764952,0.776495,170.828929
+center,22,220,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,22,220,5,-121.045893,79.673926,1.500000,15.213260,-77.776440,10,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,91.151384
+center,22,220,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,22,220,7,-245.204825,80.936610,1.500000,2.490700,-90.499000,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,109.738452
+center,22,220,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,9,-38.527640,92.595097,1.500000,23.430247,-69.559453,13,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,175.907559
+center,22,220,10,-136.028197,50.878476,1.500000,15.102533,-77.887167,10,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,137.949028
+center,22,220,11,-254.192232,49.514933,1.500000,2.402819,-90.586881,5,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,125.097785
+center,22,220,12,-112.239982,39.844887,1.500000,19.451733,-73.537967,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,110.820404
+center,22,220,13,-155.237299,72.091888,1.500000,11.519305,-81.470395,9,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,115.894690
+center,22,220,14,-211.559108,-63.431161,1.500000,5.750358,-87.239342,7,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,158.623228
+center,22,220,15,-252.902110,133.950666,1.500000,0.268967,-92.720733,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,84.970736
+center,22,220,16,-31.197815,103.609529,1.500000,21.740137,-71.249563,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,106.823255
+center,22,220,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,18,-227.171532,36.418358,1.500000,4.978952,-88.010748,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,101.412931
+center,22,220,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,20,-110.516256,5.200203,1.500000,20.931897,-72.057803,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019007,0.601901,102.323131
+center,22,220,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,22,220,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,23,-61.306417,7.886296,1.500000,33.697539,-59.292161,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116810,0.511681,112.569837
+center,22,220,24,7.562215,-110.988737,1.500000,20.033956,-72.955744,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,72.382619
+center,22,220,25,-180.005792,47.200318,1.500000,9.640616,-83.349084,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,88.354982
+center,22,220,26,52.755251,-5.202961,1.500000,35.841506,-57.148194,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,95.461758
+center,22,220,27,-64.668907,-52.190936,1.500000,26.643175,-66.346525,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223682,0.422368,59.131534
+center,22,220,28,-150.341631,-27.970288,1.500000,13.774779,-79.214921,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,65.325763
+center,22,220,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,22,220,30,-149.321711,-94.187557,1.500000,10.516612,-82.473088,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,144.852249
+center,23,230,1,-44.122421,-71.704606,1.500000,26.142195,-66.847505,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,178.593880
+center,23,230,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,23,230,5,-121.045893,79.673926,1.500000,15.213260,-77.776440,10,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,91.151384
+center,23,230,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,23,230,7,-241.119806,83.799104,1.500000,2.744774,-90.244926,5,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,114.726564
+center,23,230,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,9,-36.316829,100.279178,1.500000,22.064045,-70.925655,12,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,183.903357
+center,23,230,10,-142.290397,50.557706,1.500000,14.242057,-78.747643,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,144.219438
+center,23,230,11,-254.192232,49.514933,1.500000,2.402819,-90.586881,5,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,125.097785
+center,23,230,12,-116.221917,36.759682,1.500000,18.928791,-74.060909,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,115.857694
+center,23,230,13,-156.203844,77.270400,1.500000,11.130032,-81.859668,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,121.162631
+center,23,230,14,-218.022533,-60.235798,1.500000,5.238797,-87.750903,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,165.833374
+center,23,230,15,-252.902110,133.950666,1.500000,0.268967,-92.720733,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,84.970736
+center,23,230,16,-26.981260,108.785984,1.500000,20.955291,-72.034409,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,113.499707
+center,23,230,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,18,-227.171532,36.418358,1.500000,4.978952,-88.010748,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,101.412931
+center,23,230,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,20,-116.325285,6.776159,1.500000,19.805934,-73.183766,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,108.342139
+center,23,230,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,23,230,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,23,-65.397391,4.812913,1.500000,32.362147,-60.627553,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,117.686647
+center,23,230,24,2.215899,-108.195791,1.500000,20.625061,-72.364639,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,78.414504
+center,23,230,25,-182.709314,44.230417,1.500000,9.413796,-83.575904,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,92.371117
+center,23,230,26,48.988574,-9.830011,1.500000,36.960229,-56.029471,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,101.428118
+center,23,230,27,-68.413627,-50.237336,1.500000,26.225360,-66.764340,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,63.355215
+center,23,230,28,-147.053389,-31.280907,1.500000,14.133792,-78.855908,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,69.991889
+center,23,230,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,23,230,30,-146.510903,-100.141628,1.500000,10.391454,-82.598246,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,151.436443
+center,24,240,1,-50.174081,-66.839230,1.500000,26.354131,-66.635569,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764952,0.776495,186.358832
+center,24,240,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,24,240,5,-121.045893,79.673926,1.500000,15.213260,-77.776440,10,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,91.151384
+center,24,240,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,24,240,7,-236.433042,85.506587,1.500000,3.079036,-89.910664,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,119.714675
+center,24,240,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,9,-31.377421,106.566868,1.500000,21.156367,-71.833333,12,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995799,0.799580,191.899156
+center,24,240,10,-148.531382,51.164458,1.500000,13.371875,-79.617825,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,150.489848
+center,24,240,11,-253.379962,57.291237,1.500000,2.340903,-90.648797,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,132.916396
+center,24,240,12,-120.315265,33.823902,1.500000,18.367993,-74.621707,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,120.894985
+center,24,240,13,-159.006905,81.730674,1.500000,10.572747,-82.416953,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,126.430571
+center,24,240,14,-223.550102,-55.606306,1.500000,4.848780,-88.140920,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,173.043521
+center,24,240,15,-252.016081,128.355672,1.500000,0.525456,-92.464244,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,90.635452
+center,24,240,16,-26.981260,108.785984,1.500000,20.955291,-72.034409,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,113.499707
+center,24,240,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,18,-227.066680,43.661380,1.500000,4.876778,-88.112922,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,108.656712
+center,24,240,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,20,-116.325285,6.776159,1.500000,19.805934,-73.183766,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,108.342139
+center,24,240,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,24,240,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,23,-69.895117,2.373197,1.500000,30.927135,-62.062565,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,122.803458
+center,24,240,24,-3.037166,-105.231176,1.500000,21.217399,-71.772301,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,84.446389
+center,24,240,25,-185.268933,41.135632,1.500000,9.200919,-83.788781,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,96.387252
+center,24,240,26,45.882108,-14.923862,1.500000,37.565978,-55.423723,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,107.394477
+center,24,240,27,-71.812701,-47.730190,1.500000,25.921688,-67.068012,14,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,67.578896
+center,24,240,28,-147.091654,-35.946876,1.500000,13.966346,-79.023354,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,74.658015
+center,24,240,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,24,240,30,-142.039227,-104.974403,1.500000,10.481611,-82.508089,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,158.020636
+center,25,250,1,-55.765719,-61.451461,1.500000,26.565832,-66.423868,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,194.123783
+center,25,250,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,25,250,5,-121.045893,79.673926,1.500000,15.213260,-77.776440,10,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,91.151384
+center,25,250,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,25,250,7,-231.551471,86.532022,1.500000,3.451835,-89.537865,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,124.702786
+center,25,250,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,9,-25.880518,112.373489,1.500000,20.323659,-72.666041,12,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,199.894954
+center,25,250,10,-154.801154,51.253954,1.500000,12.550872,-80.438828,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,156.760259
+center,25,250,11,-253.158931,65.106724,1.500000,2.210756,-90.778945,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,140.735008
+center,25,250,12,-124.362111,30.824346,1.500000,17.810543,-75.179157,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,125.932276
+center,25,250,13,-162.627756,85.556983,1.500000,9.972263,-83.017437,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,131.698512
+center,25,250,14,-229.380564,-51.364617,1.500000,4.416162,-88.573538,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,180.253667
+center,25,250,15,-249.634859,123.215751,1.500000,0.869136,-92.120564,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,96.300167
+center,25,250,16,-26.981260,108.785984,1.500000,20.955291,-72.034409,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,113.499707
+center,25,250,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,18,-229.717189,50.402831,1.500000,4.512045,-88.477655,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,115.900492
+center,25,250,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,20,-116.325285,6.776159,1.500000,19.805934,-73.183766,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,108.342139
+center,25,250,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,25,250,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,23,-74.181221,-0.421631,1.500000,29.612559,-63.377141,15,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,127.920269
+center,25,250,24,-8.157080,-102.042114,1.500000,21.820531,-71.169169,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603188,90.478274
+center,25,250,25,-187.939103,38.135709,1.500000,8.968037,-84.021663,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,100.403388
+center,25,250,26,45.882108,-14.923862,1.500000,37.565978,-55.423723,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,107.394477
+center,25,250,27,-74.880143,-44.826695,1.500000,25.697579,-67.292121,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,71.802578
+center,25,250,28,-146.917406,-40.609747,1.500000,13.810200,-79.179500,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,79.324140
+center,25,250,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,25,250,30,-137.470710,-109.715737,1.500000,10.558713,-82.430987,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,164.604829
+center,26,260,1,-61.320991,-56.026204,1.500000,26.610096,-66.379604,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,201.888734
+center,26,260,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,26,260,5,-127.087488,80.326711,1.500000,14.399275,-78.590425,10,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,97.228143
+center,26,260,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,26,260,7,-227.177858,88.930513,1.500000,3.742180,-89.247520,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,129.690897
+center,26,260,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,9,-20.700444,118.464435,1.500000,19.387848,-73.601852,11,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,207.890752
+center,26,260,10,-160.948041,50.015479,1.500000,11.821961,-81.167739,9,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,163.030669
+center,26,260,11,-252.438796,72.892101,1.500000,2.103326,-90.886374,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,148.553620
+center,26,260,12,-124.300374,35.861259,1.500000,17.613267,-75.376433,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,130.969567
+center,26,260,13,-166.296509,89.337386,1.500000,9.383495,-83.606205,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,136.966452
+center,26,260,14,-235.165614,-47.061199,1.500000,3.985599,-89.004101,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,187.463813
+center,26,260,15,-245.991010,118.878543,1.500000,1.278513,-91.711187,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,101.964884
+center,26,260,16,-26.981260,108.785984,1.500000,20.955291,-72.034409,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,113.499707
+center,26,260,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,18,-230.479090,57.606432,1.500000,4.297575,-88.692125,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243781,0.724378,123.144273
+center,26,260,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,20,-116.325285,6.776159,1.500000,19.805934,-73.183766,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,108.342139
+center,26,260,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,26,260,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,23,-78.456916,-3.232358,1.500000,28.348652,-64.641048,14,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,133.037080
+center,26,260,24,-13.261378,-98.828116,1.500000,22.389410,-70.600290,12,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,96.510159
+center,26,260,25,-190.273524,34.867709,1.500000,8.773036,-84.216665,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,104.419524
+center,26,260,26,45.882108,-14.923862,1.500000,37.565978,-55.423723,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,107.394477
+center,26,260,27,-78.491990,-42.637164,1.500000,25.228823,-67.760877,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,moving,4.223681,0.422368,76.026259
+center,26,260,28,-146.963137,-45.275649,1.500000,13.606536,-79.383164,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,83.990266
+center,26,260,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,26,260,30,-133.299530,-114.810132,1.500000,10.540840,-82.448860,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,171.189022
+center,27,270,1,-67.603064,-51.462212,1.500000,26.191927,-66.797773,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,209.653685
+center,27,270,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,27,270,5,-133.127793,80.991324,1.500000,13.607371,-79.382329,9,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,103.304902
+center,27,270,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,27,270,7,-223.670900,92.477695,1.500000,3.919320,-89.070380,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,134.679008
+center,27,270,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,9,-15.716415,124.716814,1.500000,18.401980,-74.587720,11,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,215.886550
+center,27,270,10,-167.215870,49.835568,1.500000,11.059520,-81.930180,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,169.301079
+center,27,270,11,-252.510320,80.710385,1.500000,1.914458,-91.075242,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,156.372231
+center,27,270,12,-124.292039,40.898543,1.500000,17.377836,-75.611864,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,136.006858
+center,27,270,13,-169.899483,93.180533,1.500000,8.811807,-84.177893,8,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,142.234393
+center,27,270,14,-241.706594,-44.027753,1.500000,3.465433,-89.524267,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,194.673960
+center,27,270,15,-242.276983,114.601276,1.500000,1.697213,-91.292487,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,moving,5.664716,0.566472,107.629600
+center,27,270,16,-26.981260,108.785984,1.500000,20.955291,-72.034409,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,paused,0.000000,0.000000,113.499707
+center,27,270,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,18,-231.419366,64.788927,1.500000,4.052031,-88.937669,6,0,I want to watch 4K video,eMBB,intermittent,moving,7.243780,0.724378,130.388053
+center,27,270,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,20,-116.325285,6.776159,1.500000,19.805934,-73.183766,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,paused,0.000000,0.000000,108.342139
+center,27,270,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,27,270,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,23,-82.838409,-5.875135,1.500000,27.109708,-65.879992,14,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,138.153890
+center,27,270,24,-13.261378,-98.828116,1.500000,22.389410,-70.600290,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,96.510159
+center,27,270,25,-191.621676,31.084611,1.500000,8.690230,-84.299470,8,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,108.435659
+center,27,270,26,45.882108,-14.923862,1.500000,37.565978,-55.423723,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,107.394477
+center,27,270,27,-78.491990,-42.637164,1.500000,25.228823,-67.760877,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,76.026259
+center,27,270,28,-147.070737,-49.940534,1.500000,13.378903,-79.610797,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,88.656392
+center,27,270,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,27,270,30,-126.715424,-114.776258,1.500000,11.148272,-81.841428,8,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,177.773216
+center,28,280,1,-71.887002,-44.985921,1.500000,26.297637,-66.692063,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,217.418636
+center,28,280,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,28,280,5,-139.201469,80.797788,1.500000,12.891595,-80.098105,9,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,109.381661
+center,28,280,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,28,280,7,-221.667413,97.045768,1.500000,3.927963,-89.061737,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,139.667119
+center,28,280,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,9,-12.189245,131.892597,1.500000,17.241012,-75.748688,11,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,223.882349
+center,28,280,10,-173.476784,49.490604,1.500000,10.326452,-82.663248,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,175.571489
+center,28,280,11,-251.765303,88.493420,1.500000,1.774126,-91.215574,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818611,0.781861,164.190842
+center,28,280,12,-122.881969,45.734451,1.500000,17.346532,-75.643168,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,141.044150
+center,28,280,13,-173.477306,97.047105,1.500000,8.254315,-84.735385,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267940,0.526794,147.502333
+center,28,280,14,-248.848853,-43.040663,1.500000,2.868673,-90.121027,6,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,201.884106
+center,28,280,15,-242.276983,114.601276,1.500000,1.697213,-91.292487,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,107.629600
+center,28,280,16,-22.813445,114.001763,1.500000,20.139121,-72.850579,12,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,120.176161
+center,28,280,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,18,-231.419366,64.788927,1.500000,4.052031,-88.937669,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,130.388053
+center,28,280,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,20,-119.399903,11.950633,1.500000,19.183790,-73.805910,11,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,114.361147
+center,28,280,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,28,280,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,23,-87.675758,-7.543009,1.500000,25.840345,-67.149355,14,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116810,0.511681,143.270701
+center,28,280,24,-13.261378,-98.828116,1.500000,22.389410,-70.600290,12,0,I want to remotely access my work computer,URLLC,intermittent,paused,0.000000,0.000000,96.510159
+center,28,280,25,-193.766092,27.688904,1.500000,8.504807,-84.484893,7,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016136,0.401614,112.451795
+center,28,280,26,45.882108,-14.923862,1.500000,37.565978,-55.423723,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,paused,0.000000,0.000000,107.394477
+center,28,280,27,-78.491990,-42.637164,1.500000,25.228823,-67.760877,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,76.026259
+center,28,280,28,-147.070737,-49.940534,1.500000,13.378903,-79.610797,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,88.656392
+center,28,280,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,28,280,30,-120.317075,-113.222961,1.500000,11.879016,-81.110684,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,184.357409
+center,29,290,1,-74.967697,-37.858243,1.500000,26.572395,-66.417305,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764952,0.776495,225.183588
+center,29,290,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,29,290,5,-144.971031,78.890132,1.500000,12.333180,-80.656520,9,0,I need to control a robotic arm in real time,URLLC,intermittent,moving,6.076759,0.607676,115.458419
+center,29,290,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,29,290,7,-222.094854,102.015531,1.500000,3.712978,-89.276722,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,144.655230
+center,29,290,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,9,-9.110608,139.271945,1.500000,16.081797,-76.907903,10,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,231.878146
+center,29,290,10,-179.746617,49.575691,1.500000,9.600907,-83.388793,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270410,0.627041,181.841900
+center,29,290,11,-252.032496,96.307465,1.500000,1.539104,-91.450596,5,0,I need to sync my calendar and contacts,eMBB,intermittent,moving,7.818612,0.781861,172.009454
+center,29,290,12,-121.333453,50.527821,1.500000,17.306655,-75.683045,11,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,146.081440
+center,29,290,13,-175.836176,101.757406,1.500000,7.779074,-85.210626,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,152.770275
+center,29,290,14,-255.307312,-39.835274,1.500000,2.374256,-90.615444,5,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210146,0.721015,209.094253
+center,29,290,15,-242.276983,114.601276,1.500000,1.697213,-91.292487,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,107.629600
+center,29,290,16,-18.287260,118.909785,1.500000,19.376024,-73.613676,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676453,0.667645,126.852615
+center,29,290,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,18,-231.419366,64.788927,1.500000,4.052031,-88.937669,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,130.388053
+center,29,290,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,20,-113.402218,11.444441,1.500000,20.309094,-72.680606,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,120.380155
+center,29,290,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,29,290,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,23,-92.247446,-9.841143,1.500000,24.679373,-68.310327,13,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,148.387512
+center,29,290,24,-18.342811,-95.578089,1.500000,22.919160,-70.070540,13,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,102.542044
+center,29,290,25,-196.164669,24.467698,1.500000,8.283319,-84.706381,7,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401613,116.467930
+center,29,290,26,42.631867,-19.927199,1.500000,37.968751,-55.020949,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,113.360837
+center,29,290,27,-78.491990,-42.637164,1.500000,25.228823,-67.760877,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,76.026259
+center,29,290,28,-147.070737,-49.940534,1.500000,13.378903,-79.610797,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,paused,0.000000,0.000000,88.656392
+center,29,290,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,29,290,30,-113.805631,-112.246902,1.500000,12.581241,-80.408459,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,190.941602
+center,30,300,1,-78.279117,-30.834785,1.500000,26.603206,-66.386494,14,0,I want to use remote surgery equipment,URLLC,continuous,moving,7.764951,0.776495,232.948539
+center,30,300,2,-43.330000,-28.890000,1.500000,36.597630,-56.392070,15,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,3,22.090000,139.950000,1.500000,15.703705,-77.285995,10,0,I need to synchronize distributed financial ledgers instantly,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,4,-218.790000,2.190000,1.500000,6.037916,-86.951784,7,0,I want to download a large software update,eMBB,static,static,0.000000,0.000000,0.000000
+center,30,300,5,-144.971031,78.890132,1.500000,12.333180,-80.656520,9,0,I need to control a robotic arm in real time,URLLC,intermittent,paused,0.000000,0.000000,115.458419
+center,30,300,6,-15.920000,148.680000,1.500000,14.567770,-78.421930,10,0,I need to participate in a video conference meeting,eMBB,static,static,0.000000,0.000000,0.000000
+center,30,300,7,-222.699359,106.966877,1.500000,3.479651,-89.510049,6,0,I need to control remote diagnostic equipment in rural clinics,URLLC,continuous,moving,4.988111,0.498811,149.643341
+center,30,300,8,-167.870000,45.110000,1.500000,11.134691,-81.855009,8,0,I need real-time traffic updates for navigation,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,9,-6.762479,146.915182,1.500000,14.924135,-78.065565,10,0,I want to stream a live sports event in HD,eMBB,continuous,moving,7.995798,0.799580,239.873944
+center,30,300,10,-185.749574,51.387474,1.500000,8.877495,-84.112205,8,0,I need to deploy early warning systems for natural disasters,URLLC,continuous,moving,6.270411,0.627041,188.112310
+center,30,300,11,-252.032496,96.307465,1.500000,1.539104,-91.450596,5,0,I need to sync my calendar and contacts,eMBB,intermittent,paused,0.000000,0.000000,172.009454
+center,30,300,12,-120.873103,55.544033,1.500000,17.054191,-75.935509,10,0,I need to control critical infrastructure with zero downtime,URLLC,continuous,moving,5.037291,0.503729,151.118732
+center,30,300,13,-178.200977,106.464732,1.500000,7.309086,-85.680614,7,0,I need real-time traffic updates for navigation,URLLC,continuous,moving,5.267941,0.526794,158.038215
+center,30,300,14,-254.018282,-32.741289,1.500000,2.573122,-90.416578,5,0,I need to monitor IoT sensors in real-time,URLLC,continuous,moving,7.210147,0.721015,216.304400
+center,30,300,15,-242.276983,114.601276,1.500000,1.697213,-91.292487,5,0,I want to participate in a virtual reality gaming session,eMBB,intermittent,paused,0.000000,0.000000,107.629600
+center,30,300,16,-14.072729,124.087889,1.500000,18.544601,-74.445099,11,0,I need reliable communication for firefighters inside buildings,URLLC,intermittent,moving,6.676454,0.667645,133.529068
+center,30,300,17,-10.000000,84.930000,1.500000,26.934238,-66.055462,14,0,I want to play competitive mobile games with ultra-low latency,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,18,-231.419366,64.788927,1.500000,4.052031,-88.937669,6,0,I want to watch 4K video,eMBB,intermittent,paused,0.000000,0.000000,130.388053
+center,30,300,19,-100.910000,89.230000,1.500000,16.854557,-76.135143,10,0,I need instant alerts for life-threatening patient conditions,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,20,-108.055756,8.679698,1.500000,21.394828,-71.594872,12,0,I need to control critical infrastructure with zero downtime,URLLC,intermittent,moving,6.019008,0.601901,126.399163
+center,30,300,21,-195.250000,-70.240000,1.500000,7.089398,-85.900302,7,0,I want to use augmented reality navigation,eMBB,static,static,0.000000,0.000000,0.000000
+center,30,300,22,-15.760000,97.600000,1.500000,23.724596,-69.265104,13,0,I need emergency response coordination during a disaste,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,23,-97.254039,-10.897449,1.500000,23.514904,-69.474796,13,0,I need to send text messages and use messaging apps,eMBB,continuous,moving,5.116811,0.511681,153.504323
+center,30,300,24,-23.202793,-92.005385,1.500000,23.474052,-69.515648,13,0,I want to remotely access my work computer,URLLC,intermittent,moving,6.031885,0.603189,108.573930
+center,30,300,25,-198.889612,21.517439,1.500000,8.019069,-84.970631,7,0,I need to use cloud-based AI services for image processing,eMBB,continuous,moving,4.016135,0.401614,120.484065
+center,30,300,26,38.890327,-24.574599,1.500000,38.332919,-54.656781,15,0,I need real-time fraud detection for financial transactions,URLLC,intermittent,moving,5.966360,0.596636,119.327197
+center,30,300,27,-78.491990,-42.637164,1.500000,25.228823,-67.760877,13,0,I need vehicle-to-vehicle collision avoidance systems,URLLC,intermittent,paused,0.000000,0.000000,76.026259
+center,30,300,28,-146.986850,-54.605906,1.500000,13.161356,-79.828344,9,0,I need to monitor and control critical manufacturing processes in real-time,URLLC,intermittent,moving,4.666126,0.466613,93.322518
+center,30,300,29,-102.420000,130.340000,1.500000,12.305350,-80.684350,9,0,I need instant facial recognition for public security threats,URLLC,static,static,0.000000,0.000000,0.000000
+center,30,300,30,-107.340471,-111.000586,1.500000,13.316354,-79.673346,9,0,I want to listen to low-quality audio streaming,eMBB,continuous,moving,6.584193,0.658419,197.525795

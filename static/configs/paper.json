@@ -1,0 +1,36 @@
+{
+  "scenarios": [
+    "center",
+    "north",
+    "south"
+  ],
+  "methods": [
+    "tkg_dtn",
+    "wireless_kb",
+    "rule_upstream",
+    "prompt"
+  ],
+  "users": 30,
+  "repeats": 5,
+  "seed": 20261008,
+  "arrival_order": "source",
+  "checkpoints": [
+    1,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "llm": {
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.2,
+    "timeout_seconds": 120,
+    "max_tokens": 4096,
+    "max_retries": 2,
+    "max_calls_per_run": 400
+  },
+  "graph_reset": "none"
+}
