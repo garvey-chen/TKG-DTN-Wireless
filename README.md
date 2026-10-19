@@ -163,8 +163,4 @@ Reference used by the manuscript:
 
 > J. Tong, W. Guo, J. Shao, Q. Wu, Z. Li, Z. Lin, and J. Zhang, “WirelessAgent: Large language model agents for intelligent wireless networks,” *China Communications*, vol. 23, no. 3, pp. 265–285, 2026. DOI: 10.23919/JCC.fa.2025-0163.202603.
 
-If using these experiments, cite the TKG-DTN manuscript and the WirelessAgent reference. This release does not invent a publication DOI or final bibliographic record for TKG-DTN.
-
-## Publication security review
-
-The release, including all compressed logs, was checked for credentials and private metadata. No live credentials were found; workstation paths were removed from metadata, and runtime metadata hashes were refreshed while preserving historical hashes. See [the security review](SECURITY_AUDIT.md).
+If using these experiments, cite the TKG-DTN manuscript and the WirelessAgent reference. 
