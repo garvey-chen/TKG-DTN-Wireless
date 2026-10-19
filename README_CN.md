@@ -163,8 +163,4 @@ WirelessAgent 代码和数据集来自本地归档的 [WirelessAgent 仓库](htt
 
 > J. Tong, W. Guo, J. Shao, Q. Wu, Z. Li, Z. Lin, and J. Zhang, “WirelessAgent: Large language model agents for intelligent wireless networks,” *China Communications*, vol. 23, no. 3, pp. 265–285, 2026. DOI: 10.23919/JCC.fa.2025-0163.202603.
 
-使用这些实验时，请引用 TKG-DTN 稿件及上述 WirelessAgent 文献。本发布包不为 TKG-DTN 编造出版 DOI 或最终书目信息。
-
-## 公开发布安全检查
-
-已检查发布包中的凭据和私有元数据，包括全部压缩日志。未发现真实凭据；已清除元数据中的工作站路径，并在保留历史哈希的同时更新运行时元数据哈希。详情见[安全检查报告](SECURITY_AUDIT.md)。
+使用这些实验时，请引用 TKG-DTN 稿件及上述 WirelessAgent 文献。
