@@ -82,7 +82,7 @@ def event_times(start, end):
 def load_runtime(method):
     runtime_key = "tkg" if method == "tkg_dtn" else "wireless"
     runtime = HERE / "source_runtime" / runtime_key
-    provenance = json.loads((HERE / "source_provenance.json").read_text())[runtime_key]
+    provenance = json.loads((HERE / "runtime_config.json").read_text())[runtime_key]
     for relative, metadata in provenance["files"].items():
         if sha(runtime / relative) != metadata["sha256"]:
             raise AssertionError("Paper runtime source changed: " + relative)
@@ -374,9 +374,8 @@ def main():
         parser.error("Refusing to overwrite existing run: " + str(args.output))
     args.output.mkdir(parents=True)
     inputs = {name:sha(args.input_dir / name) for name in (
-        f"{args.scene}.csv", "timeline.csv", "generation.json", "independent_validation.json")}
-    source = {str(p.relative_to(HERE)):sha(p) for p in [Path(__file__), HERE / "event_graph_adapter.py",
-                                                      HERE / "execution_change.json"]}
+        f"{args.scene}.csv", "timeline.csv", "generation.json")}
+    source = {str(p.relative_to(HERE)):sha(p) for p in [Path(__file__), HERE / "event_graph_adapter.py"]}
     record = {"status": "running", "method": args.method, "scenario": args.scene,
         "duration_s": 300, "sample_interval_s": 1, "observed_users": 30, "repeats": 1,
         "started_at_utc": datetime.now(timezone.utc).isoformat(),

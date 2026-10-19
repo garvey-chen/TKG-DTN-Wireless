@@ -1,8 +1,8 @@
 # TKG-DTN：无线网络实验
 
-[English README](README.md) · [发布包核验报告](provenance/VALIDATION.md)
+[English README](README.md)
 
-本仓库提供 **TKG-DTN: Temporal Knowledge Graph-Driven Digital Twin Network for 6G Networking** 无线实验的源码、固定场景输入、实验记录和离线核验工具。
+本仓库提供 **TKG-DTN: Temporal Knowledge Graph-Driven Digital Twin Network for 6G Networking** 无线实验的源码、固定场景输入和运行说明。
 
 本发布包以 **2026 年 10 月 19 日**的英文实验稿 *Framework Transfer and Dynamic Service Assurance in Wireless Networks*（无线网络中的框架迁移与动态服务保障）为依据，收录该稿最终使用的静态与动态实验。
 
@@ -26,7 +26,7 @@ TKG-DTN 通过图表示无线用户、网络切片、资源分配及带有时间
 - eMBB 每用户约束为 6–20 MHz、100–400 Mbps；URLLC 每用户约束为 1–5 MHz、1–100 Mbps。
 - 五次重复使用相同输入与到达顺序。离散程度采用**重复运行之间的样本标准差**，而不是单次请求之间或重新采样网络之间的标准差。
 
-静态实验中的两种智能体共享 `exact_resources_v2` 分配工具。Prompt-based 每个请求调用一次模型，不重新分配已有用户的带宽。Rule-based 使用真实服务类别标签，保留上游连续带宽的比例公平分配及回退机制；其审计不施加其他方法采用的整数带宽约束。
+静态实验中的两种智能体共享 `exact_resources_v2` 分配工具。Prompt-based 每个请求调用一次模型，不重新分配已有用户的带宽。Rule-based 使用真实服务类别标签，保留上游连续带宽的比例公平分配及回退机制；该方法不施加其他方法采用的整数带宽约束。
 
 动态实验在 Center、North 和 South 中分别继承 27、30 和 29 名已接入用户，接入用户集合及其切片归属保持不变。每个场景观测全部 30 名用户，包括 10 名静止用户、10 名持续移动用户和 10 名间歇移动用户。输入包含从 0 到 300 s 的 301 个整秒采样时刻。1 秒粒度的位置由原始 10 秒轨迹段细分得到；信道根据几何模型重新计算，并以静态信道值为锚点校准。
 
@@ -41,56 +41,38 @@ TKG-DTN 通过图表示无线用户、网络切片、资源分配及带有时间
 ## 仓库结构
 
 ```text
-static/                 静态实验入口、四种策略、共享工具和 Neo4j 图适配器
-dynamic/tkg/            最终 TKG-DTN 完成驱动入口及冻结版本的运行时源码
-dynamic/wireless/       最终 WirelessAgent/冻结基线入口及冻结版本的运行时源码
-dynamic/data/           经核验的静态终态，用于初始化动态实验
-data/mobility/          三个场景最终采用的 1 秒信道与移动输入
-preparation/            移动轨迹重采样、信道生成程序及 10 秒原始输入
-evidence/static/       选定的 60 组运行记录，大型文本日志采用 gzip 压缩
-evidence/dynamic/      选定的 33 组运行记录，含状态、决策、流量和 API 日志
-analysis/              可移植的静态绘图程序与独立动态审计程序
-results/paper/         原稿统计表与绘图数据
-figures/               PNG 和 PDF 格式的论文图件
-provenance/            原始源码哈希、运行选择及可移植性修改记录
-reproduce.py           离线审计、统计核验与图件重绘入口
-RELEASE_MANIFEST.json  发布文件的 SHA-256 校验清单
+static/                 静态实验入口、四种策略、资源工具及 Neo4j 适配器
+dynamic/tkg/            TKG-DTN 动态实验入口及必需的运行模块
+dynamic/wireless/       WirelessAgent/冻结基线入口及必需的运行模块
+dynamic/data/           用于初始化动态实验的静态终态输入
+data/mobility/          三个场景的一秒间隔信道与移动输入
+preparation/            移动轨迹和信道生成代码及原始输入
+figures/                动态场景示意图
+requirements.txt        Python 依赖
+.env.example            环境变量示例
 ```
 
-静态 TKG-DTN 使用 **Neo4j**。最终动态 TKG-DTN 使用本地 **SQLite 时序图**，不需要 Neo4j 服务器。各方法分别保留运行时快照，以保存选定实验实际使用的实现版本。快照中的内部支持模块用于满足完整的导入依赖和来源追溯，不代表稿件额外报告了这些模块对应的基线。
+静态 TKG-DTN 使用 **Neo4j**。动态 TKG-DTN 使用本地 **SQLite 时序图**，不需要 Neo4j 服务器。各动态方法保留各自的运行模块，以保持实验所用实现一致。`runtime_config.json` 提供实验采用的模型配置，以及运行加载器需要的源码校验值。
 
 ## 安装
 
-发布包使用 Python **3.11** 进行核验。在仓库根目录执行：
+使用 Python **3.11**，克隆仓库后安装依赖：
 
 ```bash
+git clone https://github.com/garvey-chen/TKG-DTN-Wireless.git
+cd TKG-DTN-Wireless
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Windows PowerShell 使用 `.venv\Scripts\Activate.ps1` 激活环境。归档的静态实验环境版本见 `static/requirements-lock.txt`；本次打包核验所用环境见 `provenance/validation-environment.txt`。后者不代表原始实验环境。
-
-## 不调用 API，复核已记录的结果
-
-```bash
-# 仅使用 Python 标准库，核验全部发布文件的校验值。
-python reproduce.py --mode verify
-
-# 审计全部 60 组静态和 33 组动态运行，重算指标并重绘图件。
-python reproduce.py --mode all
-```
-
-输出写入 `outputs/reproduction/`。审计程序独立重算静态资源可行性，核对 450 个配对资源状态，按精确事件区间积分动态流量，验证固定用户集合及决策完成时序，重算 Table I，并检查全部 1–300 s 切片内公平性窗口。数值结果会与包内稿件 CSV 对照。无需 API 密钥或图数据库服务器。日志解压到临时目录，动态实验每次处理一组运行。
-
-可使用 `--mode static` 或 `--mode dynamic` 单独核验一个阶段。生成的静态图件及 `figure_5.png/pdf` 使用已记录数据，字体和子图排布可能与稿件不同。原稿图件保存在 `figures/`，包括 Fig. 1 和 Fig. 4 的空间地图。原始绘图与汇总源码保存在 `provenance/original_analysis/` 供追溯；这些文件依赖历史工作区路径，不是发布包的公开执行入口。
+Windows PowerShell 使用 `.venv\Scripts\Activate.ps1` 激活环境。静态实验记录的依赖版本见 `static/requirements-lock.txt`。
 
 ## 重新运行静态实验
 
 规则基线无需 API 密钥：
 
 ```bash
-python static/run.py preflight
 python static/run.py run --methods rule_upstream --scenarios center north south \
   --users 30 --repeats 5 --arrival-order source --output outputs/static_rule
 ```
@@ -153,11 +135,9 @@ python preparation/generate_mobility_1s.py --output outputs/mobility_regenerated
 
 这些实验评估框架适配和仿真服务保障，不测量分组级时延、无线硬件、切换或干扰。共享资源工具解释了观察到的静态决策一致性；效率差异比较的是完整的适配后智能体实现，不能单独归因于图表示。
 
-## 来源追溯与署名
+## 来源与署名
 
-`provenance/source_files.json` 记录原始文件与发布文件的哈希；`provenance/portability.patch` 记录路径及配置修改。核心策略和运行时文件复制自已核验的选定源码。原始运行清单保留历史哈希，公开路径可能经过脱敏；**公开发布包以 `RELEASE_MANIFEST.json` 为文件校验依据**。离线审计验证的是已发布的实验记录子集。冗余策略日志和大型图数据库转储未纳入发布包，这不表示公开审计重新验证了完整的历史数据库导出。
-
-WirelessAgent 代码和数据集来自本地归档的 [WirelessAgent 仓库](https://github.com/jwentong/WirelessAgent_R1)，源码快照及逐文件哈希记录在 `static/vendor/manifest.json` 中。该归档的 Git 提交号未知。地图保留 [OpenStreetMap 贡献者署名](https://www.openstreetmap.org/copyright)。另见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本次打包未为整个仓库指定新许可证，也未重新许可第三方材料。
+WirelessAgent 代码和数据集改编自 [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1)。地图保留 [OpenStreetMap 贡献者署名](https://www.openstreetmap.org/copyright)。来源和许可说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 稿件使用的参考文献：
 

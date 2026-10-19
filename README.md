@@ -1,8 +1,8 @@
 # TKG-DTN: Wireless Network Experiments
 
-[中文使用说明](README_CN.md) · [Release validation](provenance/VALIDATION.md)
+[中文使用说明](README_CN.md)
 
-Source code, fixed scenario inputs, recorded results, and offline verification tools for the wireless experiments in **TKG-DTN: Temporal Knowledge Graph-Driven Digital Twin Network for 6G Networking**.
+Source code, fixed scenario inputs, and run instructions for the wireless experiments in **TKG-DTN: Temporal Knowledge Graph-Driven Digital Twin Network for 6G Networking**.
 
 This release follows the English experimental manuscript dated **19 October 2026**, *Framework Transfer and Dynamic Service Assurance in Wireless Networks*. It contains the final static and dynamic experiments used in that manuscript.
 
@@ -26,7 +26,7 @@ Common settings:
 - eMBB per-user bounds: 6–20 MHz and 100–400 Mbps. URLLC bounds: 1–5 MHz and 1–100 Mbps.
 - Five repetitions reuse the same inputs and arrival order. Dispersion is the **sample standard deviation across repetitions**, not across individual requests or newly sampled networks.
 
-The static agent methods share the `exact_resources_v2` allocation tools. Prompt-based uses one model call and does not reallocate existing users. Rule-based uses oracle service labels and retains the upstream continuous-bandwidth proportional-fair allocation and fallback; its audit does not enforce the integer-bandwidth constraint used by the other methods.
+The static agent methods share the `exact_resources_v2` allocation tools. Prompt-based uses one model call and does not reallocate existing users. Rule-based uses oracle service labels and retains the upstream continuous-bandwidth proportional-fair allocation and fallback; it does not enforce the integer-bandwidth constraint used by the other methods.
 
 Dynamic runs inherit exactly 27, 30, and 29 admitted users in Center, North, and South. Membership and slice assignments stay fixed. Each scenario observes all 30 users, including 10 stationary, 10 continuously moving, and 10 intermittently moving users. The input contains 301 samples at integer seconds from 0 through 300. One-second positions subdivide the original 10-second trajectory segments; geometric channels are recomputed and anchored to the static channel values.
 
@@ -41,56 +41,38 @@ In the dynamic experiments, continuous resource adjustment maintains service mor
 ## Repository layout
 
 ```text
-static/                 Static runner, four policies, shared tools, Neo4j graph adapter
-dynamic/tkg/            Final TKG-DTN completion-driven runner and frozen runtime source
-dynamic/wireless/       Final WirelessAgent/frozen runner and frozen runtime source
-dynamic/data/           Verified static terminal states used to initialize dynamic runs
-data/mobility/          Final 1 s channel and mobility inputs for all three scenarios
-preparation/            Mobility resampling/channel generation code and 10 s source inputs
-evidence/static/       Selected 60 runs (large text logs compressed with gzip)
-evidence/dynamic/      Selected 33 runs (states, decisions, traffic and API logs)
-analysis/              Portable static plotting and independent dynamic audit
-results/paper/         Original manuscript tables and plot data
-figures/               Publication figures in PNG and PDF
-provenance/            Original source hashes, run selection and portability changes
-reproduce.py           Offline audit, statistics verification and figure redraws
-RELEASE_MANIFEST.json  SHA-256 checksums of released files
+static/                 Static runner, four policies, resource tools and Neo4j adapter
+dynamic/tkg/            TKG-DTN dynamic runner and required runtime modules
+dynamic/wireless/       WirelessAgent/frozen runner and required runtime modules
+dynamic/data/           Static terminal states used to initialize dynamic runs
+data/mobility/          One-second channel and mobility inputs for three scenarios
+preparation/            Mobility/channel generation code and source inputs
+figures/                Dynamic scenario illustration
+requirements.txt        Python dependencies
+.env.example            Environment-variable template
 ```
 
-Static TKG-DTN uses **Neo4j**. The final dynamic TKG-DTN implementation uses a local **SQLite temporal graph** and requires no Neo4j server. Separate method runtime snapshots preserve the exact implementation versions used for the selected experiments. Internal support modules in these snapshots are retained for import closure and provenance, not as additional reported baselines.
+Static TKG-DTN uses **Neo4j**. Dynamic TKG-DTN uses a local **SQLite temporal graph** and requires no Neo4j server. Each dynamic method retains its own runtime modules to preserve the implementation used in the experiment. `runtime_config.json` supplies the recorded model settings and the source checksums required by the runtime loader.
 
 ## Installation
 
-Python **3.11** is the release verification environment. From the repository root:
+Use Python **3.11**. Clone the repository and install dependencies:
 
 ```bash
+git clone https://github.com/garvey-chen/TKG-DTN-Wireless.git
+cd TKG-DTN-Wireless
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`. The archived static environment versions are in `static/requirements-lock.txt`; the packaging verification environment is recorded in `provenance/validation-environment.txt`. The latter is not claimed to be the original experiment environment.
-
-## Reproduce the recorded results without API calls
-
-```bash
-# Verify all release checksums using only the Python standard library.
-python reproduce.py --mode verify
-
-# Audit all 60 static and 33 dynamic runs; recompute metrics and redraw figures.
-python reproduce.py --mode all
-```
-
-Outputs go to `outputs/reproduction/`. The audit independently recalculates static resource feasibility, checks the 450 paired resource states, integrates dynamic traffic over the exact event intervals, verifies fixed membership and completion timing, recomputes Table I, and checks all 1–300 s within-slice fairness windows. It compares numerical results against the supplied manuscript CSVs. No API key or graph server is needed. Logs are unpacked into temporary directories, one dynamic run at a time.
-
-Use `--mode static` or `--mode dynamic` for a partial audit. The generated static figures and `figure_5.png/pdf` use the recorded data; typography and panel composition can differ from the manuscript. The original publication figures, including the spatial maps in Figs. 1 and 4, are supplied in `figures/`. Original plotting/aggregation source is preserved in `provenance/original_analysis/` for traceability; its historical workspace paths are not public execution entry points.
+On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`. The recorded static dependency versions are in `static/requirements-lock.txt`.
 
 ## Run new static experiments
 
 The rule baseline needs no API key:
 
 ```bash
-python static/run.py preflight
 python static/run.py run --methods rule_upstream --scenarios center north south \
   --users 30 --repeats 5 --arrival-order source --output outputs/static_rule
 ```
@@ -153,14 +135,12 @@ This reconstructs the final 1 s positions and anchored channels from the supplie
 
 The experiments evaluate framework adaptation and simulated service assurance. They do not measure packet-level latency, wireless hardware, handover or interference. Shared resource tools explain the observed static decision agreement; efficiency differences compare the complete adapted agent implementations and do not isolate graph representation alone.
 
-## Provenance and attribution
+## Attribution
 
-`provenance/source_files.json` records source and release hashes. `provenance/portability.patch` records path/configuration changes. Core policy/runtime files are copied from the verified selected sources. Original run manifests retain historic hashes, while public paths may be redacted; **`RELEASE_MANIFEST.json` is the checksum authority for the public package**. The offline audit verifies the released evidence subset. Redundant policy traces and large graph database dumps are omitted; their omission is not a claim that full historical database exports were revalidated by the public audit.
-
-WirelessAgent code and datasets derive from the locally archived [WirelessAgent repository](https://github.com/jwentong/WirelessAgent_R1), whose source snapshot and per-file hashes are recorded in `static/vendor/manifest.json`. The archived Git commit is unknown. Maps retain [OpenStreetMap contributor attribution](https://www.openstreetmap.org/copyright). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Packaging does not assign a new repository-wide license or relicense third-party material.
+WirelessAgent code and datasets are adapted from [WirelessAgent](https://github.com/jwentong/WirelessAgent_R1). Maps retain [OpenStreetMap contributor attribution](https://www.openstreetmap.org/copyright). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for source and licensing information.
 
 Reference used by the manuscript:
 
 > J. Tong, W. Guo, J. Shao, Q. Wu, Z. Li, Z. Lin, and J. Zhang, “WirelessAgent: Large language model agents for intelligent wireless networks,” *China Communications*, vol. 23, no. 3, pp. 265–285, 2026. DOI: 10.23919/JCC.fa.2025-0163.202603.
 
-If using these experiments, cite the TKG-DTN manuscript and the WirelessAgent reference. 
+If using these experiments, cite the TKG-DTN manuscript and the WirelessAgent reference.

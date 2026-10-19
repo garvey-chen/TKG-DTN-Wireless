@@ -11,7 +11,6 @@ from wireless_exp.settings import load_config
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("preflight", help="Validate data, dependencies and graphs without LLM calls")
     run = sub.add_parser("run", help="Execute original policies with logged real LLM calls")
     run.add_argument("--config", type=Path)
     run.add_argument("--methods", nargs="+", choices=("rule_upstream", "prompt", "wireless_kb", "wireless_nkb", "wireless_kb_guarded", "tkg_dtn"), default=["rule_upstream"])
@@ -35,10 +34,7 @@ def main():
     generate.add_argument("--seed", type=int, default=20261008)
     generate.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    if args.command == "preflight":
-        from wireless_exp.preflight import preflight
-        print(json.dumps(preflight(), ensure_ascii=False, indent=2))
-    elif args.command == "report":
+    if args.command == "report":
         from wireless_exp.report import report
         print(json.dumps(report(args.directory.resolve()), indent=2))
     elif args.command == "generate":

@@ -1,4 +1,4 @@
-# Adapted locally from vendor/upstream. See docs/patches; shared exact bandwidth allocation.
+# Adapted from https://github.com/jwentong/WirelessAgent_R1; shared exact bandwidth allocation.
 from copy import deepcopy
 from wireless_exp import ROOT as EXPERIMENT_ROOT
 from wireless_exp.metrics import SLICE_LIMITS

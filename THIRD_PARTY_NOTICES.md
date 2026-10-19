@@ -1,6 +1,6 @@
 # Third-party notices
 
-This research package includes adapted and archived WirelessAgent code, scenario datasets and maps. Attribution is retained in source files and `static/vendor/manifest.json`.
+This research package includes adapted WirelessAgent code, scenario datasets and maps. Attribution is retained in the adapted source files and in the references below.
 
 - WirelessAgent source: https://github.com/jwentong/WirelessAgent_R1 (local archive; upstream commit not recorded).
 - OpenStreetMap geographic data: © OpenStreetMap contributors; attribution and terms: https://www.openstreetmap.org/copyright .

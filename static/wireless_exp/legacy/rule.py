@@ -1,4 +1,4 @@
-# Adapted locally from vendor/upstream. See docs/patches; algorithm retained.
+# Adapted from https://github.com/jwentong/WirelessAgent_R1; algorithm retained.
 from copy import deepcopy
 from wireless_exp import ROOT as EXPERIMENT_ROOT
 # 2025/3/25 add a csv file to store the optimal allocation results.

@@ -1,4 +1,4 @@
-# Adapted locally from vendor/upstream. See docs/patches; algorithm retained.
+# Adapted from https://github.com/jwentong/WirelessAgent_R1; algorithm retained.
 from copy import deepcopy
 from wireless_exp import ROOT as EXPERIMENT_ROOT
 # add ground truth to the request, in order to computer the intent understanding accuracy.

@@ -32,3 +32,12 @@ id_ed25519
 **/secrets.json
 **/secrets.yaml
 **/secrets.yml
+
+# Local publication checks and archived experiment outputs
+/analysis/
+/evidence/
+/results/
+/provenance/
+/SECURITY_AUDIT.md
+/RELEASE_MANIFEST.json
+/reproduce.py

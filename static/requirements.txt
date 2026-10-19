@@ -10,5 +10,4 @@ tabulate>=0.9,<1
 shapely>=2.0,<3
 pyproj>=3.6,<4
 PyYAML>=6,<7
-pytest>=8,<10
 neo4j>=5.26,<6
